@@ -2790,7 +2790,7 @@ blockquote {
         height: 48px;
         line-height: 46px;
         text-align: center;
-        background-color: #0099e5;
+        background-color: rgba(255, 200, 63, 1);
         right: 10px;
         font-size: 19px;
         top: 10px;
