@@ -236,6 +236,11 @@ p {
     backface-visibility: hidden;
 }
 
+.hightlighted-text {
+    font-size: 18px;
+    font-weight: 700;
+}
+
 .btn-primary,
 .btn-secondary,
 button,
@@ -264,6 +269,10 @@ input[type=submit],
     -o-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+}
+
+.header-buttons .btn-primary {
+    color: #c5c5c5;
 }
 
 .btn-primary:last-child,
@@ -723,6 +732,7 @@ button.mfp-arrow:focus {
 .header .info-list {
     color: #fff;
     font-weight: 300;
+    margin-top: 50px;
 }
 
 .content-area {
@@ -1666,12 +1676,13 @@ input[type=text],
 
 .knowledges li {
     display: inline-block;
-    background-color: #0099e5;
-    border-radius: 25px;
-    color: #fff;
+    background-color: #333;
+    border-radius: 4px;
+    color: #c5c5c5;
     padding: 1px 12px;
     margin: 3px 0;
-    font-size: 13px
+    font-size: 15px;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, .33);
 }
 
 .certificate-item {
