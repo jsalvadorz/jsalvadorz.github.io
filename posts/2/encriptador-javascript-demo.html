@@ -3,9 +3,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    	<title>Junior Salvador | Analista de Datos y BI</title>
-		<meta name="description" content="Junior Salvador, Analista de Datos y Business Intelligence con experiencia en SQL, Python, Power BI, Tableau y Excel. Especializado en análisis de datos y auditoría antifraude.">
-        <meta name="keywords" content="Junior Salvador, Analista de Datos, Business Intelligence, Data Science, SQL, Python, Power BI, Tableau, Excel, análisis de datos, auditoría antifraude, retail, e-commerce, trade marketing">
+    	<title>Encriptador de Texto con Javascript | Por Junior Salvador</title>
+		<meta name="description" content="Descubre cómo desarrollé un encriptador de texto utilizando HTML, CSS y JavaScript en el challenge del programa Oracle Next Education de Alura Latam y Oracle.">
+        <meta name="keywords" content="encriptador de texto, HTML, CSS, JavaScript, Oracle Next Education, Alura Latam, desarrollo web, funciones de encriptación, copiar texto al portapapeles, programación web, proyectos educativos">
         <meta name="author" content="Junior Salvador">
 		<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
 		<link rel="icon" href="/images/favicon-16x16.png" sizes="16x16">
@@ -36,6 +36,16 @@
 		<!-- CSS for posts only -->
 		<link rel="stylesheet" id="highlight-css" href="/styles/highlight/github-dark.min.css" type="text/css" media="all">
 		<link rel="stylesheet" id="highlight-customtheme-css" href="/styles/highlight/highlight-customtheme.css" type="text/css" media="all">
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CGG7C2PF9B"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-CGG7C2PF9B');
+		</script>
 	</head>
 
 	<body data-rsssl="1" class="home page-template page-template-page-templates page page-id-6 wp-embed-responsive masthead-fixed full-width grid elementor-default elementor-kit-13 e--ua-blink e--ua-edge e--ua-webkit" data-elementor-device-mode="desktop">
@@ -82,7 +92,17 @@
 
 					<!-- Buttons -->
 					<div class="header-buttons">
-						<a href="#" target="yes" class="btn btn-primary">Descargar CV</a>
+						<a href="#xtwo4q5-cv" class="btn btn-primary" data-fslightbox="cv-iframe-lightbox" data-class="fslightbox-cv-iframe-styles">Descargar CV</a>
+						<div id="cv-iframe-container" style="display:none;">
+							<iframe
+								src="/docs/"
+								id="xtwo4q5-cv"
+								class="fslightbox-cv-iframe-styles"
+								frameBorder="0"
+								allow="fullscreen"
+								allowFullScreen
+							></iframe>
+						</div>
 					</div>
 					<!-- /Buttons -->
 
@@ -111,7 +131,7 @@
 									<div class="entry-meta entry-meta-top">
 										<span>Desarrollo Web</span>
 									</div>
-									<h2 class="entry-title">Encriptador de Texto con Javascript</h2>
+									<h1 class="entry-title">Encriptador de Texto con Javascript</h1>
 								</header>
 						
 								<div class="post-thumbnail">
@@ -130,7 +150,7 @@
 																<div class="elementor-widget-container">
 																	<!-- Post content here -->
 																	<div class="elementor-widget">
-																		<div class="block-title"><h2>Breve <span>descripción</span></h2></div>
+																		<div class="block-title"><h2>Descripción del <span>proyecto</span></h2></div>
 																	</div>
 
 																	<p>
@@ -189,7 +209,7 @@
 																			&lt;script src='./js/script.js'&gt;&lt;/script&gt;
 																		&lt;/body&gt;
 																		&lt;/html&gt;
-																	</code></div>
+																	</code></pre>
 																		
 																	<pre><code class="language-javascript">
 																		const diccionarioEncriptado = {
@@ -321,6 +341,10 @@
 		<script type="text/javascript" src="/scripts/highlight/plugins/hljslanguagedisplayplugin.js" id="highlightjs-language-js"></script>
 		<script type="text/javascript" src="/scripts/highlight/plugins/dax-language.js" id="dax-language-js"></script>
 		<script type="text/javascript" src="/scripts/highlight/highlight-init.js" id="highlight-config-js"></script>
+
+		<script type="text/javascript">
+			fsLightboxInstances["cv-iframe-lightbox"].props.onOpen = function(){}
+		</script>
 
 		<script type="text/javascript">
 			var currentUrl = window.location.href;

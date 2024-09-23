@@ -62,57 +62,6 @@
     }
     // /Custom scroll
 
-    // // Ajax Pages loader
-    // function ajaxLoader() {
-    //     var ajaxLoadedContent = $('#page-ajax-loaded');
-    //     function showContent() {
-    //         ajaxLoadedContent.removeClass('animated-section-moveToRight closed');
-    //         ajaxLoadedContent.show();
-    //         $('body').addClass('ajax-page-visible');
-    //     }
-    //     function hideContent() {
-    //         $('#page-ajax-loaded').addClass('animated-section-moveToRight closed');
-    //         $('body').removeClass('ajax-page-visible');
-    //         setTimeout(function(){
-    //             $('#page-ajax-loaded.closed').html('');
-    //             ajaxLoadedContent.hide();
-    //             $('#page-ajax-loaded').append('<div class="preloader-portfolio"><div class="preloader-animation"><div class="preloader-spinner"></div></div></div></div>');
-    //         }, 500);
-    //     }
-
-    //     $(document)
-    //         .on("click",".site-auto-menu, #portfolio-page-close-button", function (e) {
-    //             e.preventDefault();
-    //             hideContent();
-    //         })
-    //         .on("click",".ajax-page-load", function () {
-    //             var toLoad =  $(this).attr('href') + '?ajax=true';
-    //             showContent();
-    //             ajaxLoadedContent.load(toLoad, function() {
-    //                 imageCarousel();
-
-    //                 var $gallery_container = $("#portfolio-gallery-grid");
-    //                 $gallery_container.imagesLoaded(function () {
-    //                     $gallery_container.masonry();
-    //                 });
-
-    //                 $('.portfolio-page-wrapper .portfolio-grid').each(function() {
-    //                     $(this).magnificPopup({
-    //                         delegate: 'a.gallery-lightbox',
-    //                         type: 'image',
-    //                         gallery: {
-    //                             enabled:true
-    //                         }
-    //                     });
-    //                 });
-
-    //             });
-
-    //             return false;
-    //         });
-    // }
-    // /Ajax Pages loader
-
     // Portfolio subpage filters
     function portfolio_init() {
         $( '.portfolio-content' ).each( function() {
@@ -196,25 +145,6 @@
         var movementStrength = 15;
         var height = movementStrength / $(document).height();
         var width = movementStrength / $(document).width();
-        // $("body").on('mousemove', function(e){
-        //     var pageX = e.pageX - ($(document).width() / 2),
-        //         pageY = e.pageY - ($(document).height() / 2),
-        //         newvalueX = width * pageX * -1,
-        //         newvalueY = height * pageY * -1;
-        //     if ($('.page-wrapper').hasClass('bg-move-effect')) {
-        //         var elements = $('.home-photo .hp-inner:not(.without-move), .lm-animated-bg');
-        //     } else {
-        //         var elements = $('.home-photo .hp-inner:not(.without-move)');
-        //     }
-        //     elements.addClass('transition');
-        //     elements.css({
-        //         "background-position": "calc( 50% + " + newvalueX + "px ) calc( 50% + " + newvalueY + "px )",
-        //     });
-
-        //     setTimeout(function() {
-        //         elements.removeClass('transition');
-        //     }, 300);
-        // })
 
         customScroll();
 
@@ -222,24 +152,11 @@
         var $portfolio_container = $(".portfolio-grid"),
             $gallery_container = $("#portfolio-gallery-grid");
 
-        // $gallery_container.imagesLoaded(function () {
-        //     $gallery_container.masonry();
-        // });
-
         $portfolio_container.imagesLoaded(function () {
             portfolio_init(this);
         });
 
         imageCarousel();
-
-        // Blog grid init
-        // var $container = $(".blog-masonry");
-        // $container.imagesLoaded(function () {
-        //     $container.masonry({
-        //         itemSelector: '.item',
-        //         resize: false
-        //     });
-        // });
 
         // Mobile menu
         $('.menu-toggle').on("click", function () {
@@ -253,96 +170,6 @@
             mobileMenuHide();
         });
 
-        // Lightbox init
-        body.magnificPopup({
-            fixedContentPos: false,
-            delegate: 'a.lightbox.mfp-iframe',
-            type: 'image',
-            removalDelay: 300,
-
-            // Class that is added to popup wrapper and background
-            // make it unique to apply your CSS animations just to this exact popup
-            mainClass: 'mfp-fade',
-            image: {
-                // options for image content type
-                titleSrc: 'title',
-                gallery: {
-                    enabled: true
-                },
-            },
-
-            iframe: {
-                markup: '<div class="mfp-iframe-scaler">'+
-                        '<div class="mfp-close"></div>'+
-                        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-                        '<div class="mfp-title mfp-bottom-iframe-title"></div>'+
-                      '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
-
-                patterns: {
-                    youtube: {
-                      index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
-
-                      id: null, // String that splits URL in a two parts, second part should be %id%
-                      // Or null - full URL will be returned
-                      // Or a function that should return %id%, for example:
-                      // id: function(url) { return 'parsed id'; }
-
-                      src: '%id%?autoplay=1' // URL that will be set as a source for iframe.
-                    },
-                    vimeo: {
-                        index: 'vimeo.com/',
-                        id: '/',
-                        src: '//player.vimeo.com/video/%id%?autoplay=1'
-                    },
-                    gmaps: {
-                        index: '//maps.google.',
-                        src: '%id%&output=embed'
-                    }
-                },
-
-                srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
-            },
-
-            callbacks: {
-                markupParse: function(template, values, item) {
-                    values.title = item.el.attr('title');
-                }
-            },
-        });
-
-        $('.ajax-page-load-link').magnificPopup({
-            type: 'ajax',
-            removalDelay: 300,
-            mainClass: 'mfp-fade',
-            gallery: {
-                enabled: true
-            },
-        });
-
-        $('.portfolio-page-wrapper .portfolio-grid').each(function() {
-            $(this).magnificPopup({
-                delegate: 'a.gallery-lightbox',
-                type: 'image',
-                gallery: {
-                    enabled:true
-                }
-            });
-        });
-
-        //Form Controls
-        // $('.form-control')
-        //     .val('')
-        //     .on("focusin, click", function(){
-        //         $(this).parent('.form-group:not(.form-group-checkbox)').addClass('form-group-focus');
-        //     })
-        //     .on("focusout", function(){
-        //         if($(this).val().length === 0) {
-        //             $(this).parent('.form-group:not(.form-group-checkbox)').removeClass('form-group-focus');
-        //         } else {
-        //             $(this).parent('.form-group:not(.form-group-checkbox)').addClass('form-group-focus');
-        //         }
-        //     });
-
         $('body').append('<div id="page-ajax-loaded" class="page-portfolio-loaded animated animated-section-moveFromLeft" style="display: none"><div class="preloader-portfolio"><div class="preloader-animation"><div class="preloader-spinner"></div></div></div></div>');
         ajaxLoader();
 
@@ -351,10 +178,6 @@
             $('#blog-sidebar').toggleClass('open');
             $(this).toggleClass('open');
         });
-
-        // $('.section-content, .content-wrapper').mutate('height',function (element,info){
-        //     updateScroll();
-        // });
 
     });
 

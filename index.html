@@ -32,6 +32,16 @@
 
 		<script type="text/javascript" src="./scripts/jquery.min.js" id="jquery-core-js"></script>
 		<script type="text/javascript" src="./scripts/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CGG7C2PF9B"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-CGG7C2PF9B');
+		</script>
 	</head>
 
 	<body data-rsssl="1" class="home page-template page-template-page-templates page page-id-6 wp-embed-responsive masthead-fixed full-width grid elementor-default elementor-kit-13 e--ua-blink e--ua-edge e--ua-webkit" data-elementor-device-mode="desktop">
@@ -78,7 +88,17 @@
 
 					<!-- Buttons -->
 					<div class="header-buttons">
-						<a href="#" target="yes" class="btn btn-primary">Descargar CV</a>
+						<a href="#xtwo4q5-cv" class="btn btn-primary" data-fslightbox="cv-iframe-lightbox" data-class="fslightbox-cv-iframe-styles">Descargar CV</a>
+						<div id="cv-iframe-container" style="display:none;">
+							<iframe
+								src="./docs/"
+								id="xtwo4q5-cv"
+								class="fslightbox-cv-iframe-styles"
+								frameBorder="0"
+								allow="fullscreen"
+								allowFullScreen
+							></iframe>
+						</div>
 					</div>
 					<!-- /Buttons -->
 
@@ -173,11 +193,6 @@
 																				<h3 class="slogan-text">
 																					Con más de 5 años de experiencia, convierto datos en insights valiosos, optimizando procesos y facilitando decisiones estratégicas.
 																				</h3>
-																				<!-- <p>	
-																					Los datos son un valioso activo corporativo que analizados de forma correcta brindan un enorme poder para transformar decisiones y crear un impacto positivo
-																					en las organizaciones. Mi objetivo es combinar habilidades técnicas con visión estratégica para anticipar riesgos, optimizar recursos y fortalecer la toma
-																					de decisiones empresariales.
-																				</p> -->
 																				<div class="home-buttons">
 																					<a href="#portfolio" class="btn btn-primary" data-object="page">Portafolio</a>
 																					<a href="#contact" class="btn btn-secondary" data-object="page">Contacto</a>
@@ -800,276 +815,6 @@
 															</div>
 														</div>
 													</div>
-													<!-- certificates mode timeline
-													<div class="elementor-element elementor-element-001h850 elementor-widget elementor-widget-spacer" data-id="001h850" data-element_type="widget" data-widget_type="spacer.default">
-														<div class="elementor-widget-container">
-															<div class="elementor-spacer">
-																<div class="elementor-spacer-inner"></div>
-															</div>
-														</div>
-													</div>		
-													<div class="elementor-element elementor-element-21g351h elementor-widget elementor-widget-timeline" data-id="21g351h" data-element_type="widget" data-widget_type="timeline.default">
-														<div class="elementor-widget-container">
-															<div class="timeline clearfix">
-																<div class="block-title element-title">
-																	<h2>Cursos y Certificaciones</h2>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Ubits Learn</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Programa de Analítica de Datos para los Negocios con Python</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Ubits Learn</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Análisis Exploratorio de Datos con Python</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Ubits Learn</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Desarrolla procesos ETL con Python y Pandas</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Ubits Learn</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Data Storytelling con Seaborn, GeoPandas y Plotly</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Skill Perú</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Python Fundamental</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Ubits Learn</span>
-																		<a href="./images/certificates/power-bi.png" data-fslightbox><span class="item-logo"><img decoding="async" src="./images/certificates/thumbnails/power-bi-thumb.jpg" alt="Power BI"></span></a>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Programa de Especialización en Power BI Desktop</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Udemy</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Curso de Tableau: Análisis y Visualización de Datos</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Ubits Learn</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Implementa Business Intelligence en tu Organización</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Ubits Learn</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Aprendizaje Supervisado: Regresión Lineal Simple</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Udemy</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Macros y VBA para Excel</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Skill Perú</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Macros y VBA en Excel</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Skill Perú</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Tablas Dinámicas y Dashboard en Excel</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">ITEC</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Microsoft Excel Avanzado</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2024</h5>
-																		<span class="item-company">Skill Perú</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">SQL Server Fundamental</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2023</h5>
-																		<span class="item-company">Codo a Codo 4.0 (Buenos Aires Ciudad)</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Big Data & Ciencia de Datos</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2023</h5>
-																		<span class="item-company">Ubits Learn</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Introducción a la Ciencia de Datos</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2023</h5>
-																		<span class="item-company">DataCamp</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Intermediate SQL</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2023</h5>
-																		<span class="item-company">Skill Perú</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Microsoft Power BI</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2023</h5>
-																		<span class="item-company">Ubits Learn</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Marcos Ágiles para la Gestión de Proyectos</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2023</h5>
-																		<span class="item-company">Ubits Learn</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">SCRUM: Orígenes y Fundamentos</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2023</h5>
-																		<span class="item-company">Ubits Learn</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Beneficios del Cloud Computing</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2023</h5>
-																		<span class="item-company">Ubits Learn</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Prácticas de Ciberseguridad</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2022</h5>
-																		<span class="item-company">Alura Latam</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Git y GitHub</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2022</h5>
-																		<span class="item-company">Alura Latam</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Formación en programación Web</span>
-																	</div>
-																</div>
-																<div class="timeline-item clearfix">
-																	<div class="left-part">
-																		<h5 class="item-period">2019</h5>
-																		<span class="item-company">CedHinfo</span>
-																	</div>
-																	<div class="divider"></div>
-																	<div class="right-part">
-																		<span class="item-title">Especialización SQL Server for Analytics</span>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													End of certificates mode timeline -->
-
 												</div>
 											</div>
 											<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-9a7f380" data-id="9a7f380" data-element_type="column">
@@ -2338,7 +2083,7 @@
 												</div>
 											</div>
 										</div>
-									</section> <!--hasta aqui-->
+									</section>
 
 									<section class="elementor-section elementor-top-section elementor-element elementor-element-09dsec3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="09dsec3" data-element_type="section">
 										<div class="elementor-container elementor-column-gap-default">									
@@ -2809,9 +2554,10 @@
 		<script type="text/javascript" src="./scripts/xtwo4q5.js" id="xtwo4q5-js"></script>
 		<script type="text/javascript" src="./scripts/fslightbox.js" id="fslightbox-js"></script>
 
-		<script>
+		<script type="text/javascript">
 			fsLightboxInstances["awards-lightbox"].props.onOpen = function(){}
 			fsLightboxInstances["certi-lightbox"].props.onOpen = function(){}
+			fsLightboxInstances["cv-iframe-lightbox"].props.onOpen = function(){}
 		</script>
 	</body>
 </html>
