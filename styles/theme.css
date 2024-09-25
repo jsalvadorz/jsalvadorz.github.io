@@ -280,6 +280,12 @@ a:hover,
     border:1px solid rgba(139, 152, 169, 0.15);
     text-shadow:0 0 15px rgba(119, 62, 198, 1);
 }
+.deepnote-iframe{
+    margin:20px auto
+}
+.single-page-area button.btn-primary{
+    margin-top:20px
+}
 .wp-block-pullquote.is-style-solid-color{
     background-color:#09aeea
 }

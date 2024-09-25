@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Web Scraping con Selenium de productos de Tottus.com | Por Junior Salvador</title>
+		<meta name="description" content="Desarrollo de un script en Python utilizando Selenium para realizar web scraping de productos en Tottus.com. El script extrae información detallada de los productos, como nombre, marca y precios ofertados, permitiendo resaltar aquellos con precios límite definidos por el usuario. La información se procesa y formatea en un DataFrame con Pandas para exportación a CSV, bases de datos o datalakes.">
+		<meta name="keywords" content="web scraping, Selenium, Python, Pandas, Tottus, precios, productos, script Python, automatización, CSV, datalake, base de datos, scraping productos, scraping precios, Tottus.com, análisis de datos">
+		<meta name="author" content="Junior Salvador">
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+		<link rel="icon" href="/images/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" href="/images/favicon-32x32.png" sizes="32x32">
+		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+		<!-- CSS Fonts -->
+		<link rel="stylesheet" id="font-awesome" href="/styles/fonts/font-awesome/css/font-awesome.min.css" type="text/css" media="all">
+		<link rel="stylesheet" id="font-linearicons" href="/styles/fonts/linearicons/style.css" type="text/css" media="all">
+		<link rel="stylesheet" id="font-elementor-icons" href="/styles/fonts/elementor-icons/css/elementor-icons.min.css" type="text/css" media="all">
+
+		<!-- CSS Animations -->
+		<link rel="stylesheet" id="owl-carousel-css" href="/styles/owl.carousel.css" type="text/css" media="all">
+		<link rel="stylesheet" id="perfect-scrollbar-css" href="/styles/perfect-scrollbar.css" type="text/css" media="all">
+		<link rel="stylesheet" id="animations-css" href="/styles/animations.css" type="text/css" media="all">
+		<link rel="stylesheet" id="magnific-popup-css" href="/styles/magnific-popup.css" type="text/css" media="all">
+
+		<!-- CSS Main Styles -->
+		<link rel="stylesheet" id="bootstrap-css" href="/styles/bootstrap.min.css" type="text/css" media="all">
+		<link rel="stylesheet" id="google-fonts-css" href="/styles/fonts/google-fonts.css" type="text/css" media="all">
+		<link rel="stylesheet" id="main-css" href="/styles/main.css" type="text/css" media="all">
+		<link rel="stylesheet" id="menu-css" href="/styles/menu.css" type="text/css" media="all">
+		<link rel="stylesheet" id="theme-css" href="/styles/theme.css" type="text/css" media="all">
+
+		<script type="text/javascript" src="/scripts/jquery.min.js" id="jquery-core-js"></script>
+		<script type="text/javascript" src="/scripts/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+
+		<!-- CSS for posts only -->
+		<link rel="stylesheet" id="highlight-css" href="/styles/highlight/github-dark.min.css" type="text/css" media="all">
+		<link rel="stylesheet" id="highlight-customtheme-css" href="/styles/highlight/highlight-customtheme.css" type="text/css" media="all">
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CGG7C2PF9B"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-CGG7C2PF9B');
+		</script>
+	</head>
+
+	<body data-rsssl="1" class="home page-template page-template-page-templates page page-id-6 wp-embed-responsive masthead-fixed full-width grid elementor-default elementor-kit-13 e--ua-blink e--ua-edge e--ua-webkit" data-elementor-device-mode="desktop">
+		<div class="lm-animated-bg"></div>
+    
+		<!-- Loading animation -->
+		<div class="preloader">
+			<div class="preloader-animation">
+				<div class="preloader-spinner"></div>
+			</div>
+		</div>
+		<!-- /Loading animation -->
+
+		<div class="page-wrapper bg-move-effect">
+			<div class="page-content site-content">
+
+				<header id="site_header" class="header mobile-menu-hide">
+					<div class="header-content">
+						<div class="header-photo">
+							<a href="/index.html"><img src="/images/profile-cicle.png" alt="image"></a>
+						</div>
+						<div class="header-titles">
+							<h2>Junior Salvador</h2>
+							<h4>Analista de Datos</h4>
+						</div>
+					</div>
+
+					<ul id="menu-vcard-menu" class="classic-menu main-menu">
+						<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon"><a class="nav-anim" href="/index.html#about-me" data-object="page"><span class="menu-icon lnr lnr-user"></span> <span class="link-text">Sobre mí</span></a></li>
+						<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon"><a class="nav-anim" href="/index.html#resume" data-object="page"><span class="menu-icon lnr lnr-graduation-hat"></span> <span class="link-text">Mi CV</span></a></li>
+						<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon"><a class="nav-anim" href="/index.html#portfolio" data-object="page"><span class="menu-icon lnr lnr-briefcase"></span> <span class="link-text">Portafolio</span></a></li>
+						<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon"><a class="nav-anim" href="/index.html#contact" data-object="page"><span class="menu-icon lnr lnr-envelope"></span> <span class="link-text">Contacto</span></a></li>
+					</ul>
+
+					<!-- Social Links -->
+					<div class="social-links">
+						<ul>
+							<li><a id="xtwo4q5-m" href="" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/juniorsalvadorz/" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
+							<li><a href="https://github.com/jsalvadorz" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
+						</ul>
+					</div>
+					<!-- /Social Links -->
+
+					<!-- Buttons -->
+					<div class="header-buttons">
+						<a href="#xtwo4q5-cv" class="btn btn-primary" data-fslightbox="cv-iframe-lightbox" data-class="fslightbox-cv-iframe-styles">Descargar CV</a>
+						<div id="cv-iframe-container" style="display:none;">
+							<iframe
+								src="/docs/"
+								id="xtwo4q5-cv"
+								class="fslightbox-cv-iframe-styles"
+								frameBorder="0"
+								allow="fullscreen"
+								allowFullScreen
+							></iframe>
+						</div>
+					</div>
+					<!-- /Buttons -->
+
+					<!-- Copyrights -->
+					<div class="copyrights">© 2024 | Github and ☕</div>
+					<!-- /Copyrights -->
+				</header>
+
+				<div class="mobile-site-title mobile-visible">
+					<a href="/index.html">Junior Salvador</a>
+				</div>
+
+				<!-- Mobile Navigation -->
+				<div class="menu-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<!-- End Mobile Navigation -->
+			
+				<div class="content-area single-page-area">
+					<div class="single-page-content ps ps--theme_default ps--active-y" data-ps-id="article-block">
+						<div class="content-wrapper">					
+							<article id="article-post" class="article-post post type-post status-publish format-standard has-post-thumbnail hentry category-e-commerce">
+								<header class="entry-header">
+									<div class="entry-meta entry-meta-top">
+										<span>Web Scraping</span>
+									</div>
+									<h1 class="entry-title">Web Scraping con Selenium de productos de Tottus.com</h1>
+								</header>
+						
+								<div class="post-thumbnail">
+									<img fetchpriority="high" src="./images/web-scraping-con-selenium-tottus.png" class="attachment-full size-full wp-post-image" alt="Web Scraping con Selenium de productos de Tottus.com" decoding="async">
+								</div>
+											
+								<div class="post-content">
+									<div class="entry-content">
+										<div data-elementor-type="wp-post" data-elementor-id="1" class="elementor elementor-1">
+											
+											<section class="elementor-section elementor-top-section elementor-element elementor-element-qrt10s5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="qrt10s5" data-element_type="section">
+												<div class="elementor-container elementor-column-gap-default">
+													<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-qrt10s6" data-id="qrt10s6" data-element_type="column">
+														<div class="elementor-widget-wrap elementor-element-populated">
+															<div class="elementor-element elementor-element-qrt10s7 elementor-widget elementor-widget-text-editor" data-id="qrt10s7" data-element_type="widget" data-widget_type="text-editor.default">
+																<div class="elementor-widget-container">
+																	<!-- Post content here -->
+																	<div class="elementor-widget">
+																		<div class="block-title"><h2>Descripción del <span>proyecto</span></h2></div>
+																	</div>
+
+																	<p>
+																		En este proyecto desarrollé un script en Python usando la librería <span class="inline-code">Selenium</span> para hacer web scraping de los productos de la página web de Tottus.com.
+																		El script procesa y genera una lista de productos a partir de un parámetro de búsqueda definido por el usuario, por ejemplo "refrigeradora", y extrae la información de cada producto
+																		de esa categoría como el nombre, la marca y las modalidades de precios ofertados (precio CMR, precio en línea y precio en tienda), todo desde la web de Tottus.com.
+																	</p>
+
+																	<p>
+																		Asimismo, permite destacar los productos que tienen un precio límite definido también por el usuario, por ejemplo, resaltar aquellos productos con un precio menor o igual a
+																		S/ 1,800.00. Finalmente, la data extraída se formatea en un DataFrame de <span class="inline-code">Pandas</span> (otra librería de Python) y a partir de allí es posible exportar la
+																		información a un archivo CSV para su posterior análisis o incluso si fuera necesario, a una base de datos o un datalake en la nube.
+																	</p>
+
+																	<div class="elementor-widget">
+																		<div class="block-title"><h2>Sobre el <span>entorno</span></h2></div>
+																	</div>
+
+																	<p>
+																		El script se ejecuta en la nube en un notebook de <b>Deepnote</b>, que permite trabajar con Python y Jupyter Notebooks en la nube. Considerar que fue necesario instalar previamente
+																		la librería <span class="inline-code">Selenium</span> y el driver <span class="inline-code">geckodriver</span> (Firefox) para Selenium en el entorno de Deepnote ya que no están
+																		instalados por default, tal como sucede en Google Colab si se quisiera ejecutar el script en ese entorno. Otro detalle ¿Por qué usé geckodriver? Simplemente porque es el driver que
+																		mejor me ha funcionado en mi experiencia personal, pero se puede implementar con ChromeDriver o Edge WebDriver sin mayor problema.
+																	</p>
+
+																	<div class="elementor-widget">
+																		<div class="block-title"><h2>Ver demo <span>en vivo</span></h2></div>
+																	</div>
+
+																	<p>
+																		Para ver el script en acción, puedes hacer clic en el botón. Se abrirá una nueva pestaña con la app del proyecto en Deepnote donde podrás colocar los parámetros a tu gusto, ejecutar
+																		el script y ver los resultados en tiempo real. No es necesario crearte una cuenta. Luego puedes volver aquí para seguir leyendo el post.
+																	</p>
+
+																	<button class="btn btn-primary" onclick="window.open('https://deepnote.com/app/jandresz/Web-Scraping-Projects-fa6eb3f6-0dd8-451d-a002-f16a056c04e6', '_blank')" type="button">
+																		Ver demo
+																	</button>
+
+																	<div class="elementor-widget">
+																		<div class="block-title"><h2>Explicación del <span>código</span></h2></div>
+																	</div>
+
+																	<p>
+																		<b>1. Importación de librerías.</b>
+																	</p>
+
+																	<div class="deepnote-iframe">
+																		<iframe title="Embedded cell output" src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/4a9722b7d8714cadbf3c093f9897ee55?height=173" height="173" width="100%"></iframe>
+																	</div>
+																	
+																	<p>
+																		<b>2. Función que captura los precios.</b>
+																	</p>
+
+																	<div class="deepnote-iframe">
+																		<iframe title="Embedded cell output" src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/02ab5a8839ff457ba0dfba76663c3c99?height=137" height="137" width="100%"></iframe>
+																	</div>
+
+																	<p>
+																		Un poco de contexto. La web Tottus.com tiene tres tipos de precios para cada producto: <i>precio "CMR"</i>, <i>precio "internet"</i> y <i>precio "normal"</i>, y aún así no todos los productos
+																		tienen los tres valores, algunos tienen dos, otros solo uno. Cada uno de estos valores de precios se encuentran en un atributo específico según se aprecia en la estructura HTML de la web y
+																		el objetivo es capturar el contenido de esos atributos, si existen, y de no ser así asignar un valor cero, conservando de esa manera la uniformidad de las longitudes de las listas extraídas.
+																		Esta función realiza todo ese proceso.
+																	</p>
+
+																	<p>
+																		<b>3. Configuraciones previas del driver y parámetros de búsqueda.</b>
+																	</p>
+
+																	<div class="deepnote-iframe">
+																		<iframe title="Embedded cell output" src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/73e9c35f903a490e81ea9b49e1acde87?height=353" height="353" width="100%"></iframe>
+																	</div>
+
+																	<p>
+																		<b>4. Bloque principal.</b>
+																	</p>
+
+																	<div class="deepnote-iframe">
+																		<iframe title="Embedded cell output" src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/320487cbfbdf418cb9b9085d649ee5fc?height=1197.75" height="1197.75" width="100%"></iframe>
+																	</div>
+
+																	<p>
+																		Algunas anotaciones. Se ha incluído código para manejar excepciones, de darse el caso. Además, se han agregado notas para el usuario final conforme se va ejecutando el script.
+																	</p>
+
+																	<div class="elementor-widget">
+																		<div class="block-title"><h2>Tabla de <span>resultados</span></h2></div>
+																	</div>
+
+																	<p>
+																		La data extraída se almacena en un DataFrame de Pandas llamado <span class="inline-code">tabla_resultado</span>.
+																	</p>
+
+																	<p class="important-note">
+																		Tener en cuenta que el script tiene solo fines demostrativos por lo que extrae datos
+																		solo de la primera ventana de resultados. En un caso real, se debería implementar un mecanismo de paginación para recorrer todas las páginas de resultados y extraer la información de todos
+																		los productos. Algo que se puede hacer fácilmente con Selenium.
+																	</p>
+
+																	<div class="deepnote-iframe">
+																		<iframe title="Embedded cell output" src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/d81586cc7590478c984894bde420f553?height=1482" height="1482" width="100%"></iframe>
+																	</div>
+
+																	<div class="elementor-widget">
+																		<div class="block-title"><h2>Algunos <span>gráficos</span></h2></div>
+																	</div>
+
+																	<p>
+																		Una característica que me agrada de los notebooks de Deepnote es que se pueden crear gráficos interactivos básicos de inmediato con unos clics sin tener que escribir código con librerías como
+																		Matplotlib. Esos gráficos permiten una vista inicial rápida: seleccionas el dataframe, eliges el tipo de gráfico, seleccionas los campos, y listo. A continuación, se muestran dos gráficos
+																		interactivos generados por Deepnote a partir de la data extraída.
+																	</p>
+
+																	<div class="deepnote-iframe">
+																		<iframe title="Embedded cell output" src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/1955a069be2040a1bfc60a6b140ca4ca?height=500" height="500" width="100%"></iframe>
+																		<iframe title="Embedded cell output" src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/bf0a5ffca2874ae8893329a49b746d7e?height=500" height="500" width="100%"></iframe>
+																	</div>
+																	<!-- End of Post content -->
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>
+
+										</div>
+									</div>
+									<div class="entry-meta entry-meta-bottom">
+										<div class="author-container">
+											<div class="date-author">
+												<span class="entry-date"><i class="fa fa-fw fa-clock-o"></i> <time class="entry-date" datetime="2024-09-25T01:15:00-05:00">Setiembre, 2024</time></span>
+												<span class="author vcard"><i class="fa fa-fw fa-user"></i> Junior Salvador</a></span>
+											</div>
+											<!-- Share Buttons -->
+											<div class="entry-share btn-group share-buttons">
+												<a href="https://www.facebook.com/sharer/sharer.php?u=" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn share-url" target="_blank" title="Compartir en Facebook">
+													<i class="fa fa-facebook"></i>
+												</a>
+												<a href="https://twitter.com/share?url=" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn share-url" target="_blank" title="Compartir en X">
+													<i class="fa fa-twitter"></i>
+												</a>
+												<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn share-url" title="Compartir en LinkedIn">
+													<i class="fa fa-linkedin"></i>
+												</a>
+											</div>
+										<!-- /Share Buttons -->
+										</div>
+									</div>
+									<div class="post-tags">
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+							<div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+						</div>
+						<div class="ps__scrollbar-y-rail" style="top: 0px; height: 0px; right: 0px;">
+							<div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<link rel="stylesheet" id="elementor-frontend-css" href="/styles/frontend.min.css" type="text/css" media="all">
+		<link rel="stylesheet" id="body-styles-css" href="/styles/body.css" type="text/css" media="all">
+		<link rel="stylesheet" id="widget-tags-css" href="/styles/widgets-tags.css" type="text/css" media="all">
+
+		<script type="text/javascript" src="/scripts/modernizr.custom.js" id="modernizr-js"></script>
+		<script type="text/javascript" src="/scripts/owl.carousel.min.js" id="owl-carousel-js"></script>
+		<script type="text/javascript" src="/scripts/perfect-scrollbar.min.js" id="perfect-scrollbar-js"></script>
+		<script type="text/javascript" src="/scripts/imagesloaded.min.js" id="imagesloaded-js"></script>
+		<script type="text/javascript" src="/scripts/jquery.shuffle.min.js" id="shuffle-js"></script>
+		<script type="text/javascript" src="/scripts/jquery.magnific-popup.min.js" id="magnific-popup-js"></script>
+		<script type="text/javascript" src="/scripts/animating.js" id="animating-js"></script>
+		<script type="text/javascript" src="/scripts/main.js" id="jquery-main-js"></script>
+		<script type="text/javascript" src="/scripts/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
+		<script type="text/javascript" src="/scripts/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
+		<script type="text/javascript" src="/scripts/elementorFrontendConfig.js" id="elementor-frontend-js-before"></script>
+		<script type="text/javascript" src="/scripts/frontend.min.js" id="elementor-frontend-js"></script>
+		<script type="text/javascript" src="/scripts/scripts.js" id="scripts-js"></script>
+		<script type="text/javascript" src="/scripts/xtwo4q5.js" id="xtwo4q5-js"></script>
+		<script type="text/javascript" src="/scripts/fslightbox.js" id="fslightbox-js"></script>
+		<script type="text/javascript" src="/scripts/highlight/highlight.min.js" id="highlight.min-js"></script>
+		<script type="text/javascript" src="/scripts/highlight/plugins/highlightjs-line-numbers.js" id="highlightjs-line-numbers-js"></script>
+		<script type="text/javascript" src="/scripts/highlight/plugins/highlight-clean-blanks-tabs.js" id="highlight-clean-blanks-tabs-js"></script>
+		<script type="text/javascript" src="/scripts/highlight/plugins/highlightjs-copy.js" id="highlightjs-copy-js"></script>
+		<script type="text/javascript" src="/scripts/highlight/plugins/hljslanguagedisplayplugin.js" id="highlightjs-language-js"></script>
+		<script type="text/javascript" src="/scripts/highlight/plugins/dax-language.js" id="dax-language-js"></script>
+		<script type="text/javascript" src="/scripts/highlight/highlight-init.js" id="highlight-config-js"></script>
+
+		<script type="text/javascript">
+			fsLightboxInstances["cv-iframe-lightbox"].props.onOpen = function(){}
+		</script>
+
+		<script type="text/javascript">
+			var currentUrl = window.location.href;
+			var shareURLs = document.querySelectorAll('.share-url');
+
+			shareURLs.forEach(function(link) {
+				link.href += currentUrl;
+			});
+		</script>
+	</body>
+</html>
