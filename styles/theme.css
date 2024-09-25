@@ -283,6 +283,9 @@ a:hover,
 .deepnote-iframe{
     margin:20px auto
 }
+.powerbi-iframe{
+    margin:40px auto
+}
 .single-page-area button.btn-primary{
     margin-top:20px
 }
