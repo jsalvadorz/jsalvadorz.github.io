@@ -337,6 +337,23 @@ a:hover,
     justify-content:center;
     align-items:center
 }
+.post-button{
+    text-align:center
+}
+.post-button button.btn-primary{
+    background-color:#773EC6;
+    margin:0 auto
+}
+.post-button button.btn-primary:hover{
+    background-color:#FFF;
+    border-color:#FFF;
+    color:#080A0E
+}
+.post-button button.btn-primary:focus,
+.post-button button.btn-primary:active{
+    border-color:none !important;
+    outline:none !important
+}
 @media only screen and (min-width:1025px){
     ul.main-menu a.active,
     ul.main-menu a:focus,
