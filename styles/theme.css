@@ -348,6 +348,8 @@ a:hover,
 }
 .post-button button.btn-primary{
     background-color:#773EC6;
+    border-color:#773EC6;
+    color:#D9DFE7;
     margin:0 auto
 }
 .post-button button.btn-primary:hover{
@@ -357,8 +359,11 @@ a:hover,
 }
 .post-button button.btn-primary:focus,
 .post-button button.btn-primary:active{
-    border-color:none !important;
-    outline:none !important
+    background-color:#773EC6 !important;
+    border-color:#773EC6 !important;
+    color:#D9DFE7;
+    outline:none;
+    box-shadow:none !important
 }
 .post-button button.btn-primary::after{
     font-family:"FontAwesome";
@@ -416,6 +421,21 @@ input[type="submit"]:focus,
 .elementor .form-control ~ .form-control-border,
 .elementor .timeline .divider:after{
     border-color:#773fC7
+}
+.btn-primary:focus,
+.btn-primary:active{
+    background-color:#773fC7 !important;
+    border-color:#773fC7 !important;
+    box-shadow:none !important;
+    outline:none
+}
+.btn-secondary:focus,
+.btn-secondary:active{
+    background-color:#D5D5D5 !important;
+    border-color:#D5D5D5 !important;
+    color:#080A0E !important;
+    box-shadow:none !important;
+    outline:none
 }
 .elementor .clients.owl-carousel .owl-nav button.owl-prev:focus,
 .elementor .clients.owl-carousel .owl-nav button.owl-prev:active,

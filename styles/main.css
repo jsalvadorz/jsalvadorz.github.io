@@ -1180,15 +1180,23 @@ pre.wp-block-verse{
 .header-buttons{
     margin-top:50px
 }
-.header-buttons .btn-primary{
+.header-buttons a.btn-primary{
     background-color:#773EC6;
-    color:#D9DFE7;
-    border-color:#773EC6
+    border-color:#773EC6;
+    color:#D9DFE7
 }
-.header-buttons .btn-primary:hover{
+.header-buttons a.btn-primary:hover{
     background-color:#fff;
     color:#080A0E;
     border-color:#fff
+}
+.header-buttons a.btn-primary:focus,
+.header-buttons a.btn-primary:active{
+    background-color:#773EC6 !important;
+    border-color:#773EC6 !important;
+    color:#D9DFE7;
+    outline:none;
+    box-shadow:none !important
 }
 .header .copyrights{
     color:#8B98A9;
