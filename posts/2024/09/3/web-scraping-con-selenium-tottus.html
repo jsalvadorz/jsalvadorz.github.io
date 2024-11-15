@@ -84,7 +84,6 @@
 					<div class="social-links">
 						<ul>
 							<li><a id="xtwo4q5-m" href="" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/juniorsalvadorz/" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
 							<li><a href="https://github.com/jsalvadorz" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
 						</ul>
 					</div>
@@ -92,17 +91,7 @@
 
 					<!-- Buttons -->
 					<div class="header-buttons">
-						<a href="#xtwo4q5-cv" class="btn btn-primary" data-fslightbox="cv-iframe-lightbox" data-class="fslightbox-cv-iframe-styles">Descargar CV</a>
-						<div id="cv-iframe-container" style="display:none;">
-							<iframe
-								src="/docs/"
-								id="xtwo4q5-cv"
-								class="fslightbox-cv-iframe-styles"
-								frameBorder="0"
-								allow="fullscreen"
-								allowFullScreen
-							></iframe>
-						</div>
+						<a href="/index.html#portfolio" class="btn btn-primary" data-object="page">Portafolio</a>
 					</div>
 					<!-- /Buttons -->
 
@@ -185,9 +174,11 @@
 																		el script y ver los resultados en tiempo real. No es necesario crearte una cuenta. Luego puedes volver aquí para seguir leyendo el post.
 																	</p>
 
-																	<button class="btn btn-primary" onclick="window.open('https://deepnote.com/app/jandresz/Web-Scraping-Projects-fa6eb3f6-0dd8-451d-a002-f16a056c04e6', '_blank')" type="button">
-																		Ver demo
-																	</button>
+																	<div class="post-button">
+																		<button class="btn btn-primary" onclick="window.open('https://deepnote.com/app/jandresz/Web-Scraping-Projects-fa6eb3f6-0dd8-451d-a002-f16a056c04e6', '_blank')" type="button">
+																			Ver demo
+																		</button>
+																	</div>
 
 																	<div class="elementor-widget">
 																		<div class="block-title"><h2>Explicación del <span>código</span></h2></div>
@@ -344,7 +335,7 @@
 		<script type="text/javascript" src="/scripts/highlight/highlight-init.js" id="highlight-config-js"></script>
 
 		<script type="text/javascript">
-			fsLightboxInstances["cv-iframe-lightbox"].props.onOpen = function(){}
+			fsLightboxInstances["posts-lightbox"].props.onOpen = function(){}
 		</script>
 
 		<script type="text/javascript">

@@ -265,6 +265,12 @@ a:hover,
 .post-navigation .meta-nav:hover{
     color:#A87FFB
 }
+#article-post .entry-content a::after{
+    font-family:"FontAwesome";
+    content:"\f08e";
+    font-weight:inherit;
+    margin-left:8px
+}
 .inline-code{
     background-color:#BEB0D3;
     padding:2px 6px;
@@ -353,6 +359,12 @@ a:hover,
 .post-button button.btn-primary:active{
     border-color:none !important;
     outline:none !important
+}
+.post-button button.btn-primary::after{
+    font-family:"FontAwesome";
+    content:"\f08e";
+    font-weight:inherit;
+    margin-left:8px
 }
 @media only screen and (min-width:1025px){
     ul.main-menu a.active,
