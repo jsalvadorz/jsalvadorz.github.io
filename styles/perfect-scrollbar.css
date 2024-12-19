@@ -19,19 +19,19 @@
     background-color:transparent
 }
 .ps.ps--in-scrolling.ps--x>.ps__scrollbar-x-rail{
-    background-color:#10151d;
+    background-color:#D8D8D8;
     opacity:.9
 }
 .ps.ps--in-scrolling.ps--x>.ps__scrollbar-x-rail>.ps__scrollbar-x{
-    background-color:#10151d;
+    background-color:#D8D8D8;
     height:11px
 }
 .ps.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail{
-    background-color:#10151d;
+    background-color:#D8D8D8;
     opacity:.9
 }
 .ps.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail>.ps__scrollbar-y{
-    background-color:#10151d;
+    background-color:#D8D8D8;
     width:11px
 }
 .ps>.ps__scrollbar-x-rail{
@@ -86,7 +86,7 @@
     -moz-transition:background-color .2s linear,height .2s linear,width .2s ease-in-out,border-radius .2s ease-in-out,-moz-border-radius .2s ease-in-out;
     transition:background-color .2s linear,height .2s linear,width .2s ease-in-out,border-radius .2s ease-in-out;
     transition:background-color .2s linear,height .2s linear,width .2s ease-in-out,border-radius .2s ease-in-out,-webkit-border-radius .2s ease-in-out,-moz-border-radius .2s ease-in-out;
-    right:2px;
+    right:0;
     width:6px
 }
 .ps>.ps__scrollbar-y-rail:hover>.ps__scrollbar-y,.ps>.ps__scrollbar-y-rail:active>.ps__scrollbar-y{
@@ -96,14 +96,14 @@
     opacity:.9
 }
 .ps:hover.ps--in-scrolling.ps--x>.ps__scrollbar-x-rail>.ps__scrollbar-x{
-    background-color:#773ec6;
+    background-color:#B5B6B7;
     height:11px
 }
 .ps:hover.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail{
     opacity:.9
 }
 .ps:hover.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail>.ps__scrollbar-y{
-    background-color:#773ec6;
+    background-color:#B5B6B7;
     width:11px
 }
 .ps:hover>.ps__scrollbar-x-rail,.ps:hover>.ps__scrollbar-y-rail{
@@ -113,11 +113,11 @@
     opacity:.9
 }
 .ps:hover>.ps__scrollbar-x-rail:hover>.ps__scrollbar-x{
-    background-color:#773ec6
+    background-color:#B5B6B7
 }
 .ps:hover>.ps__scrollbar-y-rail:hover{
     opacity:.9
 }
 .ps:hover>.ps__scrollbar-y-rail:hover>.ps__scrollbar-y{
-    background-color:#773ec6
+    background-color:#B5B6B7
 }

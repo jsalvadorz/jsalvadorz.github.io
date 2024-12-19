@@ -11,19 +11,20 @@
 }
 .hljs-copy-button{
     position:absolute;
-    top:0.5em;
+    top:0.37em;
     right:0.5em;
     width:2rem;
     height:2rem;
     text-indent:-9999px;
-    color:#8B98A9;
-    padding: 0.8rem 0.5rem;
+    color:rgba(139,152,169,0.85);
+    padding:0.8rem 0.5rem;
     border-radius:0.375rem;
     border:none;
-    background-color:#080A0E;
-    border:2px solid #080A0E;
+    background-color:#F8F8F8;
+    border:2px solid #F8F8F8;
     overflow:hidden;
-    transition:none
+    transition:none;
+    box-shadow:none
 }
 .hljs-copy-button:not([data-copied="true"])::before{
     content:"";
@@ -38,15 +39,14 @@
     mask-size:1rem;
     mask-position:center center
 }
-.hljs-copy-button:hover{
-    background-color:#773EC6;
-    color:#D9DFE7;
-    cursor:pointer
-}
+.hljs-copy-button:hover,
 .hljs-copy-button:focus,
 .hljs-copy-button:active{
-    border-color:#773fC7;
-    outline:none !important
+    background-color:#F8F8F8;
+    border-color:#F8F8F8;
+    color:rgba(139,152,169,0.85);
+    outline:none !important;
+    cursor:pointer
 }
 .hljs-copy-button[data-copied="true"]{
     text-indent:0px; /* Shows the inner text */
@@ -75,7 +75,7 @@
 pre:has(.hljs){
     position:relative;
     padding-top:1.75rem;
-    scrollbar-color:#080A0E #10151D
+    scrollbar-color:#B5B6B7 #D8D8D8
 }
 .hljs-language{
     position:absolute;
@@ -83,9 +83,9 @@ pre:has(.hljs){
     top:0;
     width:100%;
     margin:0;
-    padding:0.8em 1em;
+    padding:0.3em 1em;
     font-size:1.25em;
-    color:rgba(139, 152, 169, 0.15);
+    color:rgba(139,152,169,0.75);
     text-transform:uppercase
 }
 
@@ -94,14 +94,15 @@ pre:has(.hljs){
 /***********************/
 pre{
     tab-size:4;
-    background:#10151D;
-    border:1px solid rgba(139, 152, 169, 0.15);
+    background:#EEE;
+    border:1px solid rgba(139,152,169,0.15);
     border-radius:0.375rem;
     margin-bottom:0;
     margin-top:1.75rem
 }
 pre code.hljs{
-    background:#10151D
+    background:#F8F8F8;
+    margin-top:15px
 }
 table.hljs-ln{
     font-size:1rem !important;
@@ -114,7 +115,7 @@ table.hljs-ln,
     border-width:0
 }
 .hljs-ln td{
-    border-bottom:1px solid rgba(139, 152, 169, 0.15)
+    border-bottom:1px solid rgba(139,152,169,.15)
 }
 .hljs-ln tr:last-child td{
     border-bottom:none
@@ -128,7 +129,7 @@ table.hljs-ln,
     user-select:none;
     text-align:center;
     color:#8B98A9;
-    border-right:1px solid #8B98A9 !important;
+    border-right:1px solid rgba(139,152,169,.25) !important;
     vertical-align:top;
     padding-right:15px !important
 }

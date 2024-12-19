@@ -14,18 +14,17 @@
     }
 }
 ::selection{
-    color:#D9DFE7;
-    background:#773EC6
+    background:#FFE2DC
 }
 body,
 p,
 .elementor .elementor-widget-icon-box .elementor-icon-box-content .elementor-icon-box-description{
     font-family:"Poppins", Helvetica, sans-serif;
-    font-size:15px;
+    font-size:1em;
     font-weight:0;
     font-style:normal;
-    line-height:1.75em;
-    color:#8B98A9
+    line-height:2em;
+    color:#5E6976
 }
 .form-control,
 .form-control:focus,
@@ -37,34 +36,34 @@ h1, h2, h3, h4, h5, h6{
     font-family:"Poppins", Helvetica, sans-serif;
     font-weight:600;
     font-style:normal;
-    color:#D9DFE7
+    color:#1E2939
 }
 .logo-text, .logo-symbol{
     font-family:"Poppins", Helvetica, sans-serif
 }
 h1{
-    font-size: 32px;
-    color:#D9DFE7
+    font-size:3em;
+    color:#1E2939
 }
 h2{
-    font-size: 24px;
-    color:#D9DFE7
+    font-size:2.3em;
+    color:#1E2939
 }
 h3{
-    font-size: 18px;
-    color:#D9DFE7
+    font-size:1.5em;
+    color:#1E2939
 }
 h4{
-    font-size: 16px;
-    color:#D9DFE7
+    font-size:1.1em;
+    color:#1E2939
 }
 h5{
-    font-size: 14px;
-    color:#D9DFE7
+    font-size:.9em;
+    color:#1E2939
 }
 h6{
-    font-size: 12px;
-    color:#D9DFE7
+    font-size:.8em;
+    color:#1E2939
 }
 h3.slogan-text{
     font-weight:400;
@@ -107,13 +106,13 @@ input[type="text"],
     margin-left:10px
 }
 html{
-    background:-webkit-gradient(linear, left top, left bottom, from(#2F2643, to(#1B2431)));
-    background:linear-gradient(#2F2643, #1B2431)
+    background:-webkit-gradient(linear, left top, left bottom, from(#F7CE68, to(#FBAB7E)));
+    background:linear-gradient(#F7CE68, #FBAB7E)
 }
 body{
     background-color:transparent
 }
-.lm-animated-bg{
+/* .lm-animated-bg{
     position:absolute;
     width:auto;
     height:auto;
@@ -126,17 +125,13 @@ body{
     background-size:cover;
     background-repeat:no-repeat;
     z-index:-1
-}
+} */
 .animated-section > .section-content,
 .single-page-content,
 .single-page-content > .content-wrapper,
 .page-portfolio-loaded,
 .single-post .site-content .post-content{
-    background-color:#080A0E;
-    background-image:url(../images/bg-main.png);
-    background-position:center center;
-    background-size:cover;
-    background-repeat:no-repeat
+    background-color:#FFF
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -173,53 +168,58 @@ input[type="submit"]:focus,
 .ps:hover>.ps__scrollbar-y-rail:hover>.ps__scrollbar-y,
 .elementor .knowledges li,
 .elementor .timeline .divider:before{
-    background-color:#773fC7
+    background-color:#FF401B
+}
+.ps:hover>.ps__scrollbar-y-rail:hover>.ps__scrollbar-y{
+    background-color:#B5B6B7
 }
 table.post-table{
     border-width:1px;
     border-collapse:collapse;
-    border:1px solid rgba(139, 152, 169, 0.15);
+    border:1px solid rgba(139,152,169,.15);
     width:80%;
     margin:1.75rem auto
 }
 table.post-table caption{
-    background-color:#080A0E;
+    background-color:#EEE;
     font-weight:600;
-    color:#D9DFE7;
-    border-top:1px solid rgba(139, 152, 169, 0.15);
-    border-left:1px solid rgba(139, 152, 169, 0.15);
-    border-right:1px solid rgba(139, 152, 169, 0.15);
+    color:#5E6976;
+    border-top:1px solid rgba(139,152,169,.15);
+    border-bottom:1px solid rgba(139,152,169,.15);
+    border-left:1px solid rgba(139,152,169,.15);
+    border-right:1px solid rgba(139,152,169,.15);
     text-align:center;
     caption-side:top;
-    border-radius:0.375rem 0.375rem 0 0;
+    border-radius:0.375rem 0.375rem 0 0
 }
 table.post-table tr, th, td{
     border:none
 }
 table.post-table tbody th{
-    background-color:#10151D;
-    border-right:1px solid rgba(139, 152, 169, 0.15);
+    background-color:#F2F2F3;
+    border-right:1px solid rgba(139,152,169,.15);
+    border-left:1px solid rgba(139,152,169,.25)
 }
 table.post-table tbody tr{
-    background-color:#161E29
+    background-color:#F8F8F8
 }
 @media only screen and (min-width:1025px){
     ul.main-menu .link-text{
-        background-color:#773EC6
+        background-color:#222831
     }
 }
 @media only screen and (max-width:1024px){
     .menu-toggle{
-        background-color:#773EC6
+        background-color:#222831
     }
 }
 .blog-sidebar .sidebar-item{
     background-color:green
 }
 .block-title:after, h3.comment-reply-title:after{
-    background-image:-webkit-repeating-radial-gradient(center center, #A87FFB, #A87FFB 1px, transparent 0px, transparent 100%);
-    background-image:-moz-repeating-radial-gradient(center center, #A87FFB, #A87FFB 1px, transparent 0px, transparent 100%);
-    background-image:-ms-repeating-radial-gradient(center center, #A87FFB, #A87FFB 1px, transparent 0px, transparent 100%)
+    background-image:-webkit-repeating-radial-gradient(center center, #FF5722, #FF5722 1px, transparent 0px, transparent 100%);
+    background-image:-moz-repeating-radial-gradient(center center, #FF5722, #FF5722 1px, transparent 0px, transparent 100%);
+    background-image:-ms-repeating-radial-gradient(center center, #FF5722, #FF5722 1px, transparent 0px, transparent 100%)
 }
 a,
 .form-group-with-icon.form-group-focus i,
@@ -259,11 +259,11 @@ ul.main-menu .current-menu-item a,
 }
 a,
 .entry-meta:not(.entry-tags-share) a:hover{
-    color:#D9DFE7
+    color:#1E2939
 }
 a:hover,
 .post-navigation .meta-nav:hover{
-    color:#A87FFB
+    color:#FF401B
 }
 #article-post .entry-content a::after{
     font-family:"FontAwesome";
@@ -272,19 +272,18 @@ a:hover,
     margin-left:8px
 }
 .inline-code{
-    background-color:#BEB0D3;
+    background-color:#EEE;
     padding:2px 6px;
     border-radius:0.375rem;
-    color:#773EC6
+    color:#1E2939
 }
 .important-note{
-    background-color:#161E29;
-    color:#D9DFE7;
+    background-color:#EEE;
+    color:#1E2939;
     padding:5px 15px;
     margin:20px auto;
     border-radius:0.375rem;
-    border:1px solid rgba(139, 152, 169, 0.15);
-    text-shadow:0 0 15px rgba(119, 62, 198, 1);
+    border:1px solid rgba(139,152,169,.15)
 }
 .deepnote-container{
     margin:20px auto
@@ -319,17 +318,20 @@ a:hover,
 .elementor .fun-fact i,
 .elementor .portfolio-grid figure i,
 .elementor .lm-info-block i{
-    color:#D9DFE7
+    color:#1E2939
+}
+.elementor .portfolio-grid figure i{
+    color:#EEE
 }
 .block-title h2 span,
 .elementor .block-title h2 span{
-    color:#A87FFB
+    color:#FF5722
 }
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background),
 .wp-block-button.is-style-outline .wp-block-button__link:active,
 .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .wp-block-button.is-style-outline .wp-block-button__link:hover{
-    background-color:#773EC6
+    background-color:#FF401B
 }
 .fslightbox-cv-iframe-styles{ /*lightbox for cv*/
     width:100vw !important;
@@ -347,20 +349,22 @@ a:hover,
     text-align:center
 }
 .post-button button.btn-primary{
-    background-color:#773EC6;
-    border-color:#773EC6;
-    color:#D9DFE7;
-    margin:0 auto
+    background-color:#FF401B;
+    border-color:#FF401B;
+    color:#FFF;
+    margin:0 auto;
+    -webkit-box-shadow:0 10px 10px -8px rgb(204,197,191);
+    -moz-box-shadow:0 10px 10px -8px rgb(204,197,191);
+    box-shadow:0 10px 10px -8px rgb(204,197,191)
 }
 .post-button button.btn-primary:hover{
-    background-color:#FFF;
-    border-color:#FFF;
-    color:#080A0E
+    background-color:#FF5722;
+    border-color:#FF5722
 }
 .post-button button.btn-primary:focus,
 .post-button button.btn-primary:active{
-    background-color:#773EC6 !important;
-    border-color:#773EC6 !important;
+    background-color:#FF401B !important;
+    border-color:#FF401B !important;
     color:#D9DFE7;
     outline:none;
     box-shadow:none !important
@@ -375,7 +379,7 @@ a:hover,
     ul.main-menu a.active,
     ul.main-menu a:focus,
     ul.main-menu a:hover{
-        color:#773EC6
+        color:#EEE
     }
 }
 @media only screen and (max-width:1024px){
@@ -420,12 +424,12 @@ input[type="submit"]:focus,
 .form-control ~ .form-control-border,
 .elementor .form-control ~ .form-control-border,
 .elementor .timeline .divider:after{
-    border-color:#773fC7
+    border-color:#FF401B
 }
 .btn-primary:focus,
 .btn-primary:active{
-    background-color:#773fC7 !important;
-    border-color:#773fC7 !important;
+    background-color:#FF401B !important;
+    border-color:#FF401B !important;
     box-shadow:none !important;
     outline:none
 }
@@ -437,18 +441,34 @@ input[type="submit"]:focus,
     box-shadow:none !important;
     outline:none
 }
+.home-buttons a.btn-primary{
+    background-color:#FF401B;
+    border-color:#FF401B;
+    color:#FFF;
+    -webkit-box-shadow:0 10px 10px -8px rgb(204,197,191);
+    -moz-box-shadow:0 10px 10px -8px rgb(204,197,191);
+    box-shadow:0 10px 10px -8px rgb(204,197,191)
+}
+.home-buttons a.btn-primary:hover{
+    background-color:#FF5722;
+    border-color:#FF5722
+}
+.elementor .clients.owl-carousel .owl-nav .owl-prev:hover,
+.elementor .clients.owl-carousel .owl-nav .owl-next:hover,
 .elementor .clients.owl-carousel .owl-nav button.owl-prev:focus,
 .elementor .clients.owl-carousel .owl-nav button.owl-prev:active,
 .elementor .clients.owl-carousel .owl-nav button.owl-next:focus,
 .elementor .clients.owl-carousel .owl-nav button.owl-next:active{
-    border-color:#773fC7;
+    background-color:#EEE;
+    border-color:#EEE;
+    color:#1E2939;
     outline:none !important
 }
 @media only screen and (max-width:1024px){
     .themeblock-arrows-nav{
-        background-color:#773EC6;
-        border-color:#773EC6;
-        opacity:0.8
+        background-color:#222831;
+        border-color:#222831;
+        opacity:1
     }
     .themeblock-arrows-nav div,
     .themeblock-arrows-nav div:hover{
@@ -456,13 +476,13 @@ input[type="submit"]:focus,
     }
 }
 .page-title:after{
-    background-image:-webkit-repeating-radial-gradient(center center, #A87FFB, #A87FFB 1px, transparent 0px, transparent 100%);
-    background-image:-moz-repeating-radial-gradient(center center, #A87FFB, #A87FFB 1px, transparent 0px, transparent 100%);
-    background-image:-ms-repeating-radial-gradient(center center, #A87FFB, #A87FFB 1px, transparent 0px, transparent 100%)
+    background-image:-webkit-repeating-radial-gradient(center center, #FF5722, #FF5722 1px, transparent 0px, transparent 100%);
+    background-image:-moz-repeating-radial-gradient(center center, #FF5722, #FF5722 1px, transparent 0px, transparent 100%);
+    background-image:-ms-repeating-radial-gradient(center center, #FF5722, #FF5722 1px, transparent 0px, transparent 100%)
 }
 .page-title h1{
-    color:#eeeeee;
-    font-size:32px;
+    color:#1E2939;
+    font-size:2.15em;
     font-family:Poppins, Helvetica, sans-serif;
     font-weight:600;
     font-style:normal;
@@ -479,6 +499,6 @@ input[type="submit"]:focus,
     }
 }
 .page-content{
-    background:-webkit-gradient(linear, left top, left bottom, from(#1B2431), to(#0C0913));
-    background:linear-gradient(#1B2431, #0C0913)
+    background:-webkit-gradient(linear, left top, left bottom, from(#222831), to(#080A0E));
+    background:linear-gradient(#222831, #080A0E)
 }

@@ -2,19 +2,19 @@
     background-color:#222
 }
 .lm-info-block{
-    background-color:#161E29;
-    border-color:#161E29
+    background-color:#F8F8F8;
+    border-color:#F8F8F8
 }
 .portfolio-filters li.active a,
 .portfolio-filters li.active a:hover,
 .portfolio-filters li a,
 .portfolio-filters li a:hover,
 .portfolio-filters li a:not([href]){
-    color:#8B98A9
+    color:#5E6976
 }
 .portfolio-grid figure .name,
 .portfolio-grid figure .category{
-    color:#D9DFE7
+    color:#1E2939
 }
 .portfolio-grid figure i{
     background-color:#222
@@ -79,7 +79,7 @@ ul.social-links li a:hover{
     border-color:#222
 }
 .skills-first-style .skill-container{
-    border-color:rgba(139, 152, 169, 0.15)
+    border-color:rgba(139,152,169,.15)
 }
 .timeline{
     border-color:#282828
@@ -89,10 +89,10 @@ ul.social-links li a:hover{
     background-color:#333
 }
 .timeline-item h5.item-period{
-    color:#D9DFE7;
+    color:#1E2939
 }
 .timeline-item .item-company{
-    color:#a7b7cc
+    color:#5E6976
 }
 .portfolio-page-nav>div.nav-item a{
     color:#aaa;
@@ -125,7 +125,7 @@ ul.social-links li a:hover{
     color:#aaa
 }
 .fun-fact-container{
-    background:#161E29;
+    background:#F8F8F8;
     border-radius:0.375rem;
     padding:25px 10px 15px
 }
@@ -133,47 +133,61 @@ ul.social-links li a:hover{
 .testimonials.owl-carousel .owl-nav .owl-next,
 .clients.owl-carousel .owl-nav .owl-prev,
 .clients.owl-carousel .owl-nav .owl-next{
-    background-color:#161E29;
-    border:1px solid #161E29;
-    color:#8B98A9
+    background-color:#E6E6E6;
+    border:1px solid #E6E6E6;
+    color:#1E2939;
+    box-shadow:none
 }
 .testimonial{
     border:2px solid #444
 }
 .timeline .divider{
-    background-color:#636c79
+    background-color:#FFE2DC
 }
 .timeline .divider:after{
-    background-color:#222
+    background-color:#FF401B
 }
 .skills-first-style .skill-value{
-    color:#aaa
+    color:#5E6976
 }
 .elementor .portfolio-grid figure .category,
 .portfolio-grid figure .category{
-    background-color:#161E29;
+    background-color:#222831;
     border-radius:.3rem;
     padding:.3rem .5rem;
-    color:#D9DFE7
+    color:#EEE
 }
 .elementor .portfolio-grid figure i,
 .portfolio-grid figure i{
-    background-color:#161E29;
+    background-color:#222831;
     border-radius:.3rem
 }
 .certificate-item{
-    border-color:#161E29
+    border-color:#222831;
+    line-height:1.75em;
+    -webkit-box-shadow:0 10px 10px -8px rgb(204,197,191);
+    -moz-box-shadow:0 10px 10px -8px rgb(204,197,191);
+    box-shadow:0 10px 10px -8px rgb(204,197,191)
 }
 .certi-logo{
-    background-color:#161E29
+    background-color:#F8F8F8
 }
 .certi-id,
 .certi-date,
 .certi-index{
-    color:#8B98A9
+    color:#5E6976
 }
 .certi-type{
-    color:#D9DFE7
+    color:#1E2939
+}
+.home-portfolio-title{
+    font-size:.8em;
+    text-align:center;
+    color:#5E6976;
+    padding:8px 0
+}
+.home-portfolio-img{
+    border-radius:8px 8px 0 0 !important
 }
 .fw-pricing .fw-package{
     border-color:#444;
@@ -204,14 +218,14 @@ ul.social-links li a:hover{
 }
 .home-photo,
 .home-bgvideo{
-    background-color:#5B676A;
-    border:18px solid #5B676A;
-    -webkit-box-shadow:0 0 25px 0 rgba(0,0,0,.8);
-    -moz-box-shadow:0 0 25px 0 rgba(0,0,0,.8);
-    box-shadow:0 0 25px 0 rgba(0,0,0,.8)
+    background-color:#f1ebe7;
+    border:1px solid #f1ebe7;
+    -webkit-box-shadow:0 0 25px 0 rgb(204,197,191);
+    -moz-box-shadow:0 0 25px 0 rgb(204,197,191);
+    box-shadow:0 0 25px 0 rgb(204,197,191)
 }
 .hp-dots{
-    background-image:-webkit-repeating-radial-gradient(center center,#8B98A9,#8B98A9 1px,transparent 0px,transparent 100%);
-    background-image:-moz-repeating-radial-gradient(center center,#8B98A9,#8B98A9 1px,transparent 0px,transparent 100%);
-    background-image:-ms-repeating-radial-gradient(center center,#8B98A9,#8B98A9 1px,transparent 0px,transparent 100%)
+    background-image:-webkit-repeating-radial-gradient(center center,#B1B1B1,#B1B1B1 1px,transparent 0px,transparent 100%);
+    background-image:-moz-repeating-radial-gradient(center center,#B1B1B1,#B1B1B1 1px,transparent 0px,transparent 100%);
+    background-image:-ms-repeating-radial-gradient(center center,#B1B1B1,#B1B1B1 1px,transparent 0px,transparent 100%)
 }

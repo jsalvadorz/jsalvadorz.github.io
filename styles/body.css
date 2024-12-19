@@ -40,7 +40,7 @@
     margin-bottom:30px
 }
 .skills-info.skills-first-style h4{
-    font-size:13px;
+    font-size:.85em;
     line-height:1.1em;
     position:relative;
     float:left;
@@ -99,7 +99,7 @@
     margin:8px 0
 }
 .info-block-w-icon .ci-text p{
-    font-size:.95em
+    font-size:1em
 }
 .info-list ul{
     list-style:none;
@@ -246,15 +246,15 @@
     margin:0 0 15px;
     padding:2px;
     border-radius:.375rem;
-    -webkit-box-shadow:none;
-    -moz-box-shadow:none;
-    box-shadow:none;
+    -webkit-box-shadow:0 10px 10px -8px rgb(204,197,191);
+    -moz-box-shadow:0 10px 10px -8px rgb(204,197,191);
+    box-shadow:0 10px 10px -8px rgb(204,197,191);
     overflow:hidden;
-    background-image:-webkit-linear-gradient(to top, #161E29, #773EC6);
-    background-image:-moz-linear-gradient(to top, #161E29, #773EC6);
-    background-image:-o-linear-gradient(to top, #161E29, #773EC6);
-    background-image:-ms-linear-gradient(to top, #161E29, #773EC6);
-    background-image:linear-gradient(to top, #161E29, #773EC6);
+    background-image:-webkit-linear-gradient(to top, #F8F8F8, #F2F2F3);
+    background-image:-moz-linear-gradient(to top, #F8F8F8, #F2F2F3);
+    background-image:-o-linear-gradient(to top, #F8F8F8, #F2F2F3);
+    background-image:-ms-linear-gradient(to top, #F8F8F8, #F2F2F3);
+    background-image:linear-gradient(to top, #F8F8F8, #F2F2F3);
     -webkit-transition:all .2s ease-in-out;
     -moz-transition:all .2s ease-in-out;
     -o-transition:all .2s ease-in-out;
@@ -266,16 +266,16 @@
     -ms-transform:translateY(-5px);
     -o-transform:translateY(-5px);
     transform:translateY(-5px);
-    -webkit-box-shadow:0 12px 17px rgba(0,0,0,.12);
-    -moz-box-shadow:0 12px 17px rgba(0,0,0,.12);
-    -o-box-shadow:0 12px 17px rgba(0,0,0,.12);
-    box-shadow:0 12px 17px rgba(0,0,0,.12)
+    -webkit-box-shadow:0 12px 17px rgba(204,197,191,.42);
+    -moz-box-shadow:0 12px 17px rgba(204,197,191,.42);
+    -o-box-shadow:0 12px 17px rgba(204,197,191,.42);
+    box-shadow:0 12px 17px rgba(204,197,191,.42)
 }
 .fun-fact.gray-bg{
     background-color:#fcfcfc
 }
 .fun-fact h4{
-    font-size:16px;
+    font-size:1.1em;
     margin:15px
 }
 .fun-fact i{
@@ -294,7 +294,7 @@
     color:#04b4e0
 }
 .fun-fact-block-value{
-    color:#8B98A9;
+    color:#5E6976;
     font-size:36px;
     line-height:50px;
     display:block;
@@ -330,7 +330,7 @@
 }
 .timeline .right-part p,
 .timeline .right-part p>*{
-    font-size:.92em
+    font-size:.95em
 }
 .timeline .divider{
     position:absolute;
@@ -373,7 +373,7 @@
 }
 .timeline .item-period{
     margin:3px 0;
-    font-size:14px;
+    font-size:.9em;
     line-height:1.4em;
     padding-top:3px
 }
@@ -403,11 +403,11 @@
     padding:2px;
     border-radius:8px;
     margin-bottom:20px;
-    background-image:-webkit-linear-gradient(to top, #161E29, #773EC6);
-    background-image:-moz-linear-gradient(to top, #161E29, #773EC6);
-    background-image:-o-linear-gradient(to top, #161E29, #773EC6);
-    background-image:-ms-linear-gradient(to top, #161E29, #773EC6);
-    background-image:linear-gradient(to top, #161E29, #773EC6);
+    background-image:-webkit-linear-gradient(to top, #F8F8F8, #F2F2F3);
+    background-image:-moz-linear-gradient(to top, #F8F8F8, #F2F2F3);
+    background-image:-o-linear-gradient(to top, #F8F8F8, #F2F2F3);
+    background-image:-ms-linear-gradient(to top, #F8F8F8, #F2F2F3);
+    background-image:linear-gradient(to top, #F8F8F8, #F2F2F3);
     -webkit-transition:all 2s ease-in-out;
     -moz-transition:all .2s ease-in-out;
     -o-transition:all .2s ease-in-out;
@@ -419,10 +419,10 @@ a>.certificate-item:hover{
     -ms-transform:translateY(-5px);
     -o-transform:translateY(-5px);
     transform:translateY(-5px);
-    -webkit-box-shadow:0 12px 17px rgba(0,0,0,.12);
-    -moz-box-shadow:0 12px 17px rgba(0,0,0,.12);
-    -o-box-shadow:0 12px 17px rgba(0,0,0,.12);
-    box-shadow:0 12px 17px rgba(0,0,0,.12)
+    -webkit-box-shadow:0 12px 17px rgba(204,197,191,.42);
+    -moz-box-shadow:0 12px 17px rgba(204,197,191,.42);
+    -o-box-shadow:0 12px 17px rgba(204,197,191,.42);
+    box-shadow:0 12px 17px rgba(204,197,191,.42)
 }
 .certi-logo{
     display:table-cell;
@@ -439,7 +439,7 @@ a>.certificate-item:hover{
     max-width:100%
 }
 .certi-content{
-    background:#080A0E;
+    background:#F2F2F3;
     display:table-cell;
     width:100%;
     padding:20px 25px;
@@ -448,7 +448,7 @@ a>.certificate-item:hover{
     border-bottom-right-radius:6px
 }
 .certi-title h4{
-    font-size:16px;
+    font-size:1em;
     margin:0 0 5px
 }
 .certi-type{
@@ -583,7 +583,7 @@ a>.certificate-item:hover{
     z-index:1
 }
 .lm-info-block h4{
-    font-size:15px;
+    font-size:1em;
     margin:8px 0 0
 }
 .lm-info-block .lm-info-block-value{
@@ -667,7 +667,7 @@ a>.certificate-item:hover{
 .home-content{
     position:relative;
     width:100%;
-    margin:7% 0
+    margin:4% 0
 }
 .home-text{
     text-align:left;
@@ -679,14 +679,17 @@ a>.certificate-item:hover{
     padding-right:25px
 }
 .home-text h1{
-    font-size:48px;
+    font-size:3em;
     line-height:56px;
     margin-top:0;
     margin-bottom:20px
 }
+.home-text h3{
+    font-size:1.15em;
+}
 .home-text h4{
-    font-size:16px;
-    color:#D9DFE7;
+    font-size:1.1em;
+    color:#1E2939;
     font-weight:300;
     margin-bottom:10px
 }
@@ -694,14 +697,10 @@ a>.certificate-item:hover{
     display:block;
     position:relative;
     width:100%;
-    padding-bottom:calc(100% - 36px);
+    padding-bottom:calc(100% - 2px);
     background-color:#fff;
     border-radius:1000px;
-    border:18px solid #fff;
-    overflow:hidden;
-    -webkit-box-shadow:0 0 25px 0 rgba(0,0,0,.1);
-    -moz-box-shadow:0 0 25px 0 rgba(0,0,0,.1);
-    box-shadow:0 0 25px 0 rgba(0,0,0,.1)
+    overflow:hidden
 }
 .home-photo .hp-inner{
     background-position:center;
@@ -750,7 +749,7 @@ a>.certificate-item:hover{
 @media only screen and (max-width:767px){
     .home-photo{
         width:60%;
-        padding-bottom:calc(60% - 36px);
+        padding-bottom:calc(60% - 2px);
         margin:30px auto
     }
     .home-text{
@@ -771,13 +770,13 @@ a>.certificate-item:hover{
 @media only screen and (max-width:648px){
     .home-photo,.home-photo.hp-left{
         width:70%;
-        padding-bottom:calc(70% - 36px)
+        padding-bottom:calc(70% - 2px)
     }
 }
 @media only screen and (max-width:500px){
     .home-photo,.home-photo.hp-left{
         width:90%;
-        padding-bottom:calc(90% - 36px)
+        padding-bottom:calc(90% - 2px)
     }
     .home-text h1{
         font-size:36px;

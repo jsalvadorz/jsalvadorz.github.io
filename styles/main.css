@@ -27,7 +27,7 @@ body{
     background-position:center;
     background-position:50% 50%;
     background-size:cover;
-    scrollbar-color:#10151D #080A0E
+    scrollbar-color:#B5B6B7 #D8D8D8
 }
 .page-scroll{
     width:100%;
@@ -396,18 +396,6 @@ figure{
     display:none;
     visibility:hidden
 }
-/* pre{
-    display:block;
-    padding:9.5px;
-    margin:0 0 10px;
-    line-height:1.42857143;
-    color:#333;
-    word-break:break-all;
-    word-wrap:break-word;
-    background-color:#f5f5f5;
-    border:1px solid #ccc;
-    border-radius:4px
-} */
 .btn-primary,
 .btn-secondary,
 button,input[type=button],
@@ -459,18 +447,18 @@ input[type=submit]:focus{
 }
 .btn-secondary,
 .elementor .btn-secondary{
-    border-color:#8B98A9;
+    border-color:#B6BEC5;
     background-color:#fff;
     box-shadow:0 10px 10px -8px #d5d5d5;
-    color:#666
+    color:#1E2939
 }
 .btn-secondary:hover,
 .btn-secondary:focus,
 .elementor .btn-secondary:hover,
 .elementor .btn-secondary:focus{
-    color:#333;
-    border-color:#d5d5d5;
-    background-color:#d5d5d5
+    color:#1E2939;
+    border-color:#EEE;
+    background-color:#EEE
 }
 .mfp-container button{
     box-shadow:none
@@ -916,19 +904,19 @@ pre.wp-block-verse{
     border-radius:20px
 }
 .ps>.ps__scrollbar-y-rail>.ps__scrollbar-y{
-    background-color:#b5b6b7
+    background-color:#B5B6B7
 }
 .ps:hover>.ps__scrollbar-y-rail:hover>.ps__scrollbar-y{
     background-color:#0ba376
 }
 .ps>.ps__scrollbar-y-rail{
-    width:12px
+    width:10px
 }
 .ps>.ps__scrollbar-y-rail:hover>.ps__scrollbar-y,
 .ps>.ps__scrollbar-y-rail:active>.ps__scrollbar-y,
 .ps:hover.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail>.ps__scrollbar-y,
 .ps.ps--in-scrolling.ps--y>.ps__scrollbar-y-rail>.ps__scrollbar-y{
-    width:8px
+    width:10px
 }
 .page-wrapper{
     display:block;
@@ -1049,8 +1037,6 @@ pre.wp-block-verse{
 }
 .header-photo img{
     max-width:100%;
-    background-color:#5B676A;
-    border:8px solid #5B676A;
     border-radius:300px
 }
 .header-photo:after{
@@ -1062,25 +1048,25 @@ pre.wp-block-verse{
     content:'';
     height:calc(100% + 0px);
     width:calc(100% + 0px);
-    background-image:-webkit-repeating-radial-gradient(center center,#8B98A9,#8B98A9 1px,transparent 0px,transparent 100%);
-    background-image:-moz-repeating-radial-gradient(center center,#8B98A9,#8B98A9 1px,transparent 0px,transparent 100%);
-    background-image:-ms-repeating-radial-gradient(center center,#8B98A9,#8B98A9 1px,transparent 0px,transparent 100%);
+    background-image:-webkit-repeating-radial-gradient(center center,#B1B1B1,#B1B1B1 1px,transparent 0px,transparent 100%);
+    background-image:-moz-repeating-radial-gradient(center center,#B1B1B1,#B1B1B1 1px,transparent 0px,transparent 100%);
+    background-image:-ms-repeating-radial-gradient(center center,#B1B1B1,#B1B1B1 1px,transparent 0px,transparent 100%);
     -webkit-background-size:6px 6px;
     -moz-background-size:6px 6px;
     background-size:6px 6px;
     z-index:-1
 }
 .header-titles h2{
-    font-size:36px;
+    font-size:2.3em;
     font-weight:600;
-    color:#D9DFE7;
+    color:#EEE;
     margin:5px 0 7px;
     line-height:1.2em
 }
 .header-titles h4{
-    font-size:18px;
+    font-size:1.1em;
     font-weight:300;
-    color:#D9DFE7;
+    color:#EEE;
     margin:5px 0;
     line-height:1.2em
 }
@@ -1127,12 +1113,13 @@ pre.wp-block-verse{
         width:auto;
         visibility:hidden;
         opacity:0;
-        color:#D9DFE7;
+        color:#EEE;
+        font-size:1.2em;
         padding:2px 10px;
         background-color:#0ba376;
         white-space:nowrap;
         right:0;
-        top:-50%;
+        top:-60%;
         margin-top:50%;
         -webkit-transition:all .3s ease-in-out;
         -moz-transition:all .3s ease-in-out;
@@ -1165,7 +1152,7 @@ pre.wp-block-verse{
     display:inline-block
 }
 .social-links ul li a{
-    background-color:#161E29;
+    background-color:#080A0E;
     color:#808C9C;
     border-radius:.5rem;
     font-size:30px;
@@ -1181,14 +1168,15 @@ pre.wp-block-verse{
     margin-top:50px
 }
 .header-buttons a.btn-primary{
-    background-color:#773EC6;
-    border-color:#773EC6;
-    color:#D9DFE7
+    background-color:#FF401B;
+    border-color:#FF401B;
+    color:#FFF;
+    box-shadow: 0 10px 10px -8px rgba(255,64,27,.72)
 }
 .header-buttons a.btn-primary:hover{
-    background-color:#fff;
-    color:#080A0E;
-    border-color:#fff
+    background-color:#FF5722;
+    color:#FFF;
+    border-color:#FF5722
 }
 .header-buttons a.btn-primary:focus,
 .header-buttons a.btn-primary:active{
@@ -1199,7 +1187,7 @@ pre.wp-block-verse{
     box-shadow:none !important
 }
 .header .copyrights{
-    color:#8B98A9;
+    color:#EEE;
     width:380px;
     position:absolute;
     bottom:0;
@@ -1454,7 +1442,7 @@ pre.wp-block-verse{
 .block-title h2,
 h3.comment-reply-title{
     position:relative;
-    font-size:21px;
+    font-size:1.5em;
     margin:0 0 2px;
     z-index:1
 }
@@ -1772,7 +1760,7 @@ ul.social-links li:last-child a{
     display:block;
     padding:15px 0;
     margin:0;
-    font-size:16px;
+    font-size:1.1em;
     position:relative
 }
 .portfolio-grid.five-columns .item .name{
@@ -2436,7 +2424,7 @@ blockquote.fw-quote-right{
     margin:40px 0 10px
 }
 .entry-meta{
-    color:#8B98A9;
+    color:#5E6976;
     margin:20px 0 30px
 }
 .entry-meta a{
@@ -2480,19 +2468,13 @@ blockquote.fw-quote-right{
     width:100%;
     padding:2px;
     margin:10px 0 0;
-    border-radius:0.375rem;
-    /* background-image:-webkit-linear-gradient(to top, #10151D, #773EC6);
-    background-image:-moz-linear-gradient(to top, #10151D, #773EC6);
-    background-image:-o-linear-gradient(to top, #10151D, #773EC6);
-    background-image:-ms-linear-gradient(to top, #10151D, #773EC6);
-    background-image:linear-gradient(to top, #10151D, #773EC6) */
+    border-radius:0.375rem
 }
 .site-content .entry-meta.entry-meta-bottom:empty{
     display:none
 }
 .site-content .author-container{
-    /* background-color:#10151D; */
-    color:#8B98A9;
+    color:#5E6976;
     border-radius:0.375rem;
     padding:.4rem 0.7rem
 }
@@ -2501,7 +2483,7 @@ blockquote.fw-quote-right{
     margin:5px 0
 }
 .entry-meta.entry-meta-bottom .share-buttons a:hover{
-    color:#D9DFE7
+    color:#1E2939
 }
 .entry-meta.entry-meta-bottom .post-info span{
     display:inline-block;
@@ -2859,7 +2841,7 @@ a.post-thumbnail:hover{
     z-index:1
 }
 .entry-title{
-    font-size:32px;
+    font-size:2em;
     line-height:1.3;
     margin:15px 0 20px
 }
@@ -3005,7 +2987,7 @@ a.post-thumbnail:hover{
 }
 .entry-content table,
 .comment-content table{
-    font-size:14px;
+    font-size:1em;
     line-height:1.2857142857
 }
 .entry-content th,
@@ -3807,7 +3789,7 @@ a.post-thumbnail:hover{
         line-height:46px;
         text-align:center;
         background-color:#0ba376;
-        right:10px;
+        right:20px;
         font-size:19px;
         top:10px;
         border-radius:30px;
@@ -3884,7 +3866,7 @@ a.post-thumbnail:hover{
     .themeblock-arrows-nav{
         background-color:rgba(255,255,255,.6);
         width:48px;
-        right:10px;
+        right:20px;
         bottom:10px;
         padding:5px 0;
         border:2px solid #0ba376

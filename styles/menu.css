@@ -1,6 +1,6 @@
 @media only screen and (min-width:1025px){
     ul.main-menu{
-        background-color:#080A0E;
+        background-color:#222831;
         -webkit-box-shadow:0 0 30px -5px rgba(0,0,0,.15);
         -moz-box-shadow:0 0 30px -5px rgba(0,0,0,.15);
         box-shadow:0 0 30px -5px rgba(0,0,0,.15)
@@ -10,7 +10,7 @@
     }
 }
 .themeblock-arrows-nav{
-    background-color:#080A0E;
+    background-color:#222831;
     -webkit-box-shadow:0 0 30px -5px rgba(0,0,0,.15);
     -moz-box-shadow:0 0 30px -5px rgba(0,0,0,.15);
     box-shadow:0 0 30px -5px rgba(0,0,0,.15)
@@ -19,7 +19,7 @@
     color:#8B98A9
 }
 .themeblock-arrows-nav div:hover{
-    color:#773EC6 !important
+    color:#EEE !important
 }
 .btn-primary,
 .btn-secondary,
@@ -30,11 +30,15 @@ input[type=submit],
 .elementor .btn-primary,
 .elementor .btn-secondary{
     background-color:transparent;
-    color:#8B98A9
+    color:#1E2939
 }
 .btn-secondary,
 .elementor .btn-secondary{
-    box-shadow:0 10px 10px -8px rgba(0,0,0,.3)
+    background-color:#E6E6E6;
+    border-color:#E6E6E6;
+    -webkit-box-shadow:0 10px 10px -8px rgb(204,197,191);
+    -moz-box-shadow:0 10px 10px -8px rgb(204,197,191);
+    box-shadow:0 10px 10px -8px rgb(204,197,191)
 }
 .preloader,
 .preloader-portfolio{
@@ -84,8 +88,7 @@ input[type=button],
 input[type=submit],
 .wp-block-button .wp-block-button__link{
     color:#8B98A9;
-    background-color:#333;
-    box-shadow:0 10px 10px -8px rgba(0,0,0,.78)
+    background-color:#333
 }
 .btn-primary,
 .elementor .btn-primary{
@@ -140,8 +143,8 @@ input[type=text]{
     color:#444
 }
 .entry-meta .share-buttons a{
-    background-color:#161E29;
-    color:#808C9C;
+    background-color:#E6E6E6;
+    color:#808C9C
 }
 .tags a,
 .tags li a,
@@ -228,12 +231,12 @@ input[type=text]{
     .mobile-site-title a,
     .mobile-site-title a:hover,
     .mobile-site-title a:focus{
-        color:#f5f5f5
+        color:#1E2939
     }
     .mobile-site-title a,
     .mobile-site-title a:hover,
     .mobile-site-title a:focus{
-        background-color:rgba(119, 62, 198, 0.6)
+        background-color:rgba(238,238,238,.8)
     }
 }
 @media only screen and (min-width:1024px){
