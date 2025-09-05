@@ -1,0 +1,138 @@
+/*************************/
+/*  CSS for Copy Plugin  */
+/*************************/
+.hljs-copy-wrapper{
+    position:relative;
+    overflow:hidden
+}
+.hljs-copy-wrapper:hover .hljs-copy-button,
+.hljs-copy-button:focus{
+    transform:translateX(0)
+}
+.hljs-copy-button{
+    position:absolute;
+    top:0.37em;
+    right:0.5em;
+    width:2rem;
+    height:2rem;
+    text-indent:-9999px;
+    color:rgba(139,152,169,0.85);
+    padding:0.8rem 0.5rem;
+    border-radius:0.375rem;
+    border:none;
+    background-color:rgba(44, 57, 67, 0.8);
+    border:2px solid rgba(44, 57, 67, 0.8);
+    overflow:hidden;
+    transition:none;
+    box-shadow:none
+}
+.hljs-copy-button:not([data-copied="true"])::before{
+    content:"";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color:currentColor;
+    mask:url("data:image/svg+xml,%3Csvg fill='%238B98A9' height='800px' width='800px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 352.804 352.804' xml:space='preserve'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'/%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg%3E%3Cpath d='M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651 v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804 z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    mask-repeat:no-repeat;
+    mask-size:1rem;
+    mask-position:center center
+}
+.hljs-copy-button:hover,
+.hljs-copy-button:focus,
+.hljs-copy-button:active{
+    background-color:rgba(44, 57, 67, 0.5);
+    border-color:rgba(44, 57, 67, 0.5);
+    color:rgba(139,152,169,0.85);
+    outline:none !important;
+    cursor:pointer
+}
+.hljs-copy-button[data-copied="true"]{
+    text-indent:0px; /* Shows the inner text */
+    padding:0.2rem 0.8rem 0.8rem 0.8rem;
+    width:auto
+}
+@media (prefers-reduced-motion){
+    .hljs-copy-button{
+        transition:none
+    }
+}
+/* visually-hidden */
+.hljs-copy-alert{
+    clip:rect(0 0 0 0);
+    clip-path:inset(50%);
+    height:1px;
+    overflow:hidden;
+    position:absolute;
+    white-space:nowrap;
+    width:1px
+}
+
+/*********************************/
+/* CSS for hljs-language Plugin  */
+/*********************************/
+pre:has(.hljs){
+    position:relative;
+    padding-top:1.75rem;
+    scrollbar-color:rgba(44, 57, 67, 1) rgba(44, 57, 67, 0.25)
+}
+.hljs-language{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    margin:0;
+    padding:0.4em 1em;
+    font-size:1.25em;
+    color:rgba(139,152,169,0.75);
+    text-transform:uppercase
+}
+
+/***********************/
+/* General Custom CSS  */
+/***********************/
+pre{
+    tab-size:4;
+    background:rgba(44, 57, 67, 0.3);
+    border:1px solid rgba(139,152,169,0.15);
+    border-radius:0.375rem;
+    margin-bottom:0;
+    margin-top:1.75rem
+}
+pre code.hljs{
+    background:rgba(44, 57, 67, 0.3);
+    margin-top:15px
+}
+table.hljs-ln{
+    font-size:1rem !important;
+    line-height:1.5rem !important;
+    margin-bottom:0 !important
+}
+table.hljs-ln,
+.hljs-ln td.hljs-ln-line{
+    border-right:none;
+    border-width:0
+}
+.hljs-ln td{
+    border-bottom:1px solid rgba(139,152,169,.15)
+}
+.hljs-ln tr:last-child td{
+    border-bottom:none
+}
+.hljs-ln-numbers{
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    text-align:center;
+    color:#8B98A9;
+    border-right:1px solid rgba(139,152,169,.25) !important;
+    vertical-align:top;
+    padding-right:15px !important
+}
+.hljs-ln-code{
+    padding-left:15px !important
+}

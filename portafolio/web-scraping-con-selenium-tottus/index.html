@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Web Scraping con Selenium de productos de Tottus.com | Analista de Datos y BI en SQL, Python, Power BI</title>
+		<meta name="description" content="Desarrollo de un script en Python utilizando Selenium para realizar web scraping de productos en Tottus.com. El script extrae información detallada de los productos, como nombre, marca y precios ofertados, permitiendo resaltar aquellos con precios límite definidos por el usuario. La información se procesa y formatea en un DataFrame con Pandas para exportación a CSV, bases de datos o datalakes.">
+		<meta name="keywords" content="web scraping, Selenium, Python, Pandas, Tottus, precios, productos, script Python, automatización, CSV, datalake, base de datos, scraping productos, scraping precios, Tottus.com, análisis de datos">
+		<meta name="author" content="Junior Salvador">
+		<!-- Favicon -->
+		<link rel="icon" href="/assets/images/favicon-32x32.png" type="image/png" sizes="32x32">
+		<link rel="icon" href="/assets/images/favicon-16x16.png" type="image/png" sizes="16x16">
+		<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+		<!-- CSS -->
+		<link href="/assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/plugins/glightbox/glightbox.min.css" rel="stylesheet">
+		<link href="/assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link href="/assets/css/theme.css" rel="stylesheet">
+		<!-- Fonts/Icons -->
+		<link href="/assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+		<link href="/assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+	</head>
+
+	<body class="theme-dark" data-preloader="true">
+		<!-- Header -->
+		<header class="header-wrapper">
+			<div class="container">
+				<div class="header-nav">
+					<!-- Botón Toggle Menu (para escritorio) -->
+					<button class="toggle-menu-btn">
+						<span></span>
+					</button>
+					<!-- Toggle Menu (para escritorio) -->
+					<div class="toggle-menu">
+						<div class="mt-0">
+							<h6 class="mb-0">Teléfono:</h6>
+							<a class="tInfoTexto" target="_blank"></a>
+						</div>
+						<div class="mt-3">
+							<h6 class="mb-0">Email:</h6>
+							<a class="cInfoTexto"></a>
+						</div>
+						<ul class="list-inline mt-3">
+							<li><a class="tInfoRedes" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+							<li><a class="cInfoRedes"><i class="bi bi-envelope"></i></a></li>
+							<li><a href="https://github.com/jsalvadorz" target="_blank"><i class="bi bi-github"></i></a></li>
+						</ul>
+					</div>
+					<!-- Nav Toggle (para móvil) -->
+					<button class="nav-toggle">
+						<span></span>
+					</button>
+					<!-- Nav -->
+					<ul class="nav-list">
+						<li class="nav-list-item"><a href="/">Sobre mí</a></li>
+						<li class="nav-list-item"><a href="/portafolio/">Portafolio</a></li>
+						<li class="nav-list-item"><a href="/#servicios">Servicios</a></li>
+						<li class="nav-list-item"><a href="/#experiencia">Experiencia</a></li>
+						<li class="nav-list-item"><a href="#contacto">Contacto</a></li>
+						<li class="nav-list-item"><a href="/blog/">Blog</a></li>
+					</ul>
+				</div>
+				<!-- Header Logo -->
+				<div class="header-logo">
+					<h3 class="fw-semi-bold uppercase"><a href="/">JS</a></h3>
+				</div>
+			</div>
+		</header>
+		<!-- fin Header -->
+
+		<!-- Main -->
+		<main id="main-content">
+			<!-- Resumen Proyecto -->
+			<section class="section-spacing pb-0" id="resumen" aria-label="Resumen del Proyecto">
+				<div class="container">
+					<div class="row g-5">
+						<div class="col-12 col-xl-8">
+							<h1 class="display-2 fw-medium">Web Scraping con Selenium de productos de Tottus.com</h1>
+							<p>
+								Desarrollo de un script en Python con Selenium que realiza web scraping en Tottus.com, extrayendo nombre, marca 
+								y modalidades de precios de un producto según una búsqueda definida por el usuario. La herramienta resalta productos 
+								bajo un límite de precio configurado y organiza los datos en un DataFrame de Pandas.
+							</p>
+							<div class="d-flex flex-wrap gap-4 mt-3">
+								<div class="dashed-box font-small font-family-secondary fw-medium uppercase">
+									<span>Cliente: Personal</span>
+								</div>
+								<a target="_blank" href="https://deepnote.com/app/jandresz/Web-Scraping-Projects-fa6eb3f6-0dd8-451d-a002-f16a056c04e6">
+									<div class="bg-theme dashed-box font-small font-family-secondary fw-medium uppercase hover-shadow text-white">
+										<i class="bi bi-box-arrow-up-right text-white me-2"></i>
+										<span>Ver demo</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-12 col-xl-4">
+							<div class="bg-lighter border-radius p-4 px-5 p-xl-5 box-shadow d-flex flex-column align-items-center">
+								<div class="row g-3 g-md-4 w-100 my-auto">
+									<div class="col-12 col-md-6 col-xl-12 mt-3">
+										<h5 class="fw-medium mb-0">Servicios:</h5>
+										<p class="mb-0 py-2">Web Scraping</p>
+									</div>
+									<div class="col-12 col-md-6 col-xl-12 mt-3">
+										<h5 class="fw-medium mb-0">URL del proyecto:</h5>
+										<p class="mb-0 py-2"><a class="link-hover-line" href="#">jsalvadorz.tech</a></p>
+									</div>
+								</div><!-- fin row(inner) -->
+							</div>
+						</div>
+					</div><!-- fin row -->
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Resumen Proyecto -->
+
+			<!-- Contenido Proyecto -->
+			<section class="section-spacing pb-0" id="contenido" aria-label="Contenido del Proyecto">
+				<div class="container">
+					<!-- Imagen Principal -->
+					<div class="row g-4">
+						<div class="col-12">
+							<div class="img-link-box border-radius">
+								<img src="images/web-scraping-con-selenium-tottus.png" 
+								alt="Web Scraping con Selenium de productos de Tottus.com" 
+								decoding="async" fetchpriority="high">
+							</div>
+						</div>
+					</div>
+					<!-- fin Imagen Principal -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-body-text me-3"></i>Descripción del proyecto</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								En este proyecto desarrollé un script en Python usando la librería <b>Selenium</b> para hacer web scraping de 
+								los productos de la página web de Tottus.com. El script procesa y genera una lista de productos a partir de un 
+								parámetro de búsqueda definido por el usuario, por ejemplo "refrigeradora", y extrae la información de cada 
+								producto de esa categoría como el nombre, la marca y las modalidades de precios ofertados (precio CMR, precio 
+								en línea y precio en tienda), todo desde la web de Tottus.com.
+							</p>
+							<p class="pb-0">
+								Asimismo, permite destacar los productos que tienen un precio límite definido también por el usuario, por ejemplo, 
+								resaltar aquellos productos con un precio menor o igual a S/ 1,800.00. Finalmente, la data extraída se formatea 
+								en un DataFrame de <b>Pandas</b> (otra librería de Python) y a partir de allí es posible exportar la información 
+								a un archivo CSV para su posterior análisis o incluso, si fuera necesario, a una base de datos o un datalake en 
+								la nube.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-gear me-3"></i>Sobre el entorno</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								El script se ejecuta en la nube en un notebook de <b>Deepnote</b>, que permite trabajar con Python y Jupyter 
+								Notebooks en la nube. Considerar que fue necesario instalar previamente la librería <b>Selenium</b> y el driver 
+								<b>geckodriver</b> (Firefox) para Selenium en el entorno de Deepnote ya que no están instalados por default, 
+								tal como sucede en Google Colab si se quisiera ejecutar el script en ese entorno. Otro detalle ¿Por qué usé 
+								geckodriver? Simplemente porque es el driver que mejor me ha funcionado en mi experiencia personal, pero se 
+								puede implementar con ChromeDriver o Edge WebDriver sin mayor problema.
+							</p>
+							<p class="pb-0">
+								Para ver el script en acción, puedes hacer clic 
+								<a class="link-hover-line" href="https://deepnote.com/app/jandresz/Web-Scraping-Projects-fa6eb3f6-0dd8-451d-a002-f16a056c04e6" target="_blank">
+									<span>aquí</span>
+									<i class="bi bi-box-arrow-up-right text-white ms-1"></i>
+								</a>. 
+								Se abrirá una nueva pestaña con la app del proyecto en Deepnote donde podrás colocar los parámetros a tu gusto, 
+								ejecutar el script y ver los resultados en tiempo real. No es necesario crearte una cuenta. Luego puedes volver 
+								aquí para seguir leyendo el post.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-code-slash me-3"></i>Explicación del código</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<h5 class="fw-medium my-3">1. Importación de librerías</h5>
+							<div class="py-3 pb-4">
+								<iframe
+									class="deepnote-embed" 
+									title="Embedded cell output" 
+									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/4a9722b7d8714cadbf3c093f9897ee55?height=173" 
+									height="176" 
+									width="100%">
+								</iframe>
+							</div>
+
+							<h5 class="fw-medium my-3">2. Función que captura los precios</h5>
+							<div class="py-3 pb-2">
+								<iframe 
+									class="deepnote-embed" 
+									title="Embedded cell output" 
+									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/02ab5a8839ff457ba0dfba76663c3c99?height=137" 
+									height="140" 
+									width="100%">
+								</iframe>
+							</div>
+							<p>
+								Un poco de contexto. La web Tottus.com tiene tres tipos de precios para cada producto: <i>precio "CMR"</i>, 
+								<i>precio "internet"</i> y <i>precio "normal"</i>, y aún así no todos los productos tienen los tres valores, 
+								algunos tienen dos, otros solo uno. Cada uno de estos valores de precios se encuentran en un atributo específico 
+								según se aprecia en la estructura HTML de la web y el objetivo es capturar el contenido de esos atributos, si 
+								existen, y de no ser así asignar un valor cero, conservando de esa manera la uniformidad de las longitudes de 
+								las listas extraídas. Esta función realiza todo ese proceso.
+							</p>
+
+							<h5 class="fw-medium my-3">3. Configuraciones previas del driver y parámetros de búsqueda</h5>
+							<div class="py-3 pb-4">
+								<iframe 
+									class="deepnote-embed" 
+									title="Embedded cell output" 
+									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/73e9c35f903a490e81ea9b49e1acde87?height=353" 
+									height="356" 
+									width="100%">
+								</iframe>
+							</div>
+
+							<h5 class="fw-medium my-3">4. Bloque principal</h5>
+							<div class="py-3 pb-2">
+								<iframe 
+									class="deepnote-embed" 
+									title="Embedded cell output" 
+									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/320487cbfbdf418cb9b9085d649ee5fc?height=1197.75" 
+									height="1215" 
+									width="100%">
+								</iframe>
+							</div>
+							<p class="pb-0">
+								Algunas anotaciones. Se ha incluído código para manejar excepciones, de darse el caso. Además, se han agregado 
+								notas para el usuario final conforme se va ejecutando el script.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-table me-3"></i>Tabla de resultados</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								La data extraída se almacena en un DataFrame de Pandas llamado <span class="inline-code">tabla_resultado</span>.
+							</p>
+							<p class="bg-lighter-30 border-dashed border-radius box-shadow p-4 p-md-5 my-4">
+								Tener en cuenta que el script tiene solo fines demostrativos por lo que extrae datos solo de la primera ventana 
+								de resultados. En un caso real, se podría implementar un mecanismo de paginación para recorrer todas las páginas 
+								de resultados y extraer la información de todos los productos. Algo que se puede hacer fácilmente con Selenium.
+							</p>
+							<div class="py-3 pb-0">
+								<iframe 
+									class="deepnote-embed" 
+									title="Embedded cell output" 
+									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/d81586cc7590478c984894bde420f553?height=1482" 
+									height="1400" 
+									width="100%">
+								</iframe>
+							</div>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-kanban me-3"></i>Algunos gráficos</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								Una característica que me agrada de los notebooks de Deepnote es que se pueden crear gráficos interactivos 
+								básicos de inmediato con unos clics sin tener que escribir código con librerías como Matplotlib. Esos gráficos 
+								permiten una vista inicial rápida: seleccionas el dataframe, eliges el tipo de gráfico, seleccionas los campos, 
+								y listo. A continuación, se muestran dos gráficos interactivos generados por Deepnote a partir de la data extraída.
+							</p>
+							<div class="py-3 pb-4">
+								<iframe 
+									class="deepnote-embed" 
+									title="Embedded cell output" 
+									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/1955a069be2040a1bfc60a6b140ca4ca?height=500" 
+									height="500" 
+									width="100%">
+								</iframe>
+							</div>
+							<div class="py-2 pb-0">
+								<iframe 
+									class="deepnote-embed" 
+									title="Embedded cell output" 
+									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/bf0a5ffca2874ae8893329a49b746d7e?height=500" 
+									height="500" 
+									width="100%">
+								</iframe>
+							</div>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Contenido Proyecto -->
+
+			<!-- Sección Contacto -->
+			<section class="section-spacing" id="contacto" aria-label="Datos de contacto">
+				<div class="container">
+					<div class="bg-lighter-30 border-dashed border-radius box-shadow p-4 p-md-5">
+						<div class="row gx-5 align-items-center">
+							<div class="col-12 col-lg-6 text-center text-lg-end mb-3 mb-lg-0">
+								<h2 class="font-family-tertiary fw-semi-bold mb-0">
+									<i class="bi bi-person-plus text-white me-3"></i>Contáctame
+								</h2>
+							</div>
+							<div class="col-12 col-lg-6 text-center text-lg-start">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<i class="bi bi-telephone me-2"></i>
+										<a class="tInfoTexto fw-normal text-white fs-6 link-hover-line" target="_blank"></a>
+									</li>
+									<li>
+										<i class="bi bi-envelope me-2"></i>
+										<a class="cInfoTexto fw-normal text-white fs-6 link-hover-line"></a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- fin row -->
+					</div>
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Sección Contacto -->
+		</main>
+		<!-- fin Main -->
+
+		<!-- Footer -->
+		<footer class="container">
+			<div class="section-spacing bg-charcoal p-4 p-md-5 box-shadow border-radius-top">
+				<div class="row g-2 align-items-center">
+					<div class="col-12 col-md-6 text-center text-md-start">
+						<p>&copy; <span id="year"></span> Junior Salvador | Github and ☕</p>
+					</div>
+					<div class="col-12 col-md-6 text-center text-md-end">
+						<ul class="list-inline-dash">
+							<li><a class="link-hover-line" href="#">Subir</a></li>
+						</ul>
+					</div>
+				</div><!-- fin row -->
+			</div>
+		</footer>
+		<!-- fin Footer -->
+
+		<!-- Cursor Gradiente -->
+		<div class="cursor-gradient"></div>
+		<!-- fin Cursor Gradiente -->
+
+		<!-- JavaScripts -->
+		<script src="/assets/plugins/jquery.min.js"></script>
+		<script src="/assets/plugins/plugins.js"></script>
+		<script src="/assets/js/functions.js"></script>
+		<script src="/assets/js/letscontact.js"></script>
+	</body>
+</html>

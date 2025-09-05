@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Análisis de Gestión de Mantenimiento Línea 1 Metro de Lima | Analista de Datos y BI en SQL, Python, Power BI</title>
+		<meta name="description" content="Informe interactivo en Power BI sobre la Línea 1 del Metro de Lima con indicadores clave de gestión, como mantenimiento preventivo, análisis de órdenes de trabajo, eficacia y % de cumplimiento, del 2013 al 2024.">
+		<meta name="keywords" content="Metro de Lima, Línea 1, mantenimiento preventivo, mantenimiento predictivo, gestión de mantenimiento, indicadores de gestión, Power BI, análisis de órdenes de trabajo, eficacia, % de cumplimiento, diagrama de Pareto, activos, trenes, análisis de datos">
+		<meta name="author" content="Junior Salvador">
+		<!-- Favicon -->
+		<link rel="icon" href="/assets/images/favicon-32x32.png" type="image/png" sizes="32x32">
+		<link rel="icon" href="/assets/images/favicon-16x16.png" type="image/png" sizes="16x16">
+		<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+		<!-- CSS -->
+		<link href="/assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/plugins/glightbox/glightbox.min.css" rel="stylesheet">
+		<link href="/assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link href="/assets/css/theme.css" rel="stylesheet">
+		<!-- Fonts/Icons -->
+		<link href="/assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+		<link href="/assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+	</head>
+
+	<body class="theme-dark" data-preloader="true">
+		<!-- Header -->
+		<header class="header-wrapper">
+			<div class="container">
+				<div class="header-nav">
+					<!-- Botón Toggle Menu (para escritorio) -->
+					<button class="toggle-menu-btn">
+						<span></span>
+					</button>
+					<!-- Toggle Menu (para escritorio) -->
+					<div class="toggle-menu">
+						<div class="mt-0">
+							<h6 class="mb-0">Teléfono:</h6>
+							<a class="tInfoTexto" target="_blank"></a>
+						</div>
+						<div class="mt-3">
+							<h6 class="mb-0">Email:</h6>
+							<a class="cInfoTexto"></a>
+						</div>
+						<ul class="list-inline mt-3">
+							<li><a class="tInfoRedes" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+							<li><a class="cInfoRedes"><i class="bi bi-envelope"></i></a></li>
+							<li><a href="https://github.com/jsalvadorz" target="_blank"><i class="bi bi-github"></i></a></li>
+						</ul>
+					</div>
+					<!-- Nav Toggle (para móvil) -->
+					<button class="nav-toggle">
+						<span></span>
+					</button>
+					<!-- Nav -->
+					<ul class="nav-list">
+						<li class="nav-list-item"><a href="/">Sobre mí</a></li>
+						<li class="nav-list-item"><a href="/portafolio/">Portafolio</a></li>
+						<li class="nav-list-item"><a href="/#servicios">Servicios</a></li>
+						<li class="nav-list-item"><a href="/#experiencia">Experiencia</a></li>
+						<li class="nav-list-item"><a href="#contacto">Contacto</a></li>
+						<li class="nav-list-item"><a href="/blog/">Blog</a></li>
+					</ul>
+				</div>
+				<!-- Header Logo -->
+				<div class="header-logo">
+					<h3 class="fw-semi-bold uppercase"><a href="/">JS</a></h3>
+				</div>
+			</div>
+		</header>
+		<!-- fin Header -->
+
+		<!-- Main -->
+		<main id="main-content">
+			<!-- Resumen Proyecto -->
+			<section class="section-spacing pb-0" id="resumen" aria-label="Resumen del Proyecto">
+				<div class="container">
+					<div class="row g-5">
+						<div class="col-12 col-xl-8">
+							<h1 class="display-2 fw-medium">Análisis de Gestión de Mantenimiento Línea 1 Metro de Lima</h1>
+							<p>
+								Informe en Power BI que fortalece la gestión de mantenimiento de la Línea 1 del Metro de Lima 
+								con enfoque preventivo y predictivo. Presenta métricas clave como % de cumplimiento, eficacia 
+								y evolución de órdenes de trabajo (2013-2024). Incluye análisis de fallas, áreas críticas y 
+								desempeño de activos estratégicos como los trenes.
+							</p>
+							<div class="d-flex flex-wrap gap-4 mt-3">
+								<div class="dashed-box font-small font-family-secondary fw-medium uppercase">
+									<span>Cliente: Personal</span>
+								</div>
+								<a target="_blank" href="https://app.powerbi.com/view?r=eyJrIjoiZWI0YzYxNzYtZjU2OS00NTNlLWE4MjAtMTMyZGFiZjQxZjI0IiwidCI6IjFjZDQ4Njc1LWExNTYtNDc5OC05MDA3LTUzYWY5YmU2YTdmNyIsImMiOjR9">
+									<div class="bg-theme dashed-box font-small font-family-secondary fw-medium uppercase hover-shadow text-white">
+										<i class="bi bi-box-arrow-up-right text-white me-2"></i>
+										<span>Ver demo</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-12 col-xl-4">
+							<div class="bg-lighter border-radius p-4 px-5 p-xl-5 box-shadow d-flex flex-column align-items-center">
+								<div class="row g-3 g-md-4 w-100 my-auto">
+									<div class="col-12 col-md-6 col-xl-12 mt-3">
+										<h5 class="fw-medium mb-0">Servicios:</h5>
+										<p class="mb-0 py-2">Power BI, Análisis de Datos</p>
+									</div>
+									<div class="col-12 col-md-6 col-xl-12 mt-3">
+										<h5 class="fw-medium mb-0">URL del proyecto:</h5>
+										<p class="mb-0 py-2"><a class="link-hover-line" href="#">jsalvadorz.tech</a></p>
+									</div>
+								</div><!-- fin row(inner) -->
+							</div>
+						</div>
+					</div><!-- fin row -->
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Resumen Proyecto -->
+
+			<!-- Contenido Proyecto -->
+			<section class="section-spacing pb-0" id="contenido" aria-label="Contenido del Proyecto">
+				<div class="container">
+					<!-- Imagen Principal -->
+					<div class="row g-4">
+						<div class="col-12">
+							<div class="img-link-box border-radius">
+								<img src="images/dashboard-linea1-metro-lima-gestion-mantenimiento.png" 
+								alt="Análisis de Gestión de Mantenimiento Línea 1 Metro de Lima" 
+								decoding="async" fetchpriority="high">
+							</div>
+						</div>
+					</div>
+					<!-- fin Imagen Principal -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-lightbulb me-3"></i>Análisis y hallazgos</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								En todo servicio de operaciones técnicas es fundamental disponer de un sistema de mantenimiento preventivo y 
+								predictivo que garantice el óptimo estado de la infraestructura. En el caso de la <b>Línea 1 del Metro de Lima</b>, 
+								resulta esencial contar con un sistema de gestión de mantenimiento que permita planificar y ejecutar las actividades 
+								de manera eficiente. Asimismo, es crucial disponer de herramientas que faciliten el adecuado seguimiento de dichas 
+								actividades, preferiblemente basadas en datos, acompañadas de su respectivo análisis, para tomar decisiones oportunas 
+								y estratégicas. Con este propósito, se ha elaborado un informe interactivo en Power BI que permite visualizar los 
+								principales indicadores de gestión.
+							</p>
+							<p>
+								El informe presenta diversas métricas, como el <b>% de cumplimiento</b>, la <b>eficacia</b> y la carga de trabajo por 
+								departamento, además de un <b>análisis evolutivo de las órdenes de trabajo</b> desde <b>2013</b> hasta <b>2024</b>. 
+								También se destacan los departamentos con mayor número de pedidos, un <b>diagrama de Pareto</b> que clasifica los tipos 
+								de fallas y departamentos para identificar áreas críticas, junto con varios indicadores relacionados con los activos, 
+								como los trenes, entre otros.
+							</p>
+							<p class="bg-lighter-30 border-dashed border-radius box-shadow p-4 p-md-5 mt-4">
+								Por motivos de seguridad de la información, los datos utilizados en este informe son ficticios y no corresponden a 
+								información real del sistema de la Línea 1 del Metro de Lima, sin embargo, el escenario está basado en una problemática 
+								real del negocio. Existen políticas de protección de datos que deben cumplirse, por lo que el informe presentado es 
+								únicamente una demostración de las métricas que podrían implementarse en el sistema.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-layout-wtf me-3"></i>Dashboard</h2>
+
+					<!-- Power BI iframe -->
+					<div class="row g-4 mt-2">
+						<div class="col-12">
+							<div class="ratio ratio-16x9" id="pbi-container">
+							</div>
+						</div>
+					</div>
+					<!-- fin Power BI iframe -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-table me-3"></i>Complemento técnico</h2>
+
+					<!-- Ficha Técnica -->
+					<div class="row g-4">
+						<div class="table-responsive mt-4 mt-lg-5">
+							<table class="table caption-top mb-0">
+								<caption class="bg-lighter-80 border-radius-top text-center fw-bold">Ficha Técnica</caption>
+								<tbody>
+									<tr>
+										<th class="bg-lighter-30 fw-semibold">Desarrollador:</th>
+										<td class="bg-lighter-50">Junior Salvador</td>
+									</tr>
+									<tr>
+										<th class="bg-lighter-30 fw-semibold">Fecha de realización:</th>
+										<td class="bg-lighter-50">2024-10-03</td>
+									</tr>
+									<tr>
+										<th class="bg-lighter-30 fw-semibold">Tipo de archivos:</th>
+										<td class="bg-lighter-50">.pbix (informe), .xlsx (datos)</td>
+									</tr>
+									<tr>
+										<th class="bg-lighter-30 fw-semibold">Origen de datos:</th>
+										<td class="bg-lighter-50">Generación propia (script con Pandas y NumPy en Python)</td>
+									</tr>
+									<tr>
+										<th class="bg-lighter-30 fw-semibold">Licencia:</th>
+										<td class="bg-lighter-50">
+											<a href="https://opendefinition.org/licenses/odc-by/" 
+												target="_blank" class="link-hover-line">
+												Open Data Commons Attribution License <i class="bi bi-box-arrow-up-right ms-2"></i>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- fin Ficha Técnica -->
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Contenido Proyecto -->
+
+			<!-- Sección Contacto -->
+			<section class="section-spacing" id="contacto" aria-label="Datos de contacto">
+				<div class="container">
+					<div class="bg-lighter-30 border-dashed border-radius box-shadow p-4 p-md-5">
+						<div class="row gx-5 align-items-center">
+							<div class="col-12 col-lg-6 text-center text-lg-end mb-3 mb-lg-0">
+								<h2 class="font-family-tertiary fw-semi-bold mb-0">
+									<i class="bi bi-person-plus text-white me-3"></i>Contáctame
+								</h2>
+							</div>
+							<div class="col-12 col-lg-6 text-center text-lg-start">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<i class="bi bi-telephone me-2"></i>
+										<a class="tInfoTexto fw-normal text-white fs-6 link-hover-line" target="_blank"></a>
+									</li>
+									<li>
+										<i class="bi bi-envelope me-2"></i>
+										<a class="cInfoTexto fw-normal text-white fs-6 link-hover-line"></a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- fin row -->
+					</div>
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Sección Contacto -->
+		</main>
+		<!-- fin Main -->
+
+		<!-- Footer -->
+		<footer class="container">
+			<div class="section-spacing bg-charcoal p-4 p-md-5 box-shadow border-radius-top">
+				<div class="row g-2 align-items-center">
+					<div class="col-12 col-md-6 text-center text-md-start">
+						<p>&copy; <span id="year"></span> Junior Salvador | Github and ☕</p>
+					</div>
+					<div class="col-12 col-md-6 text-center text-md-end">
+						<ul class="list-inline-dash">
+							<li><a class="link-hover-line" href="#">Subir</a></li>
+						</ul>
+					</div>
+				</div><!-- fin row -->
+			</div>
+		</footer>
+		<!-- fin Footer -->
+
+		<!-- Cursor Gradiente -->
+		<div class="cursor-gradient"></div>
+		<!-- fin Cursor Gradiente -->
+
+		<!-- JavaScripts -->
+		<script src="/assets/plugins/jquery.min.js"></script>
+		<script src="/assets/plugins/plugins.js"></script>
+		<script src="/assets/js/functions.js"></script>
+		<script src="/assets/js/letscontact.js"></script>
+
+		<!-- Inserción de Power BI Lazy -->
+		<script>
+			window.addEventListener("load", function () {
+				const pbi_container = document.querySelector("#pbi-container");
+				const pbi_iframe = document.createElement("iframe");
+
+				pbi_iframe.title = "PBI_Metro_Línea1_Mantenimiento";
+				pbi_iframe.src = "https://app.powerbi.com/view?r=eyJrIjoiZWI0YzYxNzYtZjU2OS00NTNlLWE4MjAtMTMyZGFiZjQxZjI0IiwidCI6IjFjZDQ4Njc1LWExNTYtNDc5OC05MDA3LTUzYWY5YmU2YTdmNyIsImMiOjR9";
+				pbi_iframe.setAttribute("frameborder", "0");
+				pbi_iframe.setAttribute("allowfullscreen", "true");
+
+				pbi_container.appendChild(pbi_iframe);
+			});
+		</script>
+	</body>
+</html>

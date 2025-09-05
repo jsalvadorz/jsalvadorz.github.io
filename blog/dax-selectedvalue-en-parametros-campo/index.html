@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>SELECTEDVALUE() con Parámetros de Campo en Power BI | Analista de Datos y BI en SQL, Python, Power BI</title>
+		<meta name="description" content="Aprende a aplicar formato condicional en gráficos de Power BI usando parámetros de campo y medidas DAX, asignando colores dinámicos.">
+		<meta name="keywords" content="Power BI, DAX, formato condicional, parámetros de campo, gráficos de barras, colores dinámicos, SELECTEDVALUE, SWITCH, medida DAX">
+		<meta name="author" content="Junior Salvador">
+		<!-- Favicon -->
+		<link rel="icon" href="/assets/images/favicon-32x32.png" type="image/png" sizes="32x32">
+		<link rel="icon" href="/assets/images/favicon-16x16.png" type="image/png" sizes="16x16">
+		<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+		<!-- CSS -->
+		<link href="/assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/plugins/glightbox/glightbox.min.css" rel="stylesheet">
+		<link href="/assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link href="/assets/css/theme.css" rel="stylesheet">
+		<!-- CSS Highlight -->
+		<link href="/assets/plugins/highlight/css/atom-one-dark.min.css" rel="stylesheet">
+		<link href="/assets/plugins/highlight/css/highlight-customtheme.css" rel="stylesheet">
+		<!-- Fonts/Icons -->
+		<link href="/assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+		<link href="/assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+	</head>
+
+	<body class="theme-dark" data-preloader="true">
+		<!-- Header -->
+		<header class="header-wrapper">
+			<div class="container">
+				<div class="header-nav">
+					<!-- Botón Toggle Menu (para escritorio) -->
+					<button class="toggle-menu-btn">
+						<span></span>
+					</button>
+					<!-- Toggle Menu (para escritorio) -->
+					<div class="toggle-menu">
+						<div class="mt-0">
+							<h6 class="mb-0">Teléfono:</h6>
+							<a class="tInfoTexto" target="_blank"></a>
+						</div>
+						<div class="mt-3">
+							<h6 class="mb-0">Email:</h6>
+							<a class="cInfoTexto"></a>
+						</div>
+						<ul class="list-inline mt-3">
+							<li><a class="tInfoRedes" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+							<li><a class="cInfoRedes"><i class="bi bi-envelope"></i></a></li>
+							<li><a href="https://github.com/jsalvadorz" target="_blank"><i class="bi bi-github"></i></a></li>
+						</ul>
+					</div>
+					<!-- Nav Toggle (para móvil) -->
+					<button class="nav-toggle">
+						<span></span>
+					</button>
+					<!-- Nav -->
+					<ul class="nav-list">
+						<li class="nav-list-item"><a href="/">Sobre mí</a></li>
+						<li class="nav-list-item"><a href="/portafolio/">Portafolio</a></li>
+						<li class="nav-list-item"><a href="/#servicios">Servicios</a></li>
+						<li class="nav-list-item"><a href="/#experiencia">Experiencia</a></li>
+						<li class="nav-list-item"><a href="#contacto">Contacto</a></li>
+						<li class="nav-list-item"><a href="/blog/">Blog</a></li>
+					</ul>
+				</div>
+				<!-- Header Logo -->
+				<div class="header-logo">
+					<h3 class="fw-semi-bold uppercase"><a href="/">JS</a></h3>
+				</div>
+			</div>
+		</header>
+		<!-- fin Header -->
+
+		<!-- Main -->
+		<main id="main-content">
+			<!-- Resumen Publicación -->
+			<section class="section-spacing pb-0" id="resumen" aria-label="Resumen de la Publicación">
+				<div class="container">
+					<div class="row g-5">
+						<div class="col-12 col-xl-8">
+							<h1 class="display-2 fw-medium">SELECTEDVALUE() con Parámetros de Campo en Power BI</h1>
+							<p>
+								Exploraremos cómo manejar el error que se genera al usar <span class="inline-code">SELECTEDVALUE()</span> 
+								con parámetros de campo en Power BI.
+							</p>
+							<div class="d-flex flex-wrap gap-4 mt-3">
+								<div class="dashed-box font-small font-family-secondary fw-medium uppercase">
+									<span>Publicado: 15 Ago. 2025</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xl-4">
+							<div class="bg-lighter border-radius p-4 px-5 p-xl-5 box-shadow d-flex flex-column align-items-center">
+								<div class="row g-3 g-md-4 w-100 my-auto">
+									<div class="col-12 col-md-6 col-xl-12 mt-3">
+										<h5 class="fw-medium mb-0">Categorías:</h5>
+										<p class="mb-0 py-2">Power BI</p>
+									</div>
+									<div class="col-12 col-md-6 col-xl-12 mt-3">
+										<h5 class="fw-medium mb-0">Publicado por:</h5>
+										<p class="mb-0 py-2"><a class="link-hover-line" href="#">Junior Salvador</a></p>
+									</div>
+								</div><!-- fin row(inner) -->
+							</div>
+						</div>
+					</div><!-- fin row -->
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Resumen Publicación -->
+
+			<!-- Contenido Publicación -->
+			<section class="section-spacing pb-0" id="contenido" aria-label="Contenido de la Publicación">
+				<div class="container">
+					<!-- Imagen Principal -->
+					<div class="row g-4">
+						<div class="col-12">
+							<div class="img-link-box border-radius">
+								<img src="images/selectedvalue-en-parametros-campo.jpg" 
+								alt="SELECTEDVALUE() con Parámetros de Campo en Power BI" 
+								decoding="async" fetchpriority="high">
+							</div>
+						</div>
+					</div>
+					<!-- fin Imagen Principal -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-body-text me-3"></i>Contexto</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								Imaginemos que deseamos aplicar un formato de estilo condicional en un gráfico de barras de Power BI 
+								basado en parámetros de campo. En este caso, buscamos que las barras se muestren en azul cuando la medida 
+								corresponde al género Masculino y en rosado cuando corresponde al género Femenino.
+							</p>
+							<p class="pb-0">
+								Para entender cómo implementar esta lógica, primero revisemos la estructura de la tabla de parámetros 
+								de campo utilizada en este ejemplo:
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Código fuente -->
+					<div class="row g-4 py-2 pb-4">
+						<div class="col-12">
+							<pre><code class="language-dax">
+								ParámetroFallecidos = {
+									("Hombres Fallecidos", NAMEOF('Medidas'[TOTAL FALLECIDOS M]), 0),
+									("Mujeres Fallecidas", NAMEOF('Medidas'[TOTAL FALLECIDOS F]), 1)
+								}
+							</code></pre>
+						</div>
+					</div>
+					<!-- fin Código fuente -->
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12 col-lg-6 pt-3 pt-lg-4">
+							<div class="text-center">
+								<img src="images/1.jpg" 
+									class="img-fluid" 
+									loading="lazy"
+									decoding="async">
+							</div>
+						</div>
+						<div class="col-12 col-lg-6">
+							<p class="pb-0 pb-lg-1 pb-xl-2">
+								En la imagen mostrada se observa la disposición de la tabla generada junto con sus columnas. Con esta 
+								estructura en mente, lo natural sería emplear la función <span class="inline-code">SELECTEDVALUE()</span>
+								dentro de una medida, de modo que permita realizar una comparación simple y devolver el color correspondiente 
+								según la selección de género. A continuación se muestra la medida que, en teoría, debería funcionar 
+								correctamente al devolver el color en formato hexadecimal para dos posibles valores:
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Código fuente -->
+					<div class="row g-4 py-2 pb-4">
+						<div class="col-12">
+							<pre><code class="language-dax">
+								COLOR DINAMICO = 
+								VAR CampoActual = SELECTEDVALUE('ParámetroFallecidos'[Totales Fallecidos])
+								VAR Color = SWITCH(
+												CampoActual,
+												"Hombres Fallecidos", "#4E79A7",
+												"Mujeres Fallecidas", "#D37295",
+												BLANK()
+											)
+								RETURN
+									Color
+							</code></pre>
+						</div>
+					</div>
+					<!-- fin Código fuente -->
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								Sin embargo, lo anterior no funcionará. Es más, <b>romperá el gráfico si lo aplicamos</b> como formato 
+								condicional. Veremos el siguiente error:
+							</p>
+							<p class="bg-lighter-30 border-dashed border-radius box-shadow p-4 p-md-5 mt-4">
+								<i>"Error de cálculo en la medida 'Medidas'[COLOR DINAMICO]: La columna [Totales Fallecidos] forma parte
+									de la clave compuesta, pero no todas las columnas de dicha clave se incluyen en la expresión o en 
+									su expresión dependiente."</i>
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Imagen -->
+					<div class="row g-4 justify-content-center my-4">
+						<div class="col-12">
+							<div class="text-center">
+								<img src="images/2.jpg" 
+									class="img-fluid" 
+									loading="lazy"
+									decoding="async">
+							</div>
+						</div>
+					</div>
+					<!-- fin Imagen -->
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p class="pb-0">
+								Tampoco es que se entienda mucho lo que dice con tanto tecnicismo, pero la idea es que DAX no puede 
+								evaluar la columna <span class="inline-code">[Totales Fallecidos]</span> y eso es lo que nos interesa 
+								corregir.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-exclamation-triangle me-3"></i>El problema</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								Cuando creamos una tabla con parámetros de campo, la <b>columna de nombres</b> (la primera columna de 
+								dicha tabla), que en nuestro caso es <span class="inline-code">[Totales Fallecidos]</span>, no es una 
+								columna usual como cualquier otra.
+							</p>
+							<p class="pb-0">
+								<span class="inline-code">[Totales Fallecidos]</span> tiene aplicada una propiedad interna llamada 
+								<span class="inline-code">Group By Columns</span> haciendo que internamente el motor de DAX la trate 
+								como si formara parte de una clave compuesta. Al usar <span class="inline-code">SELECTEDVALUE()</span> 
+								sobre esa columna, DAX no puede evaluarla sola y rompe el gráfico mostrando un error.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-lightbulb me-3"></i>La solución</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p class="pb-0">
+								Hay varias formas de solucionar este inconveniente, presentaré un par de ellas.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo h5 -->
+					<h5 class="fw-medium mt-5 mb-3">Opción 1: <span class="inline-code">SELECTEDVALUE()</span> aplicado a la segunda columna</h5>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p class="pb-0">
+								Esta es la solución inmediata y más sencilla. En lugar de aplicar <span class="inline-code">SELECTEDVALUE()</span> 
+								sobre la primera columna, la aplicamos sobre la segunda columna de la tabla de parámetros de campo, es decir,
+								sobre <span class="inline-code">[Totales Fallecidos Campos]</span>, ya que ésta sí es una columna "normal" 
+								y DAX puede evaluarla sin problemas. La medida sería la siguiente:
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Código fuente -->
+					<div class="row g-4 py-2 pb-4">
+						<div class="col-12">
+							<pre><code class="language-dax">
+								COLOR DINAMICO = 
+								VAR CampoRef = SELECTEDVALUE('ParámetroFallecidos'[Totales Fallecidos Campos])
+								VAR Color = SWITCH(
+												CampoRef,
+												NAMEOF('Medidas'[TOTAL FALLECIDOS M]), "#4E79A7",
+												NAMEOF('Medidas'[TOTAL FALLECIDOS F]), "#D37295",
+												BLANK()
+											)
+								RETURN
+									Color
+							</code></pre>
+						</div>
+					</div>
+					<!-- fin Código fuente -->
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p class="pb-0">
+								Existen unos cambios sutiles como que ahora la variable <span class="inline-code">CampoRef</span>
+								almacena el valor de la segunda columna <span class="inline-code">[Totales Fallecidos Campos]</span>
+								y en la función <span class="inline-code">SWITCH()</span> comparamos con los nombres de las medidas
+								utilizando la función <span class="inline-code">NAMEOF()</span>, que devuelve el nombre de la medida 
+								como texto. El resultado es el esperado y el gráfico funciona correctamente.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Gif gLightbox -->
+					<div class="row g-4 justify-content-center my-4 mt-2">
+						<div class="col-12 text-center">
+							<div class="position-relative d-inline-block">
+								<a href="images/demo1.gif" class="glightbox">
+									<img src="images/demo1.jpg" 
+										class="img-fluid" 
+										loading="lazy"
+										decoding="async">
+									<!-- Overlay con ícono Play -->
+									<div class="play-overlay d-flex align-items-center justify-content-center icon-3xl">
+										<i class="bi bi-play-circle-fill text-white"></i>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- fin Gif gLightbox -->
+
+					<!-- Subtítulo h5 -->
+					<h5 class="fw-medium mt-5 mb-3">Opción 2: No usar <span class="inline-code">SELECTEDVALUE()</span></h5>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p class="pb-0">
+								Supongamos que sí o sí queremos usar la primera columna <span class="inline-code">[Totales Fallecidos]</span>.
+								En ese caso, usar <span class="inline-code">SELECTEDVALUE()</span> no es una opción viable. Una alternativa 
+								sencilla es usar una función de agregación como <span class="inline-code">MAX()</span>. ¿Por qué 
+								<span class="inline-code">MAX()</span>? En realidad, puede ser cualquier función de agregación como 
+								<span class="inline-code">MIN()</span>, <span class="inline-code">SUM()</span>, etc. La idea es que al usar 
+								una función de agregación, DAX ya no intentará evaluar la columna "sola" y no se producirá el error. La
+								medida quedaría así:
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Código fuente -->
+					<div class="row g-4 py-2 pb-4">
+						<div class="col-12">
+							<pre><code class="language-dax">
+								COLOR DINAMICO = 
+								VAR CampoActual = MAX('ParámetroFallecidos'[Totales Fallecidos])
+								VAR Color = SWITCH(
+												CampoActual,
+												"Hombres Fallecidos", "#4E79A7",
+												"Mujeres Fallecidas", "#D37295",
+												BLANK()
+											)
+								RETURN
+									IF(COUNTROWS('ParámetroFallecidos') = 1, Color)
+							</code></pre>
+						</div>
+					</div>
+					<!-- fin Código fuente -->
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p class="pb-0">
+								Expliquemos. La variable <span class="inline-code">CampoActual</span> ahora usa <span class="inline-code">MAX()</span>
+								aplicado a la columna <span class="inline-code">[Totales Fallecidos]</span>. La función <span class="inline-code">MAX()</span>
+								devuelve el valor máximo de la columna en el contexto actual. Dado que en este caso el contexto es un único valor, 
+								pues la tabla de parámetros de campo quedó filtrada a una única fila por el segmentador, <span class="inline-code">MAX()</span>
+								devolverá ese único valor presente: el nombre del campo. La función <span class="inline-code">SWITCH()</span> sigue 
+								siendo la misma del inicio. Finalmente, la función <span class="inline-code">IF()</span> añade una capa extra de 
+								seguridad para asegurarse de que solo se devuelva un color, por eso verificamos que, en el contexto actual, el número 
+								de filas en la tabla de parámetros de campo sea igual a 1, es decir, una única selección en el parámetro. Solucionado. 
+								Veamos el resultado:
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Gif gLightbox -->
+					<div class="row g-4 justify-content-center my-4 mt-2">
+						<div class="col-12 text-center">
+							<div class="position-relative d-inline-block">
+								<a href="images/demo2.gif" class="glightbox">
+									<img src="images/demo2.jpg" 
+										class="img-fluid" 
+										loading="lazy"
+										decoding="async">
+									<!-- Overlay con ícono Play -->
+									<div class="play-overlay d-flex align-items-center justify-content-center icon-3xl">
+										<i class="bi bi-play-circle-fill text-white"></i>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- fin Gif gLightbox -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-plus-lg me-3"></i>Extras</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p class="pb-0">
+								Por si te preguntas cómo aplicar la medida como formato condicional al gráfico de barras, pues es sencillo. En las 
+								opciones de formato de <b>Barras</b> del gráfico, damos clic en <span class="inline-code"><i>fx</i></span> de la 
+								propiedad <b>Color</b>. En la ventana emergente seleccionamos <span class="inline-code"><i>Reglas</i></span> de la 
+								lista <b>"Estilo de formato"</b> y en la opción <b>"¿En qué campo debemos basar esto?"</b> seleccionamos la medida 
+								que hemos creado <span class="inline-code"><i>COLOR DINAMICO</i></span>. Finalmente, establecemos las reglas como 
+								se muestra en la imagen:
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Imagen gLightbox -->
+					<div class="row g-4 justify-content-center mt-2">
+						<div class="col-12 text-center">
+							<div class="position-relative d-inline-block">
+								<a href="images/5.jpg" class="glightbox">
+									<img src="images/5.jpg" 
+										class="img-fluid" 
+										loading="lazy"
+										decoding="async">
+									<!-- Overlay con ícono Play -->
+									<div class="play-overlay d-flex align-items-center justify-content-center icon-3xl">
+										<i class="bi bi-zoom-in text-white"></i>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- fin Imagen gLightbox -->
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Contenido Publicación -->
+
+			<!-- Sección Contacto -->
+			<section class="section-spacing pb-0" id="contacto" aria-label="Datos de contacto">
+				<div class="container">
+					<div class="bg-lighter-30 border-dashed border-radius box-shadow p-4 p-md-5">
+						<div class="row gx-5 align-items-center">
+							<div class="col-12 col-lg-6 text-center text-lg-end mb-3 mb-lg-0">
+								<h2 class="font-family-tertiary fw-semi-bold mb-0">
+									<i class="bi bi-person-plus text-white me-3"></i>Contáctame
+								</h2>
+							</div>
+							<div class="col-12 col-lg-6 text-center text-lg-start">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<i class="bi bi-telephone me-2"></i>
+										<a class="tInfoTexto fw-normal text-white fs-6 link-hover-line" target="_blank"></a>
+									</li>
+									<li>
+										<i class="bi bi-envelope me-2"></i>
+										<a class="cInfoTexto fw-normal text-white fs-6 link-hover-line"></a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- fin row -->
+					</div>
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Sección Contacto -->
+
+			<!-- Sección Comentarios -->
+			<section class="section-spacing" id="comentarios" aria-label="Comentarios">
+				<div class="container">
+					<!-- Subtítulo -->
+					<h2 class="display-4 fw-medium mt-1 mb-4">Comentarios</h2>
+
+					<!-- Bloque Comentarios -->
+					<div class="row g-4">
+						<div class="col-12">
+							<div class="giscus"></div>
+						</div>
+					</div>
+					<!-- fin Bloque Comentarios -->
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Sección Comentarios -->
+		</main>
+		<!-- fin Main -->
+
+		<!-- Footer -->
+		<footer class="container">
+			<div class="section-spacing bg-charcoal p-4 p-md-5 box-shadow border-radius-top">
+				<div class="row g-2 align-items-center">
+					<div class="col-12 col-md-6 text-center text-md-start">
+						<p>&copy; <span id="year"></span> Junior Salvador | Github and ☕</p>
+					</div>
+					<div class="col-12 col-md-6 text-center text-md-end">
+						<ul class="list-inline-dash">
+							<li><a class="link-hover-line" href="#">Subir</a></li>
+						</ul>
+					</div>
+				</div><!-- fin row -->
+			</div>
+		</footer>
+		<!-- fin Footer -->
+
+		<!-- Cursor Gradiente -->
+		<div class="cursor-gradient"></div>
+		<!-- fin Cursor Gradiente -->
+
+		<!-- JavaScripts -->
+		<script src="/assets/plugins/jquery.min.js"></script>
+		<script src="/assets/plugins/plugins.js"></script>
+		<script src="/assets/js/functions.js"></script>
+		<script src="/assets/js/letscontact.js"></script>
+
+		<!-- JS Highlight -->
+		<script src="/assets/plugins/highlight/js/highlight.min.js"></script>
+		<script src="/assets/plugins/highlight/js/adds/highlightjs-line-numbers.js"></script>
+		<script src="/assets/plugins/highlight/js/adds/highlight-clean-blanks-tabs.js"></script>
+		<script src="/assets/plugins/highlight/js/adds/highlightjs-copy.js"></script>
+		<script src="/assets/plugins/highlight/js/adds/hljslanguagedisplayplugin.js"></script>
+		<script src="/assets/plugins/highlight/js/adds/dax-language.js"></script>
+		<script src="/assets/plugins/highlight/js/highlight-init.js"></script>
+
+		<!-- giscus Comentarios -->
+		<script src="/assets/js/giscusinit.js"></script>
+	</body>
+</html>
