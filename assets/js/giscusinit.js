@@ -11,7 +11,7 @@
     giscus.setAttribute("data-reactions-enabled", "0");
     giscus.setAttribute("data-emit-metadata", "0");
     giscus.setAttribute("data-input-position", "top");
-    giscus.setAttribute("data-theme", "https://cdn.jsdelivr.net/gh/jsalvadorz/jsalvadorz.github.io@d9857ee/assets/plugins/giscus/catppuccin_mocha_custom.css");
+    giscus.setAttribute("data-theme", "https://cdn.jsdelivr.net/gh/jsalvadorz/jsalvadorz.github.io@f629f11/assets/plugins/giscus/catppuccin_mocha_custom.css");
     giscus.setAttribute("data-lang", "es");
     giscus.setAttribute("data-loading", "lazy");
     giscus.crossOrigin = "anonymous";
