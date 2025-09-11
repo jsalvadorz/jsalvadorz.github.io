@@ -857,14 +857,16 @@ button:active {
     opacity: 1
 }
 
-.lightbox-video {
+.lightbox-video,
+.lightbox-gif {
     position: relative;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     overflow: hidden
 }
 
-.lightbox-video img {
+.lightbox-video img,
+.lightbox-gif img {
     -webkit-transform: scale(1);
     transform: scale(1);
     width: 100%;
@@ -872,7 +874,8 @@ button:active {
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
 }
 
-.lightbox-video .lightbox-play-btn {
+.lightbox-video .lightbox-play-btn,
+.lightbox-gif .lightbox-play-btn {
     z-index: 1;
     position: absolute;
     top: 50%;
@@ -888,38 +891,42 @@ button:active {
     text-align: center;
     color: white;
     backdrop-filter: blur(5px);
-    font-size: 1.33em
+    font-size: 2.5em
 }
 
-.lightbox-video .lightbox-play-btn:after {
+.lightbox-video .lightbox-play-btn:after,
+.lightbox-gif .lightbox-play-btn:after {
     content: '';
     z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.15;
-    background-image: linear-gradient(30deg, #fff 0%, transparent 100%);
+    opacity: 0.25;
+    background-image: linear-gradient(30deg, #FFF 0%, transparent 100%);
     width: 100%;
     height: 100%;
     -webkit-transition: linear 0.1s;
     transition: linear 0.1s
 }
 
-.lightbox-video .lightbox-play-btn i {
-    color: white
+.lightbox-video .lightbox-play-btn i,
+.lightbox-gif .lightbox-play-btn i {
+    color: white !important
 }
 
-.lightbox-video .lightbox-play-btn:hover {
-    color: white
+.lightbox-video .lightbox-play-btn:hover:after,
+.lightbox-gif .lightbox-play-btn:hover:after {
+    opacity: 0.35
 }
 
-.lightbox-video .lightbox-play-btn:hover:after {
-    opacity: 0.3
-}
-
-.lightbox-video:hover img {
+.lightbox-video:hover img,
+.lightbox-gif:hover img {
     -webkit-transform: scale(1.04);
     transform: scale(1.04)
+}
+
+.lightbox-gif .lightbox-play-btn:after {
+    background-image: linear-gradient(30deg, #000 0%, transparent 100%)
 }
 
 .gmap {
@@ -1035,7 +1042,7 @@ button:active {
     overflow: hidden;
     -webkit-transform: scale(1) translate3d(0, 0, 0);
     transform: scale(1) translate3d(0, 0, 0);
-    border-radius: 8px;
+    border-radius: 25px;
     -webkit-transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
 }
@@ -1433,7 +1440,7 @@ button:active {
     overflow: hidden;
     -webkit-transform: scale(1) translate3d(0, 0, 0);
     transform: scale(1) translate3d(0, 0, 0);
-    border-radius: 8px;
+    border-radius: 25px;
     -webkit-transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
 }
@@ -1482,11 +1489,11 @@ button:active {
 .portfolio-box .portfolio-caption {
     z-index: 1;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     right: 0;
     width: 100%;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 25px 25px;
     opacity: 0.7;
     color: white;
     padding: 10px 15px;
@@ -1526,6 +1533,20 @@ button:active {
 
 .portfolio-slider .swiper-slide {
     display: flex
+}
+
+.stretch-hw100 {
+    height: 100%;
+    width: 100%
+}
+
+.stretch-flex-col-hw100 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%
 }
 
 .filter ul {
@@ -1652,6 +1673,14 @@ button:active {
 
 .corner-radius {
     border-bottom-right-radius: 25px
+}
+
+.border-radius-8 {
+    border-radius: 8px
+}
+
+.border-bottom-right-radius-8 {
+    border-bottom-right-radius: 8px
 }
 
 .border-dashed {

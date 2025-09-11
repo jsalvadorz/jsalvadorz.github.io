@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Automatización de Mensajes de Clientes con n8n y Agentes de IA | Analista de Datos y BI en SQL, Python, Power BI</title>
+		<meta name="description" content="Automatización de mensajes con n8n integrando Discord, Slack, Gmail y Google Sheets. Implementación de agentes IA Google Gemini para clasificación, respuestas y análisis de sentimientos.">
+		<meta name="keywords" content="n8n, automatización de flujos, integración aplicaciones, Discord, Slack, Gmail, Google Sheets, agentes IA, Google Gemini, análisis de sentimientos, gestión de mensajes, soporte técnico, atención al cliente.">
+		<meta name="author" content="Junior Salvador">
+		<!-- Favicon -->
+		<link rel="icon" href="/assets/images/favicon-32x32.png" type="image/png" sizes="32x32">
+		<link rel="icon" href="/assets/images/favicon-16x16.png" type="image/png" sizes="16x16">
+		<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+		<!-- CSS -->
+		<link href="/assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/plugins/glightbox/glightbox.min.css" rel="stylesheet">
+		<link href="/assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link href="/assets/css/theme.css" rel="stylesheet">
+		<!-- Fonts/Icons -->
+		<link href="/assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+		<link href="/assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+	</head>
+
+	<body class="theme-dark" data-preloader="true">
+		<!-- Header -->
+		<header class="header-wrapper">
+			<div class="container">
+				<div class="header-nav">
+					<!-- Botón Toggle Menu (para escritorio) -->
+					<button class="toggle-menu-btn">
+						<span></span>
+					</button>
+					<!-- Toggle Menu (para escritorio) -->
+					<div class="toggle-menu">
+						<div class="mt-0">
+							<h6 class="mb-0">Teléfono:</h6>
+							<a class="tInfoTexto" target="_blank"></a>
+						</div>
+						<div class="mt-3">
+							<h6 class="mb-0">Email:</h6>
+							<a class="cInfoTexto"></a>
+						</div>
+						<ul class="list-inline mt-3">
+							<li><a class="tInfoRedes" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+							<li><a class="cInfoRedes"><i class="bi bi-envelope"></i></a></li>
+							<li><a href="https://github.com/jsalvadorz" target="_blank"><i class="bi bi-github"></i></a></li>
+						</ul>
+					</div>
+					<!-- Nav Toggle (para móvil) -->
+					<button class="nav-toggle">
+						<span></span>
+					</button>
+					<!-- Nav -->
+					<ul class="nav-list">
+						<li class="nav-list-item"><a href="/">Sobre mí</a></li>
+						<li class="nav-list-item"><a href="/portafolio/">Portafolio</a></li>
+						<li class="nav-list-item"><a href="/#servicios">Servicios</a></li>
+						<li class="nav-list-item"><a href="/#experiencia">Experiencia</a></li>
+						<li class="nav-list-item"><a href="#contacto">Contacto</a></li>
+						<li class="nav-list-item"><a href="/blog/">Blog</a></li>
+					</ul>
+				</div>
+				<!-- Header Logo -->
+				<div class="header-logo">
+					<h3 class="fw-semi-bold uppercase"><a href="/">JS</a></h3>
+				</div>
+			</div>
+		</header>
+		<!-- fin Header -->
+
+		<!-- Main -->
+		<main id="main-content">
+			<!-- Resumen Proyecto -->
+			<section class="section-spacing pb-0" id="resumen" aria-label="Resumen del Proyecto">
+				<div class="container">
+					<div class="row g-5">
+						<div class="col-12 col-xl-8">
+							<h1 class="display-2 fw-medium">Automatización de Mensajes de Clientes con n8n y Agentes de IA</h1>
+							<p>
+								Implementación de un flujo automatizado con n8n y Agentes de IA para centralizar y clasificar mensajes de clientes.
+								Las consultas se derivan automáticamente a los canales adecuados, garantizando una gestión rápida y eficiente.
+							</p>
+							<div class="d-flex flex-wrap gap-4 mt-3">
+								<div class="dashed-box font-small font-family-secondary fw-medium uppercase">
+									<span>Cliente: Personal</span>
+								</div>
+								<a target="_blank" href="https://www.youtube.com/watch?v=pGfW5S6vIQU">
+									<div class="bg-theme dashed-box font-small font-family-secondary fw-medium uppercase hover-shadow text-white">
+										<i class="bi bi-box-arrow-up-right text-white me-2"></i>
+										<span>Ver demo</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-12 col-xl-4">
+							<div class="bg-lighter border-radius p-4 px-5 p-xl-5 box-shadow d-flex flex-column align-items-center">
+								<div class="row g-3 g-md-4 w-100 my-auto">
+									<div class="col-12 col-md-6 col-xl-12 mt-3">
+										<h5 class="fw-medium mb-0">Servicios:</h5>
+										<p class="mb-0 py-2">Automatización, n8n</p>
+									</div>
+									<div class="col-12 col-md-6 col-xl-12 mt-3">
+										<h5 class="fw-medium mb-0">URL del proyecto:</h5>
+										<p class="mb-0 py-2"><a class="link-hover-line" href="#">jsalvadorz.tech</a></p>
+									</div>
+								</div><!-- fin row(inner) -->
+							</div>
+						</div>
+					</div><!-- fin row -->
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Resumen Proyecto -->
+
+			<!-- Contenido Proyecto -->
+			<section class="section-spacing pb-0" id="contenido" aria-label="Contenido del Proyecto">
+				<div class="container">
+					<!-- Imagen Principal -->
+					<div class="row g-4">
+						<div class="col-12">
+							<div class="img-link-box border-radius">
+								<img src="images/n8n-automatizacion-mensajes.jpg" 
+								alt="Automatización de Mensajes de Clientes con n8n y Agentes de IA" 
+								decoding="async" fetchpriority="high">
+							</div>
+						</div>
+					</div>
+					<!-- fin Imagen Principal -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-body-text me-3"></i>Descripción del proyecto</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								<b>n8n</b> es una plataforma de automatización de flujos de trabajo que permite integrar múltiples aplicaciones y servicios 
+								con el fin de optimizar procesos repetitivos. En este proyecto se diseñó un flujo automatizado que gestiona los mensajes 
+								recibidos a través del formulario de contacto y los redirige de manera eficiente hacia los canales correspondientes.
+							</p>
+							<p class="pb-0">
+								El propósito principal de esta implementación es optimizar la gestión de mensajes de clientes, garantizando una atención 
+								ágil y precisa. Gracias a la automatización, se disminuye la carga operativa manual y se reducen posibles errores humanos. 
+								El flujo desarrollado en n8n contempla la recepción de los mensajes, su clasificación y la asignación automática al canal 
+								adecuado —como Discord, Slack o Gmail— en función de la naturaleza de la consulta o solicitud.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-gear me-3"></i>Sobre el entorno</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								En este proyecto se integraron servicios como Discord y Slack, empleados como canales de comunicación interna similares 
+								a grupos de mensajería, junto con la cuenta de Gmail del cliente y una hoja de Google Sheets para el almacenamiento y 
+								gestión de los mensajes recibidos. El sistema fue probado con cuatro tipos de interacciones: consultas generales de 
+								información, solicitudes de demostración de producto, compras y requerimientos de soporte técnico. Adicionalmente, se 
+								incorporaron <b>Agentes de IA</b> de <b>Google Gemini</b> para la clasificación automática de los mensajes y la generación 
+								de respuestas, así como para realizar <b>análisis de sentimientos</b> y establecer prioridades en casos de asistencia 
+								técnica.
+							</p>
+							<p class="pb-0">
+								He preparado un video explicativo que detalla el flujo de trabajo implementado y sus funcionalidades.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-play-btn me-3"></i>Video explicativo</h2>
+
+					<!-- Lightbox Video -->
+					<div class="row g-4">
+						<div class="col-12">
+							<div class="lightbox-video border-radius mt-4 mb-0">
+								<img src="images/1.jpg" decoding="async" loading="lazy">
+								<a class="glightbox lightbox-play-btn" href="https://www.youtube.com/watch?v=pGfW5S6vIQU">
+									<i class="bi bi-play"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- fin Lightbox Video -->
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Contenido Proyecto -->
+
+			<!-- Sección Contacto -->
+			<section class="section-spacing" id="contacto" aria-label="Datos de contacto">
+				<div class="container">
+					<div class="bg-lighter-30 border-dashed border-radius box-shadow p-4 p-md-5">
+						<div class="row gx-5 align-items-center">
+							<div class="col-12 col-lg-6 text-center text-lg-end mb-3 mb-lg-0">
+								<h2 class="font-family-tertiary fw-semi-bold mb-0">
+									<i class="bi bi-person-plus text-white me-3"></i>Contáctame
+								</h2>
+							</div>
+							<div class="col-12 col-lg-6 text-center text-lg-start">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<i class="bi bi-telephone me-2"></i>
+										<a class="tInfoTexto fw-normal text-white fs-6 link-hover-line" target="_blank"></a>
+									</li>
+									<li>
+										<i class="bi bi-envelope me-2"></i>
+										<a class="cInfoTexto fw-normal text-white fs-6 link-hover-line"></a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- fin row -->
+					</div>
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Sección Contacto -->
+		</main>
+		<!-- fin Main -->
+
+		<!-- Footer -->
+		<footer class="container">
+			<div class="section-spacing bg-charcoal p-4 p-md-5 box-shadow border-radius-top">
+				<div class="row g-2 align-items-center">
+					<div class="col-12 col-md-6 text-center text-md-start">
+						<p>&copy; <span id="year"></span> Junior Salvador | Github and ☕</p>
+					</div>
+					<div class="col-12 col-md-6 text-center text-md-end">
+						<ul class="list-inline-dash">
+							<li><a class="link-hover-line" href="#">Subir</a></li>
+						</ul>
+					</div>
+				</div><!-- fin row -->
+			</div>
+		</footer>
+		<!-- fin Footer -->
+
+		<!-- Cursor Gradiente -->
+		<div class="cursor-gradient"></div>
+		<!-- fin Cursor Gradiente -->
+
+		<!-- JavaScripts -->
+		<script src="/assets/plugins/jquery.min.js"></script>
+		<script src="/assets/plugins/plugins.js"></script>
+		<script src="/assets/js/functions.js"></script>
+		<script src="/assets/js/letscontact.js"></script>
+	</body>
+</html>

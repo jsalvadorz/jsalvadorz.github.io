@@ -49,12 +49,37 @@ if (toggleMenu) {
     });
 }
 
-const lightbox = GLightbox();
+const lightbox = GLightbox({
+    selector: '.glightbox',
+    autoplayVideos: true,
+    videosWidth: '90vw',
+    plyr: {
+        config: {
+            ratio: '16:9',
+            muted: false,
+            hideControls: false,
+            youtube: {
+                noCookie: true,
+                rel: 0,
+                showinfo: 0,
+                iv_load_policy: 3
+            },
+        }
+    }
+});
 
 const pGrid = $('.portfolio-grid');
 if (pGrid.length) {
     mixitup('.portfolio-grid', {
         selectors: { target: '.portfolio-item' },
+        animation: { duration: 250 },
+    });
+}
+
+const bGrid = $('.blog-grid');
+if (bGrid.length) {
+    mixitup('.blog-grid', {
+        selectors: { target: '.blog-item' },
         animation: { duration: 250 },
     });
 }

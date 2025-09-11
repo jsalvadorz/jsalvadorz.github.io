@@ -73,9 +73,26 @@
 			<!-- Sección Blog -->
 			<section class="section-spacing pb-0" id="blog" aria-label="Blog">
 				<div class="container">
-					<div class="row g-4 g-lg-5">
-						<!-- Blog Post 1 -->
-						<div class="col-12 col-lg-6">
+					<!-- Blog Header-->
+					<div class="mb-4 mb-lg-5">
+						<div class="row align-items-end g-3">
+							<div class="col-12 col-lg-6">
+								<h1 class="display-1 font-family-tertiary fw-medium stroke-text mb-0">Blog</h1>
+							</div>
+							<div class="col-12 col-lg-6 text-lg-end">
+								<div class="filter">
+									<ul>
+										<li data-filter="all">Mostrar Todo</li>
+										<li data-filter=".category-powerbi">Power BI</li>
+									</ul>
+								</div><!-- fin Blog Filter -->
+							</div>
+						</div><!-- fin row -->
+					</div>
+					<!-- Blog Grid -->
+					<div class="row g-4 g-lg-5 blog-grid">
+						<!-- Blog post 1 -->
+						<div class="col-12 col-lg-6 blog-item category-powerbi">
 							<div class="blog-post-box">
 								<a href="dax-selectedvalue-en-parametros-campo/">
 									<div class="blog-img">
@@ -100,7 +117,7 @@
 								</div>
 							</div>
 						</div>
-					</div><!-- fin row -->
+					</div><!-- fin blog-grid -->
 				</div><!-- fin container -->
 			</section>
 			<!-- fin Sección Blog -->
