@@ -51,6 +51,8 @@ if (toggleMenu) {
 
 const lightbox = GLightbox({
     selector: '.glightbox',
+    touchNavigation: true,
+    loop: false,
     autoplayVideos: true,
     videosWidth: '90vw',
     plyr: {
@@ -63,7 +65,7 @@ const lightbox = GLightbox({
                 rel: 0,
                 showinfo: 0,
                 iv_load_policy: 3
-            },
+            }
         }
     }
 });

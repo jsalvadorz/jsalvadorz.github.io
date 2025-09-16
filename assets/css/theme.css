@@ -2240,12 +2240,19 @@ button:active {
     padding: .9rem
 }
 
-.inline-code {
-    background-color: #26303D;
-    padding: .2em .4em;
+.inline-code,
+.inline-option {
+    background-color: rgba(101, 108, 118, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: .25em .5em;
     border-radius: 0.375rem;
     font-family: "Outfit", sans-serif;
-    color: #CBADE1
+    color: #FFF
+}
+
+.inline-option {
+    border: 1px solid rgba(213, 156, 206, 0.15);
+    color: #DBAED6
 }
 
 iframe.deepnote-embed {
@@ -2264,6 +2271,35 @@ iframe.deepnote-embed {
 
 a:hover .play-overlay {
     opacity: 0.6
+}
+
+ol.post-list {
+    margin: 0;
+    padding: 0.8em 0;
+    list-style: none;
+    counter-reset: item calc(var(--start, 1) - 1)
+}
+
+ol.post-list li {
+    line-height: 2;
+    counter-increment: item;
+    position: relative;
+    padding-bottom: 0.8em;
+    padding-left: 2em
+}
+
+ol.post-list li:last-child {
+    padding-bottom: 0
+}
+
+ol.post-list li::before {
+    content: counter(item) ". ";
+    position: absolute;
+    left: 0
+}
+
+.padding-left-2em {
+    padding-left: 2em
 }
 
 @-webkit-keyframes line-out {
