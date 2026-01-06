@@ -1741,6 +1741,14 @@ button:active {
     border-color: rgba(255, 255, 255, 0.3)
 }
 
+.stack-box {
+    display: inline-block;
+    background: rgba(44, 57, 67, 0.3);
+    border-radius: 50px;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    padding: 11px 23px !important
+}
+
 @media (max-width: 991.99px) {
     .dashed-box {
         padding: 9px 20px
@@ -2253,12 +2261,6 @@ button:active {
 .inline-option {
     border: 1px solid rgba(213, 156, 206, 0.15);
     color: #DBAED6
-}
-
-iframe.deepnote-embed {
-    filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.85) saturate(0.85);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
 }
 
 .play-overlay {

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Web Scraping con Selenium de productos de Tottus.com | Analista de Datos y BI en SQL, Python, Power BI</title>
-		<meta name="description" content="Desarrollo de un script en Python utilizando Selenium para realizar web scraping de productos en Tottus.com. El script extrae información detallada de los productos, como nombre, marca y precios ofertados, permitiendo resaltar aquellos con precios límite definidos por el usuario. La información se procesa y formatea en un DataFrame con Pandas para exportación a CSV, bases de datos o datalakes.">
+		<meta name="description" content="Desarrollo de un script en Python utilizando Selenium para realizar web scraping de productos en Tottus.com. El script extrae información detallada de los productos, como nombre, marca, precios ofertados, SKU y url, permitiendo resaltar aquellos con buen precio definido por el usuario. La información se procesa y formatea en un DataFrame con Pandas para exportación a CSV, bases de datos o datalakes.">
 		<meta name="keywords" content="web scraping, Selenium, Python, Pandas, Tottus, precios, productos, script Python, automatización, CSV, datalake, base de datos, scraping productos, scraping precios, Tottus.com, análisis de datos">
 		<meta name="author" content="Junior Salvador">
 		<!-- Favicon -->
@@ -16,6 +16,9 @@
 		<link href="/assets/plugins/glightbox/glightbox.min.css" rel="stylesheet">
 		<link href="/assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
 		<link href="/assets/css/theme.css" rel="stylesheet">
+		<!-- CSS Highlight -->
+		<link href="/assets/plugins/highlight/css/atom-one-dark.min.css" rel="stylesheet">
+		<link href="/assets/plugins/highlight/css/highlight-customtheme.css" rel="stylesheet">
 		<!-- Fonts/Icons -->
 		<link href="/assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 		<link href="/assets/plugins/fontawesome/css/all.css" rel="stylesheet">
@@ -77,15 +80,15 @@
 						<div class="col-12 col-xl-8">
 							<h1 class="display-2 fw-medium">Web Scraping con Selenium de productos de Tottus.com</h1>
 							<p>
-								Desarrollo de un script en Python con Selenium que realiza web scraping en Tottus.com, extrayendo nombre, marca 
-								y modalidades de precios de un producto según una búsqueda definida por el usuario. La herramienta resalta productos 
-								bajo un límite de precio configurado y organiza los datos en un DataFrame de Pandas.
+								Desarrollo de un script en Python con Selenium que realiza web scraping en Tottus.com, extrayendo nombre, marca, 
+								modalidades de precios, SKU y url de un producto según una búsqueda definida por el usuario. La herramienta
+								resalta productos de "buen precio" y organiza los datos en un DataFrame de Pandas.
 							</p>
 							<div class="d-flex flex-wrap gap-4 mt-3">
 								<div class="dashed-box font-small font-family-secondary fw-medium uppercase">
 									<span>Cliente: Personal</span>
 								</div>
-								<a target="_blank" href="https://deepnote.com/app/jandresz/Web-Scraping-Projects-fa6eb3f6-0dd8-451d-a002-f16a056c04e6">
+								<a target="_blank" href="https://www.youtube.com/watch?v=yeegM4PxySk">
 									<div class="bg-theme dashed-box font-small font-family-secondary fw-medium uppercase hover-shadow text-white">
 										<i class="bi bi-box-arrow-up-right text-white me-2"></i>
 										<span>Ver demo</span>
@@ -119,13 +122,32 @@
 					<div class="row g-4">
 						<div class="col-12">
 							<div class="img-link-box border-radius">
-								<img src="images/web-scraping-con-selenium-tottus.png" 
+								<img src="images/web-scraping-con-selenium-tottus.jpg" 
 								alt="Web Scraping con Selenium de productos de Tottus.com" 
 								decoding="async" fetchpriority="high">
 							</div>
 						</div>
 					</div>
 					<!-- fin Imagen Principal -->
+
+					<!-- Stack de tecnologías -->
+					<div class="row g-4 my-0 my-lg-4 mb-lg-0 text-center text-lg-start">
+						<!-- Título -->
+						<div class="col-12 col-lg-3 d-flex align-items-center align-items-lg-stretch justify-content-center justify-content-lg-start">
+							<h5 class="fw-medium mt-2 mt-lg-0 mt-xl-2">Proyecto realizado con:</h5>
+						</div>
+
+						<!-- Lista de tecnologías -->
+						<div class="col-12 col-lg-9 d-flex align-items-center align-items-lg-stretch justify-content-center justify-content-lg-start">
+							<ul class="list-inline font-small font-family-secondary fw-medium uppercase">
+								<li class="list-inline-item stack-box mb-3"><i class="fa-brands fa-python me-2"></i>Python</li>
+								<li class="list-inline-item stack-box mb-3"><i class="fa-solid fa-spider me-2"></i>Selenium</li>
+								<li class="list-inline-item stack-box mb-3"><i class="fa-solid fa-table-columns me-2"></i>Pandas</li>
+								<li class="list-inline-item stack-box mb-3"><i class="fa-solid fa-table-cells me-2"></i>Excel</li>
+							</ul>
+						</div>
+					</div>
+					<!-- fin Stack de tecnologías -->
 
 					<!-- Subtítulo -->
 					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-body-text me-3"></i>Descripción del proyecto</h2>
@@ -136,16 +158,21 @@
 							<p>
 								En este proyecto desarrollé un script en Python usando la librería <b>Selenium</b> para hacer web scraping de 
 								los productos de la página web de Tottus.com. El script procesa y genera una lista de productos a partir de un 
-								parámetro de búsqueda definido por el usuario, por ejemplo "refrigeradora", y extrae la información de cada 
-								producto de esa categoría como el nombre, la marca y las modalidades de precios ofertados (precio CMR, precio 
-								en línea y precio en tienda), todo desde la web de Tottus.com.
+								parámetro de búsqueda definido por el usuario, por ejemplo "arroz", y extrae la información de cada producto
+								de esa categoría como el nombre, la marca, las modalidades de precios ofertados (precio CMR, precio en línea
+								y precio en tienda), el SKU y url de acceso, todo desde la web de Tottus.com.
 							</p>
-							<p class="pb-0">
-								Asimismo, permite destacar los productos que tienen un precio límite definido también por el usuario, por ejemplo, 
-								resaltar aquellos productos con un precio menor o igual a S/ 1,800.00. Finalmente, la data extraída se formatea 
+							<p>
+								Asimismo, permite destacar los productos que tienen un "buen precio" definido también por el usuario, por ejemplo, 
+								resaltar aquellos productos con un precio menor o igual a S/ 18.00. Finalmente, la data extraída se formatea 
 								en un DataFrame de <b>Pandas</b> (otra librería de Python) y a partir de allí es posible exportar la información 
-								a un archivo CSV para su posterior análisis o incluso, si fuera necesario, a una base de datos o un datalake en 
-								la nube.
+								a un archivo CSV o excel para su posterior análisis o incluso, si fuera necesario, a una base de datos o un
+								datalake en la nube.
+							</p>
+							<p class="bg-lighter-30 border-dashed border-radius box-shadow p-4 p-md-5 mt-4">
+								Tener en cuenta que el script tiene solo fines demostrativos. Se deben respetar los términos y condiciones de uso
+								del sitio web de Tottus.com y las leyes locales relacionadas con el web scraping antes de utilizar este script
+								en un entorno real. Los datos extraídos son únicamente para fines educativos y no comerciales.
 							</p>
 						</div>
 					</div>
@@ -157,27 +184,33 @@
 					<!-- Contenido -->
 					<div class="row g-4">
 						<div class="col-12">
-							<p>
-								El script se ejecuta en la nube en un notebook de <b>Deepnote</b>, que permite trabajar con Python y Jupyter 
-								Notebooks en la nube. Considerar que fue necesario instalar previamente la librería <b>Selenium</b> y el driver 
-								<b>geckodriver</b> (Firefox) para Selenium en el entorno de Deepnote ya que no están instalados por default, 
-								tal como sucede en Google Colab si se quisiera ejecutar el script en ese entorno. Otro detalle ¿Por qué usé 
-								geckodriver? Simplemente porque es el driver que mejor me ha funcionado en mi experiencia personal, pero se 
-								puede implementar con ChromeDriver o Edge WebDriver sin mayor problema.
-							</p>
 							<p class="pb-0">
-								Para ver el script en acción, puedes hacer clic 
-								<a class="link-hover-line" href="https://deepnote.com/app/jandresz/Web-Scraping-Projects-fa6eb3f6-0dd8-451d-a002-f16a056c04e6" target="_blank">
-									<span>aquí</span>
-									<i class="bi bi-box-arrow-up-right text-white ms-1"></i>
-								</a>. 
-								Se abrirá una nueva pestaña con la app del proyecto en Deepnote donde podrás colocar los parámetros a tu gusto, 
-								ejecutar el script y ver los resultados en tiempo real. No es necesario crearte una cuenta. Luego puedes volver 
-								aquí para seguir leyendo el post.
+								Se usó <b>Python 3.11.9</b> para desarrollar el script, siendo las librerías principales utilizadas: <b>Selenium</b>
+								para el web scraping y <b>Pandas</b> para el manejo de datos en un DataFrame. Como editor de código se usó
+								<b>Visual Studio Code</b> con las extensiones necesarias para trabajar con Jupyter Notebooks (archivos .ipynb).
+								Como navegador web se utilizó <b>Microsoft Edge</b> (Edge WebDriver) en modo headless (sin interfaz gráfica) para
+								ejecutar el script de Selenium, aunque se podría implementar con ChromeDriver o GeckoDriver (Firefox) sin mayor
+								problema. Por otro lado, también se podría usar en entornos como Google Colab, Deepnote o Jupyter Notebooks locales.
 							</p>
 						</div>
 					</div>
 					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-play-btn me-3"></i>Video explicativo</h2>
+
+					<!-- Lightbox Video -->
+					<div class="row g-4">
+						<div class="col-12">
+							<div class="lightbox-video border-radius mt-4 mb-0">
+								<img src="images/1.jpg" decoding="async" loading="lazy">
+								<a class="glightbox lightbox-play-btn" href="https://www.youtube.com/watch?v=yeegM4PxySk">
+									<i class="bi bi-play"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- fin Lightbox Video -->
 
 					<!-- Subtítulo -->
 					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-code-slash me-3"></i>Explicación del código</h2>
@@ -185,122 +218,227 @@
 					<!-- Contenido -->
 					<div class="row g-4">
 						<div class="col-12">
-							<h5 class="fw-medium my-3">1. Importación de librerías</h5>
-							<div class="py-3 pb-4">
-								<iframe
-									class="deepnote-embed" 
-									title="Embedded cell output" 
-									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/4a9722b7d8714cadbf3c093f9897ee55?height=173" 
-									height="176" 
-									width="100%">
-								</iframe>
+							<h5 class="fw-medium my-2 mt-3">1. Importación de librerías</h5>
+							<div class="py-1 pb-4">
+								<pre><code class="language-python">
+									import logging
+									import pandas as pd
+									from selenium import webdriver
+									from selenium.common.exceptions import TimeoutException
+									from selenium.webdriver.common.by import By
+									from selenium.webdriver.edge.options import Options
+									from selenium.webdriver.remote.webelement import WebElement
+									from selenium.webdriver.support import expected_conditions as EC
+									from selenium.webdriver.support.ui import WebDriverWait
+								</code></pre>
 							</div>
 
-							<h5 class="fw-medium my-3">2. Función que captura los precios</h5>
-							<div class="py-3 pb-2">
-								<iframe 
-									class="deepnote-embed" 
-									title="Embedded cell output" 
-									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/02ab5a8839ff457ba0dfba76663c3c99?height=137" 
-									height="140" 
-									width="100%">
-								</iframe>
+							<h5 class="fw-medium my-2 mt-3">2. Configuraciones previas del driver y parámetros de búsqueda</h5>
+							<div class="py-1 pb-4">
+								<pre><code class="language-python">
+									# Configurar el logging
+									logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+									# Configurar el navegador
+									edge_options = Options()
+									edge_options.add_argument("--headless")
+									edge_options.add_argument("--no-sandbox")
+									edge_options.add_argument("--disable-dev-shm-usage")
+
+									# Crear una instancia del navegador
+									driver = webdriver.Edge(options=edge_options)
+
+									# Tiempo de espera explícito (hasta 10 seg)
+									wait = WebDriverWait(driver, 10)
+
+									# Establecer el término de búsqueda, el buen precio y la URL de la página a scrapear
+									termino_busqueda = "arroz"
+									buen_precio = 18.0
+									url_inicial = f"https://www.tottus.com.pe/tottus-pe/buscar?Ntt={termino_busqueda}"
+								</code></pre>
+							</div>
+
+							<h5 class="fw-medium my-2 mt-3">3. Función que captura los precios</h5>
+							<div class="py-1 pb-4">
+								<pre><code class="language-python">
+									# Función para obtener el precio de un obj_producto
+									def obtener_precio(elemento: WebElement, selector: str) -> float:
+										elementos = elemento.find_elements(By.CSS_SELECTOR, selector)
+
+										if elementos:
+											try:
+												valor = elementos[0].get_attribute(selector[3:-1])
+												return float(valor.replace(",", "").strip())
+											except (ValueError, AttributeError):
+												return 0.0
+										return 0.0
+								</code></pre>
 							</div>
 							<p>
-								Un poco de contexto. La web Tottus.com tiene tres tipos de precios para cada producto: <i>precio "CMR"</i>, 
-								<i>precio "internet"</i> y <i>precio "normal"</i>, y aún así no todos los productos tienen los tres valores, 
+								Un poco de contexto. La web Tottus.com tiene tres tipos de precios para cada producto:
+								<span class="inline-code">data-cmr-price</span>, <span class="inline-code">data-internet-price</span> y
+								<span class="inline-code">data-normal-price</span>, y aún así no todos los productos tienen los tres valores, 
 								algunos tienen dos, otros solo uno. Cada uno de estos valores de precios se encuentran en un atributo específico 
 								según se aprecia en la estructura HTML de la web y el objetivo es capturar el contenido de esos atributos, si 
 								existen, y de no ser así asignar un valor cero, conservando de esa manera la uniformidad de las longitudes de 
 								las listas extraídas. Esta función realiza todo ese proceso.
 							</p>
 
-							<h5 class="fw-medium my-3">3. Configuraciones previas del driver y parámetros de búsqueda</h5>
-							<div class="py-3 pb-4">
-								<iframe 
-									class="deepnote-embed" 
-									title="Embedded cell output" 
-									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/73e9c35f903a490e81ea9b49e1acde87?height=353" 
-									height="356" 
-									width="100%">
-								</iframe>
+							<h5 class="fw-medium my-2 mt-3">4. Bloque principal</h5>
+							<div class="py-1 pb-4">
+								<pre><code class="language-python">
+									resultados_totales = []
+									pagina_actual = 1
+
+									try:
+										# 1. Obtener la URL inicial a escrapear
+										driver.get(url_inicial)
+										logging.info(f"Iniciando scraping en: {url_inicial}")
+
+										# 2. Bucle principal
+										while True:
+											logging.info(f"--- Procesando página {pagina_actual} ---")
+											pagina_invalida = False
+
+											# A. Esperar que carguen los productos (buscamos el contenedor de precios como referencia)
+											try:
+												wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, "prices")))
+											except TimeoutException:
+												pagina_invalida = True
+
+											# B. Evaluar si la página es inválida
+											if pagina_invalida:
+												logging.warning(f"Página {pagina_actual} marcada como inválida. Se omite extracción.")
+											else:
+												# C. Capturar listas de propiedades de productos
+												listado_marcas = driver.find_elements(By.CLASS_NAME, "title-rebrand")
+												listado_productos = driver.find_elements(By.CLASS_NAME, "subTitle-rebrand")
+												listado_precios = driver.find_elements(By.CLASS_NAME, "prices")
+												listado_links = driver.find_elements(By.CLASS_NAME, "pod-link")
+
+												# D. Validar que las listas tengan el mismo tamaño
+												if not (
+													len(listado_marcas)
+													== len(listado_productos)
+													== len(listado_precios)
+													== len(listado_links)
+												):
+													logging.error(f"Error de consistencia en página {pagina_actual}. Se omite extracción.")
+												else:
+													# E. Iterar sobre los productos de la página actual
+													for obj_marca, obj_producto, obj_precio, obj_link in zip(
+														listado_marcas,
+														listado_productos,
+														listado_precios,
+														listado_links
+													):
+														try:
+															marca_texto = obj_marca.text.strip()
+															producto_texto = obj_producto.text.strip()
+															
+															precio_cmr = obtener_precio(obj_precio, "li[data-cmr-price]")
+															precio_internet = obtener_precio(obj_precio, "li[data-internet-price]")
+															precio_normal = obtener_precio(obj_precio, "li[data-normal-price]")
+
+															url_producto = obj_link.get_attribute("href").strip()
+															sku_producto = str(url_producto.split("/")[-1]) if url_producto else "N/A"
+
+															# Lógica de buen precio
+															precio_referencia = (
+																precio_cmr
+																if precio_cmr > 0
+																else precio_internet
+																if precio_internet > 0
+																else precio_normal
+															)
+
+															es_buen_precio = "SI" if 0 < precio_referencia <= buen_precio else "NO"
+
+															# F. Agregar los resultados a una lista
+															resultados_totales.append({
+																"MARCA": marca_texto,
+																"PRODUCTO": producto_texto,
+																"SKU": sku_producto,
+																"PRECIO CMR": precio_cmr,
+																"PRECIO INTERNET": precio_internet,
+																"PRECIO TIENDA": precio_normal,
+																"BUEN PRECIO": es_buen_precio,
+																"URL": url_producto
+															})
+
+														except Exception as e:
+															logging.error(f"Error al procesar producto {producto_texto}: {e}")
+
+													logging.info(f"Cantidad de productos encontrados en la página {pagina_actual}: {len(listado_productos)}")
+
+											# G. Lógica de paginación
+											try:
+												# --- Preparar para detectar cambios en la página ---
+
+												# Guardar la URL actual
+												url_anterior = driver.current_url
+
+												elemento_viejo = None
+												try:
+													# Guardar el primer producto del DOM actual
+													elemento_viejo = driver.find_element(By.CLASS_NAME, "prices")
+												except Exception:
+													logging.warning(f"No se pudo capturar el primer elemento de la página {pagina_actual}.")
+
+												# Esperar a que el botón "Siguiente" sea cliqueable y capturarlo
+												selector_boton_siguiente = "button[id='testId-pagination-bottom-arrow-right']"
+												boton_siguiente = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, selector_boton_siguiente)))
+												
+												# --- Cambiar de página ---
+
+												# Hacer scroll hasta que el botón esté centrado en la página para asegurar que el clic funcione
+												driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", boton_siguiente)
+												boton_siguiente.click()
+
+												# --- Validar que la página ha cambiado ---
+
+												# Esperar que la nueva URL sea diferente a la anterior
+												wait.until(EC.url_changes(url_anterior))
+
+												# Esperar que el primer elemento del DOM anterior ya no esté presente
+												if elemento_viejo is not None:
+													wait.until(EC.staleness_of(elemento_viejo))
+
+												# Incrementar el contador de página
+												pagina_actual += 1
+												
+											except TimeoutException:
+												logging.info("No se detectó cambio de página o botón siguiente. Fin del scraping.")
+												break
+											except Exception as e:
+												logging.error(f"Error al intentar cambiar de página: {e}")
+												break
+
+										# 3. Crear un DataFrame con los resultados
+										df_datos = pd.DataFrame(resultados_totales)
+
+										if not df_datos.empty:
+											pd.options.display.float_format = "S/{:,.2f}".format
+											df_datos.to_excel(f"productos_tottus_{termino_busqueda}.xlsx", index=False, engine="openpyxl")
+											logging.info(f"Scraping finalizado. Total productos encontrados: {len(df_datos)}")
+										else:
+											logging.warning("No se extrajeron datos.")
+
+									except Exception as e:
+										logging.critical(f"Ocurrió un error durante la ejecución: {e}")
+									finally:
+										driver.quit()
+										logging.info("Navegador cerrado. Ejecución finalizada.")
+								</code></pre>
 							</div>
 
-							<h5 class="fw-medium my-3">4. Bloque principal</h5>
-							<div class="py-3 pb-2">
-								<iframe 
-									class="deepnote-embed" 
-									title="Embedded cell output" 
-									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/320487cbfbdf418cb9b9085d649ee5fc?height=1197.75" 
-									height="1215" 
-									width="100%">
-								</iframe>
-							</div>
+							<h5 class="fw-medium my-2 mt-3">5. Algunas anotaciones</h5>
 							<p class="pb-0">
-								Algunas anotaciones. Se ha incluído código para manejar excepciones, de darse el caso. Además, se han agregado 
-								notas para el usuario final conforme se va ejecutando el script.
+								Se ha incluido código para manejar excepciones, de darse el caso. Además, se han agregado notas para el
+								usuario final conforme se va ejecutando el script. Por otro lado, la data extraída se almacena en un
+								DataFrame de Pandas que luego es exportado en un archivo excel llamado
+								<span class="inline-code">productos_tottus_{termino_busqueda}.xlsx</span>.
 							</p>
-						</div>
-					</div>
-					<!-- fin Contenido -->
-
-					<!-- Subtítulo -->
-					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-table me-3"></i>Tabla de resultados</h2>
-
-					<!-- Contenido -->
-					<div class="row g-4">
-						<div class="col-12">
-							<p>
-								La data extraída se almacena en un DataFrame de Pandas llamado <span class="inline-code">tabla_resultado</span>.
-							</p>
-							<p class="bg-lighter-30 border-dashed border-radius box-shadow p-4 p-md-5 my-4">
-								Tener en cuenta que el script tiene solo fines demostrativos por lo que extrae datos solo de la primera ventana 
-								de resultados. En un caso real, se podría implementar un mecanismo de paginación para recorrer todas las páginas 
-								de resultados y extraer la información de todos los productos. Algo que se puede hacer fácilmente con Selenium.
-							</p>
-							<div class="py-3 pb-0">
-								<iframe 
-									class="deepnote-embed" 
-									title="Embedded cell output" 
-									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/d81586cc7590478c984894bde420f553?height=1482" 
-									height="1400" 
-									width="100%">
-								</iframe>
-							</div>
-						</div>
-					</div>
-					<!-- fin Contenido -->
-
-					<!-- Subtítulo -->
-					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-kanban me-3"></i>Algunos gráficos</h2>
-
-					<!-- Contenido -->
-					<div class="row g-4">
-						<div class="col-12">
-							<p>
-								Una característica que me agrada de los notebooks de Deepnote es que se pueden crear gráficos interactivos 
-								básicos de inmediato con unos clics sin tener que escribir código con librerías como Matplotlib. Esos gráficos 
-								permiten una vista inicial rápida: seleccionas el dataframe, eliges el tipo de gráfico, seleccionas los campos, 
-								y listo. A continuación, se muestran dos gráficos interactivos generados por Deepnote a partir de la data extraída.
-							</p>
-							<div class="py-3 pb-4">
-								<iframe 
-									class="deepnote-embed" 
-									title="Embedded cell output" 
-									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/1955a069be2040a1bfc60a6b140ca4ca?height=500" 
-									height="500" 
-									width="100%">
-								</iframe>
-							</div>
-							<div class="py-2 pb-0">
-								<iframe 
-									class="deepnote-embed" 
-									title="Embedded cell output" 
-									src="https://embed.deepnote.com/fa6eb3f6-0dd8-451d-a002-f16a056c04e6/393ce88da62f44079948f85f747aa649/bf0a5ffca2874ae8893329a49b746d7e?height=500" 
-									height="500" 
-									width="100%">
-								</iframe>
-							</div>
 						</div>
 					</div>
 					<!-- fin Contenido -->
@@ -364,5 +502,14 @@
 		<script src="/assets/plugins/plugins.js"></script>
 		<script src="/assets/js/functions.js"></script>
 		<script src="/assets/js/letscontact.js"></script>
+
+		<!-- JS Highlight -->
+		<script src="/assets/plugins/highlight/js/highlight.min.js"></script>
+		<script src="/assets/plugins/highlight/js/adds/highlightjs-line-numbers.js"></script>
+		<script src="/assets/plugins/highlight/js/adds/highlight-clean-blanks-tabs.js"></script>
+		<script src="/assets/plugins/highlight/js/adds/highlightjs-copy.js"></script>
+		<script src="/assets/plugins/highlight/js/adds/hljslanguagedisplayplugin.js"></script>
+		<script src="/assets/plugins/highlight/js/adds/dax-language.js"></script>
+		<script src="/assets/plugins/highlight/js/highlight-init.js"></script>
 	</body>
 </html>
