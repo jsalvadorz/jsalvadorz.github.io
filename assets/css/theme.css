@@ -57,6 +57,10 @@ img {
     color: rgba(255, 255, 255, 0.8)
 }
 
+h5 {
+    font-size: 1.35rem
+}
+
 .theme-dark h1,
 .theme-dark h2,
 .theme-dark h3,
@@ -560,7 +564,7 @@ ul.list-inline-dash li:first-child:before {
 
 body {
     font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 400;
     letter-spacing: 0
 }
@@ -599,9 +603,14 @@ h6,
     }
 }
 
+#footer-wrapper p,
+#footer-wrapper a {
+    font-size: 1rem
+}
+
 p {
-    margin: 0;
     line-height: 2;
+    margin: 0;
     padding: 0.8em 0
 }
 
@@ -1077,7 +1086,7 @@ button:active {
     padding: 7px 15px;
     border-radius: 30px;
     color: white;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     font-family: "Outfit", sans-serif;
     font-weight: 500;
     text-transform: uppercase;
@@ -1114,6 +1123,7 @@ button:active {
     position: fixed;
     top: 0;
     background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
     height: 72px;
     width: auto;
     backdrop-filter: blur(10px);
@@ -1343,6 +1353,7 @@ button:active {
         min-width: 200px;
         padding: 24px;
         border-radius: 20px;
+        font-size: 1em;
         -webkit-transition: linear 0.1s;
         transition: linear 0.1s
     }
@@ -1477,7 +1488,7 @@ button:active {
     padding: 7px 15px;
     border-radius: 30px;
     color: white;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     font-family: "Outfit", sans-serif;
     font-weight: 500;
     text-transform: uppercase;
@@ -1747,6 +1758,42 @@ button:active {
     border-radius: 50px;
     border: 1px dashed rgba(255, 255, 255, 0.3);
     padding: 11px 23px !important
+}
+
+#skills {
+    font-size: 1rem
+}
+
+#experiencia .company-name {
+    font-size: 1rem
+}
+
+#experiencia .exp-time {
+    display: block;
+    font-size: 0.9em
+}
+
+#educacion-wrapper span {
+    font-size: 1rem
+}
+
+.filter {
+    font-size: 1rem
+}
+
+#hard-skills,
+#reconocimientos,
+#certificaciones,
+#cursos {
+    font-size: 1rem
+}
+
+.category-wrapper p {
+    font-size: 1rem
+}
+
+#contacto a {
+    font-size: 1.125rem !important
 }
 
 @media (max-width: 991.99px) {
@@ -2027,6 +2074,10 @@ button:active {
     color: rgba(255, 255, 255, 0.4)
 }
 
+.theme-dark .text-lighter-45 {
+    color: rgba(255, 255, 255, 0.45)
+}
+
 .theme-dark .text-lighter-30 {
     color: rgba(255, 255, 255, 0.3)
 }
@@ -2302,6 +2353,34 @@ ol.post-list li::before {
 
 .padding-left-2em {
     padding-left: 2em
+}
+
+.gist .gist-file {
+    margin-bottom: 0 !important;
+    margin-top: 1.75rem !important;
+    border-radius: 25px !important
+}
+
+.gist .gist-data {
+    padding: 1.5rem !important;
+    border-radius: 25px 25px 0 0 !important
+}
+
+.gist .gist-meta {
+    background: rgba(44, 57, 67, 0.8) !important;
+    font-size: 0.75rem !important;
+    color: #8B949E !important;
+    padding: 0.9rem !important;
+    border-radius: 0 0 25px 25px !important
+}
+
+.gist .gist-meta a:first-child {
+    display: none !important
+}
+
+.gist a {
+    color: #FFF !important;
+    font-size: 1.125rem !important
 }
 
 @-webkit-keyframes line-out {

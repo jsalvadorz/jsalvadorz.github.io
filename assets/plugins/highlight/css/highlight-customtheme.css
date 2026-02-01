@@ -84,7 +84,7 @@ pre:has(.hljs){
     width:100%;
     margin:0;
     padding:0.4em 1em;
-    font-size:1.25em;
+    font-size:1.1em;
     color:rgba(139,152,169,0.75);
     text-transform:uppercase
 }
@@ -93,6 +93,7 @@ pre:has(.hljs){
 /* General Custom CSS  */
 /***********************/
 pre{
+    font-size: 1rem;
     tab-size:4;
     background:rgba(44, 57, 67, 0.3);
     border:1px solid rgba(139,152,169,0.15);
@@ -101,12 +102,12 @@ pre{
     margin-top:1.75rem
 }
 pre code.hljs{
+    font-size: 1.15rem;
     background:rgba(44, 57, 67, 0.3);
     margin-top:15px
 }
 table.hljs-ln{
-    font-size:1.05rem !important;
-    line-height:1.5rem !important;
+    line-height:1.7rem !important;
     margin-bottom:0 !important
 }
 table.hljs-ln,
