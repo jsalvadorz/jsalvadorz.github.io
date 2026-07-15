@@ -1781,8 +1781,10 @@ button:active {
     font-size: 1rem
 }
 
+#tools,
 #hard-skills,
 #reconocimientos,
+#badges,
 #certificaciones,
 #cursos {
     font-size: 1rem
@@ -1936,6 +1938,10 @@ button:active {
 
 .theme-dark .bg-lighter-10 {
     background: rgba(44, 57, 67, 0.1)
+}
+
+.bg-lighter-hover-30:hover {
+    background: rgba(44, 57, 67, 0.5)
 }
 
 .font-family-primary {
@@ -2383,6 +2389,24 @@ ol.post-list li::before {
     font-size: 1.125rem !important
 }
 
+.logo-tools {
+    width: 65px;
+    height: 65px;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: all 0.3s ease
+}
+
+.card-tools:hover {
+    cursor: pointer
+}
+
+.card-tools:hover .logo-tools {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1)
+}
+
 @-webkit-keyframes line-out {
     0% {
         -webkit-transform: scaleX(1);
@@ -2444,5 +2468,27 @@ ol.post-list li::before {
         transform: scale(1);
         -webkit-transform-origin: 0 50%;
         transform-origin: 0 50%
+    }
+}
+
+.skills-columns {
+	column-count: 1;
+	column-gap: 1.5rem
+}
+
+.skills-columns .progress-box {
+	break-inside: avoid;
+	margin-bottom: 1.5rem
+}
+
+@media (min-width: 992px) {
+	.skills-columns {
+        column-count: 2
+    }
+}
+
+@media (min-width: 1200px) {
+	.skills-columns {
+        column-count: 3
     }
 }
