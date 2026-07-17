@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Videojuego Spacecrafts con Python y Pygame | Analista de Datos y BI en SQL, Python, Power BI</title>
+		<meta name="description" content="Videojuego arcade 2D desarrollado en Python y Pygame como demostración de programación orientada a objetos, desarrollo de videojuegos, detección de colisiones y arquitectura modular.">
+		<meta name="keywords" content="Python, Pygame, videojuego 2D, desarrollo de videojuegos, programación orientada a objetos, OOP, arcade, Spacecrafts, arquitectura modular, programación, portafolio Python">
+		<meta name="author" content="Junior Salvador">
+		<!-- Favicon -->
+		<link rel="icon" href="/assets/images/favicon-32x32.png" type="image/png" sizes="32x32">
+		<link rel="icon" href="/assets/images/favicon-16x16.png" type="image/png" sizes="16x16">
+		<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+		<!-- CSS -->
+		<link href="/assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/plugins/glightbox/glightbox.min.css" rel="stylesheet">
+		<link href="/assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link href="/assets/css/theme.css" rel="stylesheet">
+		<!-- Fonts/Icons -->
+		<link href="/assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+		<link href="/assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+	</head>
+
+	<body class="theme-dark" data-preloader="true">
+		<!-- Header -->
+		<header class="header-wrapper">
+			<div class="container">
+				<div class="header-nav">
+					<!-- Botón Toggle Menu (para escritorio) -->
+					<button class="toggle-menu-btn">
+						<span></span>
+					</button>
+					<!-- Toggle Menu (para escritorio) -->
+					<div class="toggle-menu">
+						<div class="mt-0">
+							<h6 class="mb-2">Teléfono:</h6>
+							<a class="tInfoTexto" target="_blank"></a>
+						</div>
+						<div class="mt-3">
+							<h6 class="mb-2">Email:</h6>
+							<a class="cInfoTexto"></a>
+						</div>
+						<ul class="list-inline mt-3">
+							<li><a class="tInfoRedes" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+							<li><a class="cInfoRedes"><i class="bi bi-envelope"></i></a></li>
+							<li><a href="https://github.com/jsalvadorz" target="_blank"><i class="bi bi-github"></i></a></li>
+						</ul>
+					</div>
+					<!-- Nav Toggle (para móvil) -->
+					<button class="nav-toggle">
+						<span></span>
+					</button>
+					<!-- Nav -->
+					<ul class="nav-list">
+						<li class="nav-list-item"><a href="/">Sobre mí</a></li>
+						<li class="nav-list-item"><a href="/portafolio/">Portafolio</a></li>
+						<li class="nav-list-item"><a href="/#servicios">Servicios</a></li>
+						<li class="nav-list-item"><a href="/#experiencia">Experiencia</a></li>
+						<li class="nav-list-item"><a href="#contacto">Contacto</a></li>
+						<li class="nav-list-item"><a href="/blog/">Blog</a></li>
+					</ul>
+				</div>
+				<!-- Header Logo -->
+				<div class="header-logo">
+					<h3 class="fw-semi-bold uppercase"><a href="/">JS</a></h3>
+				</div>
+			</div>
+		</header>
+		<!-- fin Header -->
+
+		<!-- Main -->
+		<main id="main-content">
+			<!-- Resumen Proyecto -->
+			<section class="section-spacing pb-0" id="resumen" aria-label="Resumen del Proyecto">
+				<div class="container">
+					<div class="row g-5">
+						<div class="col-12 col-xl-8">
+							<h1 class="display-2 fw-medium">Videojuego Spacecrafts con Python y Pygame</h1>
+							<p>
+								Videojuego arcade desarrollado en Python con Pygame donde el jugador controla una nave espacial
+								para enfrentar oleadas de enemigos. Incluye controles intuitivos, sistema de puntuación, combate,
+								detección de colisiones y mecánicas que ofrecen una experiencia de juego dinámica y entretenida.
+							</p>
+							<div class="d-flex flex-wrap gap-4 mt-3">
+								<div class="dashed-box font-small font-family-secondary fw-medium uppercase">
+									<span>Cliente: Personal</span>
+								</div>
+								<a target="_blank" href="https://www.youtube.com/watch?v=OrJTmWv5HpQ">
+									<div class="bg-theme dashed-box font-small font-family-secondary fw-medium uppercase hover-shadow text-white">
+										<i class="bi bi-box-arrow-up-right text-white me-2"></i>
+										<span>Ver demo</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="category-wrapper col-12 col-xl-4">
+							<div class="bg-lighter border-radius p-4 px-5 p-xl-5 box-shadow d-flex flex-column align-items-center">
+								<div class="row g-3 g-md-4 w-100 my-auto">
+									<div class="col-12 col-md-6 col-xl-12 mt-3">
+										<h5 class="fw-medium mb-0">Servicios:</h5>
+										<p class="mb-0 py-2">Programación</p>
+									</div>
+									<div class="col-12 col-md-6 col-xl-12 mt-3">
+										<h5 class="fw-medium mb-0">URL del proyecto:</h5>
+										<p class="mb-0 py-2"><a class="link-hover-line" href="#">jsalvadorz.tech</a></p>
+									</div>
+								</div><!-- fin row(inner) -->
+							</div>
+						</div>
+					</div><!-- fin row -->
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Resumen Proyecto -->
+
+			<!-- Contenido Proyecto -->
+			<section class="section-spacing pb-0" id="contenido" aria-label="Contenido del Proyecto">
+				<div class="container">
+					<!-- Imagen Principal -->
+					<div class="row g-4">
+						<div class="col-12">
+							<div class="img-link-box border-radius">
+								<img src="images/videojuego-spacecrafts-python-pygame.jpg" 
+								alt="Videojuego Spacecrafts con Python y Pygame" 
+								decoding="async" fetchpriority="high">
+							</div>
+						</div>
+					</div>
+					<!-- fin Imagen Principal -->
+
+					<!-- Stack de tecnologías -->
+					<div class="row g-4 my-0 my-lg-4 mb-lg-0 text-center text-lg-start">
+						<!-- Título -->
+						<div class="col-12 col-lg-3 d-flex align-items-center align-items-lg-stretch justify-content-center justify-content-lg-start">
+							<h5 class="fw-medium mt-2 mt-lg-0 mt-xl-2">Proyecto realizado con:</h5>
+						</div>
+
+						<!-- Lista de tecnologías -->
+						<div class="col-12 col-lg-9 d-flex align-items-center align-items-lg-stretch justify-content-center justify-content-lg-start">
+							<ul class="list-inline font-small font-family-secondary fw-medium uppercase">
+								<li class="list-inline-item stack-box mb-3"><i class="fa-brands fa-python me-2"></i>Python</li>
+								<li class="list-inline-item stack-box mb-3"><i class="fa-solid fa-gamepad me-2"></i>Pygame</li>
+							</ul>
+						</div>
+					</div>
+					<!-- fin Stack de tecnologías -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-body-text me-3"></i>Descripción del proyecto</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								<b>Spacecrafts</b> es un videojuego arcade 2D desarrollado en <b>Python</b> utilizando la librería <b>Pygame</b>,
+								creado para demostrar la implementación de las principales mecánicas de desarrollo de videojuegos. El proyecto
+								presenta un nivel donde el jugador controla una nave espacial para esquivar ataques enemigos y eliminarlos mediante
+								disparos.
+							</p>
+							<p>
+								El juego incorpora un sistema de puntuación, contador de vidas, detección de colisiones y ventanas interactivas de
+								bienvenida, pausa, victoria y game over, generación de enemigos y gestión de estados de la partida. El resultado es
+								un proyecto funcional y entretenido que evidencia competencias en programación orientada a objetos, lógica de
+								videojuegos y desarrollo interactivo con Python.
+							</p>
+							<p class="bg-lighter-30 border-dashed border-radius box-shadow p-4 p-md-5 mt-4">
+								Aunque este proyecto no está relacionado con el análisis de datos, que es el área en el que me desempeño actualmente,
+								se incluye en el portafolio como una muestra de mis competencias en desarrollo de software. <b>Spacecrafts</b> fue
+								creado originalmente hace 15 años utilizando <b>Python 2</b>; sin embargo, decidí retomarlo para migrarlo
+								a una versión actual del lenguaje, rediseñar su arquitectura y aplicar mejores prácticas de programación.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-gear me-3"></i>Sobre el entorno</h2>
+
+					<!-- Contenido -->
+					<div class="row g-4">
+						<div class="col-12">
+							<p>
+								El proyecto fue desarrollado en <b>Python 3.11</b> utilizando la librería <b>Pygame 2.6.1</b> como motor principal
+								para la gestión de gráficos, eventos, sonido y detección de colisiones. La aplicación se implementó sobre un
+								<b>entorno virtual (venv)</b>, siguiendo buenas prácticas de organización del código mediante programación orientada
+								a objetos, separación de responsabilidades y estructura modular, lo que favorece la escalabilidad y el mantenimiento
+								del proyecto.
+							</p>
+							<p class="pb-0">
+								A continuación, se presenta un video explicativo que brinda detalles sobre la arquitectura del proyecto y el flujo del
+								juego, ofreciendo una visión completa de cómo se desarrolló y cómo funciona Spacecrafts.
+							</p>
+						</div>
+					</div>
+					<!-- fin Contenido -->
+
+					<!-- Subtítulo -->
+					<h2 class="display-6 fw-medium mt-5 mb-3"><i class="bi bi-play-btn me-3"></i>Video explicativo</h2>
+
+					<!-- Lightbox Video -->
+					<div class="row g-4">
+						<div class="col-12">
+							<div class="lightbox-video border-radius mt-4 mb-0">
+								<img src="images/1.jpg" decoding="async" loading="lazy">
+								<a class="glightbox lightbox-play-btn" href="https://www.youtube.com/watch?v=OrJTmWv5HpQ">
+									<i class="bi bi-play"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- fin Lightbox Video -->
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Contenido Proyecto -->
+
+			<!-- Sección Contacto -->
+			<section class="section-spacing" id="contacto" aria-label="Datos de contacto">
+				<div class="container">
+					<div class="bg-lighter-30 border-dashed border-radius box-shadow p-4 p-md-5">
+						<div class="row gx-5 align-items-center">
+							<div class="col-12 col-lg-6 text-center text-lg-end mb-3 mb-lg-0">
+								<h2 class="font-family-tertiary fw-semi-bold mb-0">
+									<i class="bi bi-person-plus text-white me-3"></i>Contáctame
+								</h2>
+							</div>
+							<div class="col-12 col-lg-6 text-center text-lg-start">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<i class="bi bi-telephone me-2"></i>
+										<a class="tInfoTexto fw-normal text-white fs-6 link-hover-line" target="_blank"></a>
+									</li>
+									<li>
+										<i class="bi bi-envelope me-2"></i>
+										<a class="cInfoTexto fw-normal text-white fs-6 link-hover-line"></a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- fin row -->
+					</div>
+				</div><!-- fin container -->
+			</section>
+			<!-- fin Sección Contacto -->
+		</main>
+		<!-- fin Main -->
+
+		<!-- Footer -->
+		<footer id="footer-wrapper" class="container">
+			<div class="section-spacing bg-charcoal p-4 p-md-5 box-shadow border-radius-top">
+				<div class="row g-2 align-items-center">
+					<div class="col-12 col-md-6 text-center text-md-start">
+						<p>&copy; <span id="year"></span> Junior Salvador | Github and ☕</p>
+					</div>
+					<div class="col-12 col-md-6 text-center text-md-end">
+						<ul class="list-inline-dash">
+							<li><a class="link-hover-line" href="#">Subir</a></li>
+						</ul>
+					</div>
+				</div><!-- fin row -->
+			</div>
+		</footer>
+		<!-- fin Footer -->
+
+		<!-- Cursor Gradiente -->
+		<div class="cursor-gradient"></div>
+		<!-- fin Cursor Gradiente -->
+
+		<!-- JavaScripts -->
+		<script src="/assets/plugins/jquery.min.js"></script>
+		<script src="/assets/plugins/plugins.js"></script>
+		<script src="/assets/js/functions.js"></script>
+		<script src="/assets/js/letscontact.js"></script>
+	</body>
+</html>
