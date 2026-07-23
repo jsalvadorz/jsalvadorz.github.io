@@ -140,7 +140,34 @@ swiper = new Swiper('.sliding-text-reverse', {
     },
 });
 
+function initGoogleTagManager(containerId = "GTM-KF7WJPW4") {
+    if (document.querySelector('script[src*="googletagmanager.com/gtm.js"]')) {
+        return;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        "gtm.start": Date.now(),
+        event: "gtm.js"
+    });
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${containerId}`;
+    document.head.appendChild(script);
+}
+
+function trackEvent(eventName, parameters = {}) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        event: eventName,
+        ...parameters
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const yearSpan = document.querySelector("#year");
     yearSpan.textContent = new Date().getFullYear();
 });
+
+initGoogleTagManager();
